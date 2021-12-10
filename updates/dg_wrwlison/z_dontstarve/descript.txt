@@ -15,14 +15,14 @@ type,balloon
 //The type of your balloon is... a balloon of course, so leave this alone.
 
 
-name,Z - Don't Starve
+name,DG - Don't Starve
 
 //name is the name of your balloon as it will appear in the "Change Balloon" menu option, and how it'll be referenced in install.txt. Replace "Z - Simple" with whatever you want to call your balloon.
 
 
-craftman,Zarla
-craftmanw,zarla
-craftmanurl,http://www.ashido.com/ukagaka/
+craftman,Digi
+craftmanw,Digi
+craftmanurl,https://digibill-cipher.tumblr.com/
 
 //You may remember these three from the descript.txt file for a Ghost! They are essentially the same as before. Craftman is your name. Craftmanw is where you would put your name if it was written in non-alphanumeric characters, like Korean or Japanese or Russian or something. You can delete craftmanw if you want or aren't going to use it, but you should always have craftman.
 //craftmanurl is where you put your homepage or blog url or whatever, wherever you want people to contact you.

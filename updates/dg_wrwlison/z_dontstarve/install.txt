@@ -11,7 +11,7 @@ type,balloon
 //This tells it what type of file it is. In this case, it's a balloon.
 
 
-name,Z - Don't Starve
+name,DG - Don't Starve
 
 //This is the name for your Balloon as defined in your balloon's descript.txt. Fill this in with the right name.
 
