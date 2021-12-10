@@ -1,0 +1,491 @@
+﻿//---------------------------AI Talk--------------------------
+//Alright, this is it! The bread and butter of your ghost. This is where all their random conversations are stored. Of all the .dic files, this is the one you will probably be adding stuff to and updating the most as new dialogue comes to your mind. It is relatively simple in that there aren't many functions or real coding involved with this file, but there are a few cool tricks you can do within randomtalk that can make dialogue with interesting effects, so I'll point them out as we go along.
+//I'm going to leave a lot of examples of different types of dialogue in here that you can study if the possibilities they present intrigue you. Study them carefully!
+
+//Make sure to read the walkthrough (http://www.ashido.com/ukagaka/) for more details about how to properly format ghost dialogue!
+//I will reiterate that you should be editing these in Notepad++, and in particular, you should set the Language to C (or Java I guess) to properly highlight all the text. It will make things A LOT EASIER for you, trust me! It will also help you keep track of your brackets in case you forget some. If you click on a line with a bracket in Notepad++, it should highlight where the other bracket ends, or turn purple if there's no finishing bracket (which you should definitely fix!)
+//It will also highlight my commented lines in green, so you'll know where they are. Any line beginning with // is a commented line that the code will not read. It's just for your reference!
+
+//--AiTalk
+//Leave this alone.
+//Advanced users, this is mostly setting up whether or not dialogue is in a chain before it displays. Again, you can leave it alone unless you want to screw around with chains for some strange reason.
+
+AiTalk
+ {
+	if RAND(100) < communicateratio
+ 	{
+ 		StartCommunicate
+	}
+ 	else
+	{
+		if edgescreen =="ON"
+		{
+			if mikireflag == 0
+			{
+				if CHAIN.IDName == "" {
+					lastTalk = RandomTalk
+				}
+				else {
+					lastTalk = ChainTalk
+				}
+				lastTalk
+			}
+			else
+			{ 
+			MikireTalk
+			}
+		}
+		else
+		{
+			if CHAIN.IDName == "" {
+				lastTalk = RandomTalk
+			}
+			else {
+				lastTalk = ChainTalk
+			}
+			lastTalk
+		}
+	}
+ }
+
+
+//--RandomTalk 
+ //Alright, here we go! This is where ALL your ghost's random dialogue will go! These are the conversations that they'll have with you or each other that pop up depending on the talk rate defined in menu.dic (or if you ignored that, set in bootend.dic in the first boot, which would be every five minutes).
+ 
+//*********************Advanced User Info*******************************
+//These text boxes are meant for those who have an interest in expanding or using more complicated functions in their ghost. Also for my own reference in the future since I plan on using this template too, haha. If you have no interest in any of this and just want to keep things as simple as possible, feel free to skip these boxes.
+
+//You CAN link to other pools of dialogue in RandomTalk using envelopes/functions, such as %(teatalk) to pull from a pool of dialogue about tea. Then you'd just add that line in among the other dialogue in here with %(teatalk). However, this vastly lowers the probability of dialogue in that function being called. If teatalk only gets called 1/5 times, and it has 10 pieces of dialogue in there, then you're only getting... uh... god, I'm bad at fractions... 1...50th? a chance that a certain teatalk line will appear. LOOK THE GIST IS THAT THE PROBABILITY GETS LOW. This applies to any kind of dialogue in a conditional. A simpler example would be if you have one piece of normal dialogue, and one piece that's an if check that has four pieces of dialogue in there. You'd end up with a 50% chance to get that normal dialogue, and a 50% chance for ONE of the other four pieces of dialogue... which makes the odds of seeing any specific line in that special dialogue that much lower.
+
+//You can't do things like put OnSystemBoot or something in RandomTalk. You could use \![raise] to pull something though, although I'd be careful about it. More on these kind of things and conditionals in general in the coding page on the walkthrough.
+
+//If you split up RandomTalk with if/else checks, then you can redirect in an If to another function, like... if chargermode == "on" { ChargerChatting } else {normal random talk dialogue}. This would redirect the random dialogue to ChargerChatting instead. You can't just throw a function into RandomTalk directly though, like "dialogue 1" "dialogue 2" OnFunctionname "dialogue 3", that kind of thing. You'll have to split it off into its own if or point to it with an envelope.
+
+//You can do multiple ifs in RandomTalk if required... like an if for if a character is asleep, or if a third character is present, or if they're having a nervous breakdown, or if they're sulking. It depends! You can add a bunch of checks leading to specialized pools if you want. Just make sure you leave some normal dialogue in the last else for RandomTalk (unless you want to redirect that somewhere else with an envelope too... although that seems a bit redundant, honestly.)
+//***********************************************************************
+
+RandomTalk : nonoverlap
+{
+	//Alright, here is where all your dialogue will go. I hope you studied how to format dialogue carefully in the walkthrough, as there is little here I can help you with. You're going to have to write most of it yourself. So instead, I'll give you a set of examples to look at.
+	
+	
+	//Okay, where the fuck am I?
+	
+	"\0\s[24]\f[sup,true]This seems to be some sort of computing device...\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]This device states the year is %(year),\w8 is that right?...\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]I know of Atanasoff's computing ideas...\w8 is this the result?\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]This machine lacks belts and seems to be electrically powered, \w8 it's fascinating.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]The displaying capabilities of this thing are incredible.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]I thought this device would've had vacuum tubes...\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]It's oddly warm here.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]I wonder, \w8does this machine utilize shadow magic to function?\f[sup,false]\e"
+	
+	//Constant mumbling
+	
+	"\0\s[24]\f[sup,true]Maybe I should go mining in the caves.\w8\s[25] I'd have to refuel my lantern though.\f[sup,false]\e"
+	
+	"\0\s[25]I need to go to the ruins for gears, \w8what a pain that'll be.\e"
+	
+	"\0\s[25]\f[sup,true]I should take some of my stale jerky to the pig king.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]I should collect some nightmare fuel.\f[sup,false]\e"
+	
+	"\0\s[23]This place is, \w4\s[29]slightly better than the Constant.\e"
+	
+	"\0\s[29]At least I'm not going to be eaten alive here.\e"
+	
+	"\0\s[8]I suppose this is a, \s[29]relatively safe place.\e"
+	
+	"\0\s[24]\f[sup,true]I wonder why the spiders in the Constant only have six legs.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]I need to make a trip to the Dragonfly's desert to search the tumbleweed.\f[sup,false]\e"
+	
+	"\0\s[24]\f[sup,true]There has to be an easier way to deal with those %(annoyingmobs)s.\f[sup,false]\e"
+	
+	"\0\s[25]Butter\w3-flies,\w8 dammit that's a good one.\e"
+	
+	"\0\s[30]The anNightmare Throne's cushion was rock hard, \w8\s[25] nothing can top my pity.\e"
+	
+	//Other survivors
+	
+	"\0\s[22]Sometimes I find whole forests burned to a crisp.\w8\s[34] I'm not sure they're natural either...\e" //Willow
+	
+	"\0\s[24]I wonder who,\w6 or what,\w6 keeps putting flowers on the headstones.\e" //Wendy
+	
+	"\0\s[23]I think one of anMaxwell's clockworks went rouge.\w8\s[30] Sometimes I come back to camp to find all my gears stolen.\e" //WX-78
+	
+	"\0\s[24]Who's publishing books out here?\e" //Wickerbottom
+	
+	"\0\s[31]I've seen patches of tree stumps that look like they've been chewed instead of chopped,\w8\s[22] but I've never seen a beaver in the Constant.\e" //Woodie
+	
+	"\0\s[34]Once in a great while, I'll find a balloon. \w8Just floating there,\w8 \f[italic,1]really\f[italic,0] creeps me out.w\8\w8\w8\w8\w8\c\s[24]Maybe it has something to do with that mime.\e" //Wes
+	
+	"\0\s[24]Next time I contact\s[23] anMaxwell, I should tell him about this place.\e" //Maxwell
+	
+	"\0\s[25]I know anWebber will be fine while I'm here,\s[8] that kid's very hardy.\e" //Webber
+	
+	//Reactions
+	
+	if petpet >= 50
+	{
+		"\0\s[35]You must really like my hair.\e"
+	}
+	
+	//Hewwo
+	
+	"\0\s[29]What are you looking at?\e"
+	
+	"\0\s[8]So what are you doing?\e"
+	
+	"\0\s[30]I'm sure this is very entertaining for you.\e"
+	
+	"\0\s[9]Not much I can do here, is there?\e"
+	
+	"\0\s[9]Are you doing anything interesting?\e"
+	
+	//Time keeps on ticking ticking ticking...
+	
+	if timeslot == "latenight" || timeslot == "midnight" || timeslot == "earlymorning"
+	{
+		"\0\s[33]\w8\w8\w8\e"
+		
+		"\0\s[25]\w8\w8\w8\e"
+		
+		"\0\s[9]\w8\w8\w8\e"
+	}
+	
+	//Seasonal grumbling
+		
+		//Winter
+	
+		if month >= 12 || month == 1 || month == 2
+	{
+		"\0\s[24]\f[sup,true]I should attempt to gather some more beefalo wool.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]Do I have enough fuel for the rest of winter?\f[sup,false]\e"
+		
+		"\0\s[25]\f[sup,true]At least my thermal stone is toasty.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]Some of the vegetables in my refrigerator are going bad.\f[sup,false]\e"
+		
+		"\0\s[8]It's hard to appreciate the beauty of winter when you're trying to survive through it.\e"
+		
+		"\0\s[9]So what are your snowy months like?\e"
+		
+		"\0\s[25]\f[sup,true]Deerclops better not destroy my camp while I'm here.\f[sup,false]\e"
+		
+		"\0\s[25]\f[sup,true]I hope pengulls don't nest in my camp again.\f[sup,false]\e"
+	}
+	
+		//Spring
+	
+		if month == 3 || month == 4 || month == 5
+	{
+		"\0\s[8]They say ''April showers bring May flowers,'' \w8\s[9]but why does the Constant have to have showers of frogs?\e"
+		
+		"\0\s[24]\f[sup,true]I should collect some ice before it melts.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]Perhaps I could get the frogs and the moose geese, into a battle, \w8imagine the frog legs...\f[sup,false]\e"
+		
+		"\0\s[8]It's hard to dry meats when it's raining all the time.\e"
+		
+		"\0\s[8]I've tried digging out the wet rabbit dens but they just collapse even further.\e"
+		
+		"\0\s[23]Why do the bees have to become so aggressive in the spring?\e"
+		
+		"\0\s[23]I really don't care for being wet and cold all the time, \s[8]so this place is much nicer in comparison.\e"
+		
+		"\0\s[23]I think those lure plants deliberately grow right where I don't want them.\e"
+	}
+	
+		//Summer
+		
+		if month == 6 || month == 7 || month == 8
+	{
+		"\0\s[22]It's super hot in the Constant right now, \s[8]so this place is much nicer in comparison.\e"
+		
+		"\0\s[9]I complained about the rain and now it's all gone.\e"
+		
+		"\0\s[22]The plants in the Constant are withering from the weather.\e"
+		
+		"\0\s[24]\f[sup,true]I hope a wildfire doesn't start while I'm gone.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I should check on the Antlion when I get back.\f[sup,false]\e"
+		
+		"\0\s[25]\f[sup,true]The heat is reducing the efficiency of my refrigerator.\f[sup,false]\e"
+		
+		"\0\s[8]I'm glad the hounds ignore my camp while I'm here, \s[9]It'd be up in flames otherwise.\e"
+		
+		"\0\s[22]\f[sup,true]At least my thermal stone is cool.\f[sup,false]\e"
+	}
+	
+		//Autumn
+	
+		if month == 9 || month == 10 || month == 11
+	{
+		"\0\s[23]I'm glad the hounds ignore my camp while I'm here, \s[25]It'd be up in flames otherwise.\e"
+		
+		"\0\s[8]The autumn is the best time to collect wood from the birch forests,\w3 because of the increase in nuts.\w8\w8\w8\w8\w8\s[20] Well except for when the trees get angry with me.\e"
+		
+		"\0\s[24]\f[sup,true]Did I Bearger-proof my supplies?\f[sup,false]\e"
+		
+		"\0\s[27]My crops are growing well this autumn!\e"
+		
+		"\0\s[6]It's a great time to gather supplies because of the weather this season.\e"
+		
+		"\0\s[24]\f[sup,true]I should tend to my crops when I get back.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I should make sure the spiders don't take over the pine forest.\w8\s[25] I always need %(spiderguts) anyway.\f[sup,false]\e"
+		
+		"\0\s[24]\w8\s[23]\w2\s[25]\w4I could be doing so much more productive things right now...\e"
+	}
+	
+	//And so we reach the end of randomtalk! I again reiterate, YOU CAN AND SHOULD WRITE YOUR OWN NEW LINES OF DIALOGUE FOR THIS! I included some random example phrases here for you just to replace the text, but there really aren't that many. You'll want to add more, and doing so is easy! Just copy and paste a line and redo the text. Repeat as many times as you want with as many conversations as you want. You can always expand this section!
+}
+
+
+//--Chains
+//Here is where you will put your bits of chain dialogue. They are outside of RandomTalk, which makes them a bit more flexible as I mentioned above.
+//Each chain function will go through each part of the chain in order even if it's in one function, until it goes to \e:chain=end which will end the chain, as you could probably guess. So you can put the entire chain dialogue into one place.
+
+/*
+achain
+{{CHAIN
+	//this will happen the first time the chain is called
+	"\0\s[0]Here is the second part of the chain.\w8\1\s[10]Will there be more?\e"
+	
+	//they will then go to this dialogue next
+	"\0\s[0]This is the third part of chained dialogue.\1\w8\s[10]This will lead to a fourth part.\e"
+	
+	//this will be the last piece of dialogue in the chain, then they will go back to their normal dialogue
+	"\0\s[0]This is the fourth piece of chained dialogue.\1\w8\s[10]This is the end.\e:chain=end"
+}}CHAIN
+
+//Pay careful attention to the CHAIN text and double brackets for these. Double brackets, CHAIN, dialogue, double brackets, CHAIN. If you are planning on making chains, I'd recommend just copying and pasting the chain example here and changing the dialogue and name of the function as you need. Less likely for mistakes to happen, you know?
+//Note also it ends with \e:chain=end, basically ending the chain.
+
+anotherchain
+{{CHAIN
+	"\0\s[0]This is the second example of chained dialogue.\1\w8\s[10]This will only have two parts.\e"
+	
+	"\0\s[0]This is the last piece of the second example of chained dialogue\1\w8\s[10]This will end here.\e:chain=end"
+}}CHAIN
+*/
+
+//You can make chains as long or as shot as you want! Just make sure to end the chain when you're done.
+
+
+//Alright, we're done with the random conversations for now, but there are a few other things in aitalk that we'll need to fill out too.
+
+
+//-OnMinuteChange
+//These are time-related bits of dialogue for your ghost to say. If you're uninterested, you can delete it all except for a line for MikireTalk. So it'd look something like
+
+//OnMinuteChange
+//{
+//HourCheck
+//--
+//if mikireflag == 1
+// 	{
+// 		MikireTalk
+//	}
+//}
+
+//But I think these are kind of neat, so I'd leave them myself.
+
+
+//Keeps track of if an hour has passed. Just ignore this.
+HourCheck
+{
+if passmin >= 59
+	{
+		passmin = 0
+		passhour = passhour + 1
+	}
+}
+
+
+OnMinuteChange //This is what will trigger time-based dialogue for your Ghost.
+ {
+	HourCheck //checks to see if an hour has passed, ignore it
+	--
+ 	if minute == 0 && hournotify == "ON" //These ifs will check what time it is. Here, it's seeing if the minute equals zero...
+	{
+ 		if hour == 12 //And the hour equals 12, meaning it's noon. You can change this to some other hour if you want.
+		{
+ 			"\0%(idles)It's noon.\e"
+			//Replace with appropriate dialogue as you want.
+		}
+ 		elseif hour == 0 //If the hour is zero, aka midnight. Again, you can change this to whatever hour you want to check for. This section is flexible! You can also add more elseifs if you want to check for other hours.
+		{
+ 			"\0\s[30]It's midnight.\e"
+ 			"\0\s[30]Seems you're burning both ends of the stick.\e"
+ 			"\0\s[30]Burning the midnight oil I see.\e"
+			//Then replace the dialogue with what's appropriate.
+		}
+		elseif hour > 12 && hour != 0
+		{
+			"\0%(idles)It's %(hour12)PM.\e"
+			"\0%(idles)Hey, it's %(hour12)PM.\e"
+			//%(hour12) stores the time. This is a general top of the hour notification. I personally like this because it helps me keep track of time when I've been working on something, so when a ghost is all "Hey it's 3 o clock" I can be like woah really when did that happen. If you think this is annoying though, you can just delete this bit of dialogue to leave this else statement blank, or leave "" in here instead.
+		}
+		else
+		{
+			"\0%(idles)It's %(hour12)AM.\e"
+			"\0%(idles)Hey, it's %(hour12)AM.\e"
+			//%(hour12) stores the time. This is a general top of the hour notification. I personally like this because it helps me keep track of time when I've been working on something, so when a ghost is all "Hey it's 3 o clock" I can be like woah really when did that happen. If you think this is annoying though, you can just delete this bit of dialogue to leave this else statement blank, or leave "" in here instead.
+		}
+	}
+	//You can also check for more specific times! For example...
+	elseif hour == 23 && minute == 55 //this checks to see if the hour is 23 and the minutes are at 55... essentially, 11:55 pm.
+	{
+		"\0\s[30]It's,\w8 5 minutes to midnight...\e"
+		//Replace with what you like!
+	}
+	//elseif hour == 7 && minute == 30 && weekday == 0 //Here, it's checking for a specific time on a specific day. You can add things to your time checks just like this by using the AND operator, && (more about operators at the walkthrough page). This adds up to 7:30 am, Sunday. If you have a favorite TV program on at some time, you could have your ghost comment on when it comes on like this.
+	//{			
+		//"\0\s[0]It's 7:30 on Sunday.\e"
+		//Replace with what's appropriate.
+	//}
+	//If you're not interested in these more specific checks, you can delete those last two elseifs and just leave the one for minute==0, or clear them all out as mentioned above, although leave in the HourCheck and mikireflag bits.
+	
+	//Don't touch this part.
+	elseif edgescreen == "ON"
+	{
+		if mikireflag == 1
+		{
+			MikireTalk
+		}
+	}
+ }
+
+//--OnSecondChange
+//Like the above, this handles what happens every time a second goes by. Most of this you will not have to touch.
+
+OnSecondChange
+ {
+	if passsec == 59
+ 		{
+	 	passsec = 1
+ 		passmin = passmin + 1
+		}
+ 	else
+ 		{
+	 	passsec = passsec + 1
+		}
+	if edgescreen == "ON"
+	{
+		if mikireflag == 0 && reference1 == 1 //Dialogue for putting them off the screen. You could make this a unique line if you wanted (Like "Hey! What are you doing?"), and have MikireTalk below be for if they continue to be offscreen ("Why are you leaving me out here? Help!" for example). I'll add an example bit of dialogue and comment it out, you can uncomment it and use it if you like, or just leave it out and use MikireTalk below.
+		{
+			//"\0\s[0]You've moved me off screen."
+		
+			MikireTalk
+		}
+		if mikireflag == 1 && reference1 == 0 //Dialogue for coming back on the screen
+		{
+			EndMikireTalk
+		}
+		mikireflag = reference1 //reference1 is if the ghost is offscreen or not
+	}
+	if reference2 == 1
+	{
+ 		//This dialogue is for when the two characters are overlapping each other. If you don't want your characters to care, you can just leave this blank.
+		
+ 		//"\0\s[0]Me and Triangle are overlapping.\w8\1\s[19]That's strange since your resolution is %screenwidthx%screenheight, %(username). Shouldn't we have enough space?\4\e"
+		
+		//You can see here the use of two envelopes, screenwidth and screenheight, to tell the user their resolution. Oddly, they are not in parentheses. I'm not sure why this is, but they don't display right otherwise. An odd quirk with these two envelopes.
+		//Note also how Triangle moves away at the end of the dialogue. This is due to the \4 tag. That will make any one character move away from the other if they are able. I talked about this tag and its counterpart tag \5 in the SakuraScript page on the walkthrough.
+	}
+ }
+
+ //---- MikireTalk ---------------------------------------------------------------------
+ //MikireTalk is dialogue for when your main character is off-screen. Like if you dragged Girl over to the side of your monitor until she was partially concealed by it.
+ 
+MikireTalk
+ {
+ 
+	"\0\s[20]I'm off your screen.\w8\s[2] A bit scary over here.\e"
+	
+	"\0\s[20]The darkness looked back.\w8\s[2] Help.\e"
+	
+	"\0\s[2]Hello?\e"
+	
+	"\0\s[2]Hey can you move me back?.\e"
+	
+	"\0\s[20]There's something back there.\w8\s[2] Help.\e"
+	
+	"\0\s[34]What was that!?\e"
+	//Note the hotkey combo Triangle mentions. He's telling the truth, that should bring her back on the screen.
+	
+ }
+
+ //----EndMikireTalk--------------------------------------------------------------------
+ //For after you bring the character back on screen.
+ 
+EndMikireTalk
+ {
+	
+	"\0\s[3]Thanks, that was quite unnerving.\e"
+	
+	"\0\s[3]Thank you.\e"
+	
+	"\0\s[20]Whew.\e"
+	
+	"\0\s[3]Thanks, \s[20]The darkness was staring at me.\e"
+	
+	"\0\s[3]Thanks.\e"
+	
+ }
+
+
+//**** OnSurfaceRestore *****************************************************************
+//OnSurfaceRestore is a handy function. What this does is that after a short period of time, the ghost will go back to its default pose, so you won't have a ghost stuck in one expression for too long. It's also helpful if you've made one of the characters disappear using \s[-1] in dialogue and didn't bring them back at the end of it. This will do that for you.
+//I'm going to comment out the if/else statements in this because the circumstances in which they'd come up seem pretty unlikely and unnecessary if you're just going to be making a simple ghost. You can just leave this function alone and move on if you want. However, if you do want to use them, just uncomment the lines by deleting the slashes and fill in the info as you need.
+
+//*********************Advanced User Info*******************************
+//You can put if statements in OnSurfaceRestore to make exceptions for certain poses, or to make sure that once they're in a certain pose, they stay in that pose. For example, if you turn my Hunter and Smoker ghost into eggplants, there's a check for the their eggplant pose numbers to make sure they STAY eggplants when OnSurfaceRestore is called.
+//You can also use OnSurfaceRestore to clean up things that might be left on the screen, primarily from using p[number]\s[] to call up other objects or characters. Just make sure to add a p[number]\s[-1] to OnSurfaceRestore, and that should get rid of it each time the ghost cleans itself up.
+//***********************************************************************
+
+OnSurfaceRestore
+ {
+ 	//if reference0 == 4 || reference0 == 6 //This is checking what poses they are in. This looks to see if Girl is in pose 4 or pose 6, since she is reference0.
+ 	//{
+ 	//"\1\s[10]You're in a sad pose.\w8\0\s[0]I'll go back to normal then.\e"
+ 	//}
+ 	//elseif reference1 == 14 || reference1 == 16 //This is doing the same but for Triangle, since he's reference1. It looks to see if he's in pose 14 or post 16.
+ 	//{
+ 	//"\0\s[0]You look sad.\w8\1\s[10]I'll go back to normal.\e"
+ 	//}
+ 	//else
+ 	//{
+	"\0%(idles)\1\s[10]\e"
+	//}
+ }
+
+ 
+ //--OnKeyPress
+ //This defines the hotkeys your ghost will use. You can change these to whatever you want, but I don't really know why you would. I'd just leave this alone. Advanced Users can add new hotkeys attached to whatever function if you want.
+ 
+OnKeyPress
+{
+	if reference0 == "t"
+	{
+	OnAiTalk
+	}
+	elseif reference0 == "r"
+	{
+	OnLastTalk
+	}
+	elseif reference0 == "f1"
+	{
+	"\![open,readme]"
+	}
+}
