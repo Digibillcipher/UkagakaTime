@@ -19,7 +19,7 @@ I am also not sure if his old update link works anymore, if you want to try upda
 
 ------------------------------------------------------------
 
-**DG - Don't Starve Balloon Nar Update**
+**DG - Don't Starve Balloon v1.1.0 Update**
 
 * Increased the text area by a small amount, updated readme, and included my WilsonPH font
 
