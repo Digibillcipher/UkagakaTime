@@ -1,0 +1,364 @@
+//Zichqec!
+//Possible items and their max stack numbers (and element numbers)
+//This does not include static items that you or wilson always have
+MaxStacks : array
+{
+	//Tradeable items
+	20 //0 - Logs
+	20 //1 - Gold
+	40 //2 - Silk
+	40 //3 - Rocks
+	40 //4 - Morsel
+	20 //5 - Meat
+	20 //6 - Monster Meat
+	40 //7 - Fish
+	40 //8 - Ice
+	40 //9 - Gears
+	40 //10 - Egg
+	40 //11 - Dark Petals
+	40 //12 - Nitre
+	
+	//Craftable items
+	40 //13 - Cooked Morsel
+	20 //14 - Cooked Meat
+	20 //15 - Cooked Monster Meat
+	40 //16 - Charcoal
+	20 //17 - Jerky
+	40 //18 - Small Jerky
+	20 //19 - Monster Jerky
+	40 //20 - Nightmare Fuel
+	10 //21 - Boards
+	10 //22 - Cut Stone
+	20 //23 - Rope
+	
+	//Items Wilson won't give
+	//Since 40 is a ridiculous amount of a food to have I'm changing these to reasonable values
+	10 //24 - Meatballs
+	5 //25 - Bacon and Eggs
+	40 //26 - Berries
+	5 //27 - Butter Muffin
+	5 //28 - Froggle Bunwich
+	10 //29 - Honey Nuggets
+	5 //30 - Pierogi
+	5 //31 - Monster Lasagna
+	1 //32 - Log Suit
+}
+
+GenerateWilsonInventory
+{
+	_output = (0,0,0,0,0,0,0,0,0,0,0,0,0)
+	
+	//This is a list of index numbers from the MaxStacks array. So this is logs - nitre. This way you can customize which items are available without needing to duplicate that code
+	_possible_items = "0,1,2,3,4,5,6,7,8,9,10,11,12"
+	_tackon_items = "24,25,26,27,28,29,30,31,32"
+	
+	//A random number of slots to fill, from 4-7. This should always leave at least one slot open. Customize the min and max if you want
+	_min = 4
+	_max = 6
+	_slots_to_fill = RAND(_max - _min + 1) + _min
+	
+	for _i = 0; _i < _slots_to_fill; _i++
+	{
+		_item = TOINT(ANY(_possible_items)) //Pick random item
+		while _output[_item] != 0; {_item = TOINT(ANY(_possible_items))} //If item is already filled, pick another
+		
+		_max = MaxStacks[_item] //Get max stack num
+		_output[_item] = RAND(_max) + 1 //Add a random amount from 1-the max stack
+	}
+	
+	//tack on one non-tradeable item
+	_item = TOINT(ANY(_tackon_items)) //Pick random item
+	_max = MaxStacks[_item] //Get max stack num
+	_output[_item] = RAND(_max) + 1 //Add a random amount from 1-the max stack
+	
+	_output
+}
+
+//To check if Wilson's inventory is full. Returns the number of open slots. You can make another like this for the user
+WilsonOpenSlots
+{
+	_max_slots = 15
+	_perma_slots = 7 //Some of the slots are taken up by stuff that's not in the inventory array
+	
+	_count = _max_slots - _perma_slots
+	foreach WilsonInventory; _slot
+	{
+		if _slot > 0; _count-- //If the slot has an item in it, increment the count
+	}
+	if _count < 0; _count == 0
+	_count
+}
+
+GenerateUserInventory
+{
+	_output = (0,0,0,0,0,0,0,0,0,0,0,0,0)
+	
+	//This is a list of index numbers from the MaxStacks array. So this is logs - nitre. This way you can customize which items are available without needing to duplicate that code
+	_possible_items = "0,1,2,3,4,5,6,7,8,9,10,11,12"
+	
+	//A random number of slots to fill, from 4-7. This should always leave at least one slot open. Customize the min and max if you want
+	_min = 4
+	_max = 6
+	_slots_to_fill = RAND(_max - _min + 1) + _min
+	
+	for _i = 0; _i < _slots_to_fill; _i++
+	{
+		_item = TOINT(ANY(_possible_items)) //Pick random item
+		while _output[_item] != 0; {_item = TOINT(ANY(_possible_items))} //If item is already filled, pick another
+		
+		_max = MaxStacks[_item] //Get max stack num
+		_output[_item] = RAND(_max) + 1 //Add a random amount from 1-the max stack
+	}
+	_output
+}
+
+//To check if Wilson's inventory is full. Returns the number of open slots. You can make another like this for the user
+UserOpenSlots
+{
+	_max_slots = 15
+	_perma_slots = 7 //Some of the slots are taken up by stuff that's not in the inventory array
+	
+	_count = _max_slots - _perma_slots
+	foreach UserInventory; _slot
+	{
+		if _slot > 0; _count-- //If the slot has an item in it, increment the count
+	}
+	if _count < 0; _count == 0
+	_count
+}
+
+DisplayInventory
+{
+	_inventory = GenerateWilsonInventory //Generate an inventory. You'd want to put this in your OnBoot or whatever, and save it to a global variable so it stays as it is until he closes and you generate a new one
+	_userinventory = GenerateUserInventory
+	
+	"\0%(whwr)%(eyedles)\b2\_q\![no-autopause]\![set,autoscroll,disable]\![close,inputbox,__SYSTEM_ALL_INPUT__]\*"
+	--
+	"\f[bold,true]Wilson's Inventory:\f[bold,false]\n\n[half]"
+	--
+	"Some Twigs, "
+	--
+	"Grass, "
+	--
+	"and Flint, "
+	--
+	"the Wretched Notebook, "
+	//"the \q[Wretched Notebook,wrnotebook], \n"
+	//"the \__q[wrnotebook]Wretched Notebook\__q, \n"
+	//"the \f[anchorcolor,default]\_a[wrnotebook]Wretched Notebook\_a, \n"
+	--
+	"a Wretched Spear, "
+	--
+	if garland == 1; "a Feather Pencil, and the Garland. "; else; "and a Feather Pencil. "
+	--
+	"As well as "
+	--
+	if _inventory[0] == 1; "1 Log, "; elseif _inventory[0] > 0; "%(_inventory[0]) Logs, "
+	--
+	if _inventory[1] > 0; "%(_inventory[1]) Gold, "
+	--
+	if _inventory[2] > 0; "%(_inventory[2]) Silk, "
+	--
+	if _inventory[3] == 1; "1 Rock, "; elseif _inventory[3] > 0; "%(_inventory[3]) Rocks, "
+	--
+	if _inventory[4] == 1; "1 Morsel, "; elseif _inventory[4] > 0; "%(_inventory[4]) Morsels, "
+	--
+	if _inventory[5] > 0; "%(_inventory[5]) Meat, "
+	--
+	if _inventory[6] > 0; "%(_inventory[6]) Monster Meat, "
+	--
+	if _inventory[7] > 0; "%(_inventory[7]) Fish, "
+	--
+	if _inventory[8] > 0; "%(_inventory[8]) Ice, "
+	--
+	if _inventory[9] == 1; "1 Gear, "; elseif _inventory[9] > 0; "%(_inventory[9]) Gears, "
+	--
+	if _inventory[10] == 1; "1 Egg, "; elseif _inventory[10] > 0; "%(_inventory[10]) Eggs, "
+	--
+	if _inventory[11] == 1; "1 Dark Petal, "; elseif _inventory[11] > 0; "%(_inventory[11]) Dark Petals, "
+	--
+	if _inventory[12] > 0; "%(_inventory[12]) Nitre, "
+	--
+	"and "
+	--
+	if _inventory[24] == 1; "1 Meatball."; elseif _inventory[24] > 0; "%(_inventory[24]) Meatballs."
+	--
+	if _inventory[25] > 0; "%(_inventory[25]) Bacon and Eggs."
+	--
+	if _inventory[26] == 1; "1 Berry."; elseif _inventory[26] > 0; "%(_inventory[26]) Berries."
+	--
+	if _inventory[27] == 1; "1 Butter Muffin."; elseif _inventory[27] > 0; "%(_inventory[27]) Butter Muffins."
+	--
+	if _inventory[28] == 1; "1 Froggle Bunwich."; elseif _inventory[28] > 0; "%(_inventory[28]) Froggle Bunwiches."
+	--
+	if _inventory[29] == 1; "1 Honey Nugget."; elseif _inventory[29] > 0; "%(_inventory[29]) Honey Nuggets."
+	--
+	if _inventory[30] > 0; "%(_inventory[30]) Pierogi."
+	--
+	if _inventory[31] == 1; "1 Monster Lasagna."; elseif _inventory[31] > 0; "%(_inventory[31]) Monster Lasagnas."
+	--
+	if _inventory[32] > 0; "1 Log Suit."
+	--
+	"\n\n[half]\f[bold,true]Your Inventory:\f[bold,false]\n\n[half]"
+	--
+	if _userinventory[0] == 1; "1 Log, "; elseif _userinventory[0] > 0; "%(_userinventory[0]) Logs, "
+	--
+	if _userinventory[1] > 0; "%(_userinventory[1]) Gold, "
+	--
+	if _userinventory[2] > 0; "%(_userinventory[2]) Silk, "
+	--
+	if _userinventory[3] == 1; "1 Rock, "; elseif _userinventory[3] > 0; "%(_userinventory[3]) Rocks, "
+	--
+	if _userinventory[4] == 1; "1 Morsel, "; elseif _userinventory[4] > 0; "%(_userinventory[4]) Morsels, "
+	--
+	if _userinventory[5] > 0; "%(_userinventory[5]) Meat, "
+	--
+	if _userinventory[6] > 0; "%(_userinventory[6]) Monster Meat, "
+	--
+	if _userinventory[7] > 0; "%(_userinventory[7]) Fish, "
+	--
+	if _userinventory[8] > 0; "%(_userinventory[8]) Ice, "
+	--
+	if _userinventory[9] == 1; "1 Gear, "; elseif _userinventory[9] > 0; "%(_userinventory[9]) Gears, "
+	--
+	if _userinventory[10] == 1; "1 Egg, "; elseif _userinventory[10] > 0; "%(_userinventory[10]) Eggs, "
+	--
+	if _userinventory[11] == 1; "1 Dark Petal, "; elseif _userinventory[11] > 0; "%(_userinventory[11]) Dark Petals, "
+	--
+	if _userinventory[12] > 0; "%(_userinventory[12]) Nitre, "
+	--
+	if garland == 0; "some Grass, and a Garland. "; else; "and some Grass. "
+	--
+	"\n\n[half]\![*]\q[Trade,wantrade]"
+	--
+	"\n\![*]\q[Go back,BACKTOMENU]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+OnWrnotebook
+{
+	"\0\s[29]That's, \f[italic,1]mine.\f[italic,0]"
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.wantrade
+{
+	"\0%(eyedles)You want to trade with me? \w8\*"
+	--
+	//"Please tell me what items and amounts, for example:\n"
+	//--
+	//"\![open,inputbox,OnWantrade,-1,%(RAND(21)+2) Rocks for %(RAND(11)+2) Morsels]"
+	//"\![open,inputbox,OnWantrade,-1,%(RAND(21)+2) Silk for %(RAND(8)+2) Gold]"
+	//"\![open,inputbox,OnWantrade,-1,%(RAND(8)+2) Fish for %(RAND(8)+2) Eggs]"
+	//--
+	//"\w8\w8\w8\w8Put what you want from me first, and what you're offering second."
+	"What are you offering?\![open,inputbox,OnWantrade,-1]"
+	--
+	"\w8\w8\w8\s[29] Please don't tell me the value in Longhand, or Roman numerals..."
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+OnWantrade
+{
+	tradefirsthalf = reference0
+	"\0%(eyedles)What do you want?\*\![open,inputbox,OnWantrade2,-1]"
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+OnWantrade2
+{
+	tradenexthalf = reference0
+	_tradefirsthalftwo = TOLOWER(tradefirsthalf)
+	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo," ","") //removes spaces
+	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo,".","") //removes periods
+	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo,"-","") //removes dashes
+	_tradenexthalftwo = TOLOWER(tradenexthalf)
+	_tradenexthalftwo = REPLACE(_tradenexthalftwo," ","") //removes spaces
+	_tradenexthalftwo = REPLACE(_tradenexthalftwo,".","") //removes periods
+	_tradenexthalftwo = REPLACE(_tradenexthalftwo,"-","") //removes dashes
+	_tradetext = (_tradefirsthalftwo + _tradenexthalftwo)
+	//_NoTradeBacksKeywords("Cooked",)
+	
+	if "diary" _in_ _tradetext
+	{
+		OnCalledDiary
+	}
+	elseif "note" _in_ _tradetext || "book" _in_ _tradetext || "tome" _in_ _tradetext || "journal" _in_ _tradetext
+	{
+		OnWrnotebook
+	}
+	elseif "spear" _in_ _tradetext || "suit" _in_ _tradetext || "armor" _in_ _tradetext || "armour" _in_ _tradetext
+	{
+		OnBattleEquipment
+	}
+	elseif "feather" _in_ _tradetext || "pen" _in_ _tradetext
+	{
+		OnFeatherPencil
+	}
+	else//if OnFindInString()
+	{
+		
+	}
+	//"\0%(_tradetext)\e"
+}
+
+OnCalledDiary
+{
+	"\0\s[29]A: \w8\w8\f[italic,1]not a diary.\f[italic,0]\n"
+	--
+	"\0\s[29]B: \w8\w8That's, \f[italic,1]mine.\f[italic,0]"
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+OnBattleEquipment
+{
+	"\0\s[51]Hey, I'm going to need that."
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+OnFeatherPencil
+{
+	"\0\s[51]Hey, I need \f[italic,1]something\f[italic,0] to write with."
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

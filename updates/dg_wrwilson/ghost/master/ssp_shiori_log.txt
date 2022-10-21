@@ -1,0 +1,111 @@
+=========================================================
+2022/09/14 19:30:24.150
+
+-----send------------------------
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 103
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+-----response--------------------
+***CallTime:1msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=========================================================
+2022/09/14 19:30:25.146
+
+-----send------------------------
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 103
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+-----response--------------------
+***CallTime:2msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=========================================================
+2022/09/14 19:30:25.865
+
+-----send------------------------
+GET SHIORI/3.0
+ID: OnTranslate
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Reference0: %(OnProgramSearch)\e
+Reference1: 
+Reference2: 
+Reference3: 
+
+
+-----response--------------------
+***CallTime:153msec.
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: \e
+
+
+=========================================================
+2022/09/14 19:30:26.160
+
+-----send------------------------
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 103
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+-----response--------------------
+***CallTime:2msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=========================================================
+2022/09/14 19:30:27.151
+
+-----send------------------------
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 103
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+-----response--------------------
+***CallTime:2msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
