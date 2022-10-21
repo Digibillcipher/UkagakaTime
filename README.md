@@ -17,7 +17,7 @@ The Wretched Scientist v1.1.2 Update
 If you are updating from any previous version that still uses 2D art as his main shell he'll end up with many unused and outdated files, I suggest you uninstall and reinstall him (without restarting SSP), he should hopefully remember your settings and stats this way, and he won't hold it against you.
 I am also not sure if his old update link works anymore, if you want to try updating this, change the link under "On_homeurl" in his string.dic file to "https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wrwlison/"
 
-
+------------------------------------------------------------
 
 DG - Don't Starve Balloon Nar Update
 
