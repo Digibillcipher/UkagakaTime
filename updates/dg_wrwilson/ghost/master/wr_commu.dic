@@ -453,7 +453,7 @@ OnStartTalking
 	{
 		//"\0%(sidles)\w8"
 		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]WHERE!?\w8\w8\w8%(sidles)\w8\w8\w8\w8\w8\c"
-		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(bacdles)\w8\w8\w8\w8\w8\c"
+		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(sidles)\w8\w8\w8\w8\w8\c"
 		--
 		case CasperCatagory
 		{
@@ -487,7 +487,7 @@ OnStartTalking
 	{
 		//"\0%(upbacdles)\w8"
 		"\0\s[77]WHAT!? \s[78]\w8\s[79]\w8\s[77]WHERE!?\w8\w8\w8%(upbacdles)\w8\w8\w8\w8\w8\c"
-		"\0\s[77]WHAT!? \s[78]\w8\s[79]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(bacdles)\w8\w8\w8\w8\w8\c"
+		"\0\s[77]WHAT!? \s[78]\w8\s[79]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(upbacdles)\w8\w8\w8\w8\w8\c"
 		--
 		case CasperCatagory
 		{
@@ -521,7 +521,7 @@ OnStartTalking
 	{
 		//"\0%(upsidles)\w8"
 		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]WHERE!?\w8\w8\w8%(upsidles)\w8\w8\w8\w8\w8\c"
-		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(bacdles)\w8\w8\w8\w8\w8\c"
+		"\0\s[77]WHAT!? \s[79]\w8\s[78]\w8\s[77]HOW DID I MISS THAT!?\w8\w8\w8%(upsidles)\w8\w8\w8\w8\w8\c"
 		--
 		case CasperCatagory
 		{
