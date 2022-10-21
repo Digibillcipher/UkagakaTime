@@ -1,4 +1,4 @@
-The Wretched Scientist v1.1.2 Update
+**The Wretched Scientist v1.1.2 Update**
 
 ~ Totally reworked 3Dimensional shell!
 ~ Plenty of new functions!
@@ -8,7 +8,7 @@ The Wretched Scientist v1.1.2 Update
 ~ Punch sound effect and confirm with toggles!
 ~ Writing, sitting, and sleeping modes!
 ~ Bug Fixes for stuff I don't remember!
-~ Less template dialogue!
+~ Less template dialogue!\n
 ~ Slightly more aitalk!
 ~ Auto flipping sides!
 ~ Nerd Glasses dress-up!
@@ -19,7 +19,7 @@ I am also not sure if his old update link works anymore, if you want to try upda
 
 ------------------------------------------------------------
 
-DG - Don't Starve Balloon Nar Update
+**DG - Don't Starve Balloon Nar Update**
 
 Increased the text area by a small amount, updated readme, and included my WilsonPH font
 
