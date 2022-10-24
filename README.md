@@ -1,7 +1,5 @@
-**!!ATTENTION SURVIVORS!!**
-
+**!!ATTENTION SURVIVORS!!**\n
 Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates, this should be fixed in 1.1.3
-
 
 **The Wretched Scientist v1.1.2 Update**
 
