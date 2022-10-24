@@ -1,5 +1,6 @@
+charset,OSNative
 file,ghost/master/cheese.exe0342f824bf80e9c188ba60d6b291a2adsize=49152date=2022-09-11T21:12:28
-file,ghost/master/descript.txt2e59c9a6332cc78ef0dd401c161ddf61size=2633date=2021-10-24T15:15:57
+file,ghost/master/descript.txt839a10480f016ba0b4581b23e748aa5asize=2631date=2022-10-20T20:26:53
 file,ghost/master/findwin.dllcd84a5a29163ef88c93bf097ec54ab7fsize=73728date=2022-09-08T22:56:48
 file,ghost/master/fluffyoutline.icoc00089353e583a6d1ba0583aeb99af41size=2862date=2021-10-24T15:13:00
 file,ghost/master/gethwnd.dllb8cca98e0783ac2b8a8345e388c4ed73size=48128date=2022-09-09T16:20:46
@@ -20,13 +21,13 @@ file,ghost/master/wav/honk5.wav23e475ddd6ef6dec83b3985f6d769bdcsize=53246date
 file,ghost/master/wav/honk6.wav0d80cc90f84e8b2d7d4d6e6e0455a9c4size=52346date=2022-09-03T20:34:47
 file,ghost/master/window_info.dllf746413fcc0f999f61363b81a80d0bd5size=49152date=2022-09-08T23:08:00
 file,ghost/master/wr_Inventory.dic8c996ca162fe75e91e120efec5e7c847size=10924date=2022-10-01T12:47:34
-file,ghost/master/wr_aitalk.dic6b75dd6cf39c7ad609dadf6d80e85bcdsize=28432date=2022-10-14T10:45:06
-file,ghost/master/wr_anchor.dic0010c70b3d30088a8d85c9000372f12asize=9671date=2022-09-22T21:05:30
-file,ghost/master/wr_bootend.dicd3b9ac2191e33022123f1920c8cc121esize=40415date=2022-10-13T16:48:08
-file,ghost/master/wr_commu.dica910f99916f2c4dea19aa84f9a5aeebesize=14337date=2022-10-14T10:41:43
+file,ghost/master/wr_aitalk.dic11020ca47a609dc66d4ad075b6d06d8asize=31347date=2022-10-16T14:15:33
+file,ghost/master/wr_anchor.dicdffc3d614c0ce8f5416f2873fa28a92fsize=9674date=2022-10-14T20:22:28
+file,ghost/master/wr_bootend.dicaedd205ff4cc10bcec58a027f40800d6size=43319date=2022-10-14T20:13:28
+file,ghost/master/wr_commu.dic11b29efc98d6a293a6dcfc97a4ec7970size=17456date=2022-10-20T22:38:01
 file,ghost/master/wr_etc.dic6dca3bdd434bd0796b9579a7a38cd8d6size=55861date=2022-10-14T12:44:46
-file,ghost/master/wr_menu.dica63427d7563408fe394dfb90ab80233dsize=50498date=2022-10-14T10:45:00
-file,ghost/master/wr_mouse.dic4cf416c2dd26981a4f756c91dba14fd3size=15551date=2022-10-13T16:09:00
+file,ghost/master/wr_menu.dicd0a8153de9f0f766238ed3fbbbf73ac8size=50899date=2022-10-20T19:04:50
+file,ghost/master/wr_mouse.dicc044b32960fac1599f85ad2ff9957c87size=15513date=2022-10-14T13:37:44
 file,ghost/master/wr_nameteach.dicf683a78df1886a4a25b180594681b753size=10226date=2022-10-13T09:56:46
 file,ghost/master/wr_string.dic88fb9e45d1091cc941416a85a6899e0bsize=9727date=2022-10-13T08:59:22
 file,ghost/master/wr_stuff.dic870dca35594f7b84b79cb45b520f1374size=2681date=2022-09-06T15:31:38
@@ -35,7 +36,7 @@ file,ghost/master/yaya.dll574de3a1212adad81ddd883f883498dcsize=1241088date=20
 file,ghost/master/yaya.txt8a50d78d6577b3bb949c3406d74ac331size=1520date=2022-09-15T16:51:57
 file,ghost/master/yaya_config.txt134ca91eba1f7864526eaa3a2142dd20size=3920date=2017-03-18T00:07:24
 file,install.txtbce7ac3f4a4080a3378cde915231cc86size=935date=2022-09-13T12:03:01
-file,readme.txtbad933d434784f92c6e01180c3edaa42size=699date=2022-10-14T13:07:14
+file,readme.txtf980199bdf2c070c2ba81d19e82893ecsize=714date=2022-10-20T18:36:20
 file,shell/master/descript.txt79baa8e39760efd656396e3e793b1d1asize=5549date=2022-09-30T18:22:12
 file,shell/master/menu_background.png3ca97fc4d4e15404a4819b5b01f9bcfcsize=148206date=2021-10-15T09:44:20
 file,shell/master/menu_foreground.png15c69a26f4d5b6d46268df86576bfe20size=67288date=2021-10-15T09:49:21
@@ -222,7 +223,7 @@ file,shell/master/surface930.png5a38fa515d2ab4b9ea291a8bb2dc259csize=36237dat
 file,shell/master/surface931.png8f573b206509734217591e0a2523deaasize=37263date=2022-09-12T11:28:53
 file,shell/master/surface932.png07750c5606632979a5230650d804b88fsize=35264date=2022-09-12T11:29:34
 file,shell/master/surface933.png0a15856623296f5fb14dc73af1d80022size=76648date=2022-10-11T11:06:42
-file,shell/master/surfaces.txt49af768246a42e70194106343c6c3082size=53501date=2022-10-13T13:53:17
+file,shell/master/surfaces.txt47acf2a8f2a0f19f0a3238fbeee22754size=53572date=2022-10-20T12:25:18
 file,shell/master/surfacetable.txt406395c09a9189f2a20cd2769f8b725bsize=4684date=2022-10-13T13:30:39
 file,shell/master/thumbnail.png76262bc1eab7ef2daf88d3113c1365a2size=101531date=2022-10-13T12:55:56
 file,thumbnail.png6702a9acaff88eafeb7eb36ca8c6b13csize=101532date=2022-10-13T12:56:07
