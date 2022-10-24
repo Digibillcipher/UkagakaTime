@@ -5,7 +5,6 @@ file,ghost/master/findwin.dllcd84a5a29163ef88c93bf097ec54ab7fsize=73728date=2
 file,ghost/master/fluffyoutline.icoc00089353e583a6d1ba0583aeb99af41size=2862date=2021-10-24T15:13:00
 file,ghost/master/gethwnd.dllb8cca98e0783ac2b8a8345e388c4ed73size=48128date=2022-09-09T16:20:46
 file,ghost/master/gomi.dll51fe9597398db01e684a0f9d52c63242size=13312date=2004-06-01T18:00:04
-file,ghost/master/hwnd.logcde27b8931aefede0dac6692340bcb5fsize=57405date=2022-10-14T12:50:07
 file,ghost/master/mciaudior.dllb1082bccd2aac2017f7936baf2d967b3size=29696date=2003-03-13T14:23:26
 file,ghost/master/proxy_ex.dll8ff13a8c1b2b0261f61704c1f457cc8csize=48128date=2022-09-10T15:36:04
 file,ghost/master/saori_cpuid.dlld13370aee8e579fe2517d789dba7c45esize=225280date=2004-04-17T17:47:18
@@ -36,7 +35,7 @@ file,ghost/master/yaya.dll574de3a1212adad81ddd883f883498dcsize=1241088date=20
 file,ghost/master/yaya.txt8a50d78d6577b3bb949c3406d74ac331size=1520date=2022-09-15T16:51:57
 file,ghost/master/yaya_config.txt134ca91eba1f7864526eaa3a2142dd20size=3920date=2017-03-18T00:07:24
 file,install.txtbce7ac3f4a4080a3378cde915231cc86size=935date=2022-09-13T12:03:01
-file,readme.txtf980199bdf2c070c2ba81d19e82893ecsize=714date=2022-10-20T18:36:20
+file,readme.txtc0247a3c03352a056e7913ef8e0054bfsize=715date=2022-10-24T18:56:57
 file,shell/master/descript.txt79baa8e39760efd656396e3e793b1d1asize=5549date=2022-09-30T18:22:12
 file,shell/master/menu_background.png3ca97fc4d4e15404a4819b5b01f9bcfcsize=148206date=2021-10-15T09:44:20
 file,shell/master/menu_foreground.png15c69a26f4d5b6d46268df86576bfe20size=67288date=2021-10-15T09:49:21
