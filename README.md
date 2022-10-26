@@ -29,4 +29,4 @@ You might want to completely re-install it since it's folder name has changed fr
 http://ssp.shillest.net/
 <br/>
 **Ukagaka Dream Team Getting Started Page**
-https://ukagakadreamteam.com/wiki/guide/beginner_guide?s%5B%5D=install
+https://ukagakadreamteam.com/wiki/guide/beginner_guide
