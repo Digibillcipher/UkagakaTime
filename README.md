@@ -1,6 +1,7 @@
 **The Wretched Scientist v1.1.3 Update**
 
-* Old shell now included, although some things will be unavailable or strange looking while using (I recommend you flip him around in shell scaling while using it)
+* Old shell now included, although some things will be unavailable or strange looking while using
+(I recommend you flip him around in shell scaling while using it)
 * Most actions can be preformed without causing wilson to wake up or stop sleeping/writing
 * Added specific reactions to needle shells
 * More complicated relationship system
