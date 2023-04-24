@@ -1,3 +1,7 @@
+**!!ATTENTION SURVIVORS!!**<br/>
+If you are on an update before v1.1.3
+Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if you haven't already done so.
+
 **The Wretched Scientist v1.1.3 Update**
 
 * Old shell now included, although some things will be unavailable or strange looking while using
@@ -12,10 +16,6 @@
 * More swear words :)
 * Aitalk adjustments
 * Better grammar
-
-
-**!!ATTENTION SURVIVORS!!**<br/>
-If you are on an update before v1.1.3 please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates.
 
 **The Wretched Scientist v1.1.2 Update**
 
