@@ -6,7 +6,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 * Old shell now included, although some things will be unavailable or strange looking while using
 (I recommend you flip him around in shell scaling while using it)
-* Most actions can be preformed without causing wilson to wake up or stop sleeping/writing
+* Most actions can be preformed without causing wilson to wake up or stop sitting/writing
 * Added specific reactions to needle shells
 * More complicated relationship system
 * Updates should be fixed (finally)
