@@ -1,5 +1,20 @@
+**The Wretched Scientist v1.1.3 Update**
+
+* Old shell now included, although some things will be unavailable or strange looking while using (I recommend you flip him around in shell scaling while using it)
+* Most actions can be preformed without causing wilson to wake up or stop sleeping/writing
+* Added specific reactions to needle shells
+* More complicated relationship system
+* Updates should be fixed (finally)
+* Backend stuff for future updates
+* More links to right-click menu
+* Added multiple easter eggs
+* More swear words :)
+* Aitalk adjustments
+* Better grammar
+
+
 **!!ATTENTION SURVIVORS!!**<br/>
-Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates, this should be fixed in 1.1.3
+If you are on an update before v1.1.3 please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates.
 
 **The Wretched Scientist v1.1.2 Update**
 
