@@ -1,12 +1,14 @@
 --Wilson's Readme--
 
-Whao! It's The Wretched Scientist!! Aka: Wilson Higgsbury from Don't Starve with a touch more of bri-ish, science, and monstrosity... ouch
-His balloon comes included with two fonts I recommend you install, otherwise you can change his talk font under configuration in his menu.
+Whao! It's The Wretched Scientist! Aka: Wilson Higgsbury from Don't Starve with a touch more of bri-ish, science, and monstrosity... ouch
+His balloon comes included with two fonts I recommend you install, (the fonts are located in the SSP installation folder\balloon\dg_dontstarve) otherwise you can change his talk font under configuration in his menu.
 Try not to punch him in the face when you try to access it lol
-There is also swearing(¬‿¬)
+There is also swearing >:)
 Have fun! ~Digi_056
 
 https://digi-056.tumblr.com/
+
+https://digibillcipher.github.io/
 
 
 
@@ -23,4 +25,4 @@ https://zichqec.github.io/s-the-skeleton/
 
 
 
-Version 1.1.2
+Version 1.1.3

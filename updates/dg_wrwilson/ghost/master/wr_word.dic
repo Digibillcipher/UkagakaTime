@@ -157,7 +157,7 @@ embarrassed
 
 usersfolder
 {
-	"%(username)'s Recycle Bin"
+	"%(username)'s Recycling Bin"
 	"%(username)'s Documents folder"
 	"%(username)'s Music folder"
 }
@@ -165,13 +165,15 @@ usersfolder
 programdescriptor
 {
 	"thing"
-	"thing"
 	"process"
-	"program"
-	"program"
-	"service"
+	"programme"
+	"programme"
+	//"service"
 	"application"
 	"routine"
+	"display"
+	"box"
+	"tool"
 }
 
 scaredfidgetatyou
@@ -179,6 +181,37 @@ scaredfidgetatyou
 	"\s[68]"
 	"\s[60]"
 	"\s[61]"
+}
+
+insertswearhere //tfw you stub your toe
+{
+	"Bloody hell"
+	"Fuck"
+	"Heck"
+	"Darn it"
+	"God damn it"
+	"Shit"
+}
+
+insertswearheretwo //what the (blank)
+{
+	"bloody hell"
+	"fuck"
+	"heck"
+	"shit"
+	"crap"
+}
+
+insertswearherethree //was that a (blank)ing
+{
+	"fucking"
+	"fricking"
+	"hecking"
+	"flipping"
+	"freaking"
+	"blasted"
+	"bloody"
+	"frigging"
 }
 
 //Now, this next envelope is unique. I've called it a double envelope at times, but this is actually technically an array. Note that it has a word, a comma, then another word. This is essentially a list being stored in this envelope. You can call one of the values by using brackets around the number of the list entry. So, the first value (the Korean word) would be %(lessonkor[0]) since all arrays start at 0. The second value (the definition) would be %(lessonkor[1]). If you have a longer array, like "word,word,word,word,word", you can keep calling values by changing the numbers, like %(lessonkor[5]) or %(lessonkor[10]). Arrays can be very powerful and useful for storing a lot of information in a condensed space, but I must level with you, I'm not very good at arrays or figuring out how to use them. :B They can be VERY useful though, if you can wrap your head around how they work. An example of pulling information from this array can be seen in aitalk.dic.

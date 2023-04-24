@@ -19,23 +19,24 @@ file,ghost/master/wav/honk4.wav90ae24af5d3869661e8f92da1b4758a8size=49262date
 file,ghost/master/wav/honk5.wav23e475ddd6ef6dec83b3985f6d769bdcsize=53246date=2022-09-03T20:34:38
 file,ghost/master/wav/honk6.wav0d80cc90f84e8b2d7d4d6e6e0455a9c4size=52346date=2022-09-03T20:34:47
 file,ghost/master/window_info.dllf746413fcc0f999f61363b81a80d0bd5size=49152date=2022-09-08T23:08:00
-file,ghost/master/wr_Inventory.dic8c996ca162fe75e91e120efec5e7c847size=10924date=2022-10-01T12:47:34
-file,ghost/master/wr_aitalk.dic11020ca47a609dc66d4ad075b6d06d8asize=31347date=2022-10-16T14:15:33
-file,ghost/master/wr_anchor.dicdffc3d614c0ce8f5416f2873fa28a92fsize=9674date=2022-10-14T20:22:28
-file,ghost/master/wr_bootend.dicaedd205ff4cc10bcec58a027f40800d6size=43319date=2022-10-14T20:13:28
-file,ghost/master/wr_commu.dic11b29efc98d6a293a6dcfc97a4ec7970size=17456date=2022-10-20T22:38:01
-file,ghost/master/wr_etc.dic6dca3bdd434bd0796b9579a7a38cd8d6size=55861date=2022-10-14T12:44:46
-file,ghost/master/wr_menu.dicd0a8153de9f0f766238ed3fbbbf73ac8size=50899date=2022-10-20T19:04:50
-file,ghost/master/wr_mouse.dicc044b32960fac1599f85ad2ff9957c87size=15513date=2022-10-14T13:37:44
-file,ghost/master/wr_nameteach.dicf683a78df1886a4a25b180594681b753size=10226date=2022-10-13T09:56:46
-file,ghost/master/wr_string.dicc416239d54ac1c4421b142efbca7d249size=9727date=2022-10-24T13:35:52
-file,ghost/master/wr_stuff.dic870dca35594f7b84b79cb45b520f1374size=2681date=2022-09-06T15:31:38
-file,ghost/master/wr_word.dic8754a5128d3f7baf7adfa1e1ec5ad6c2size=9604date=2022-10-13T16:47:38
+file,ghost/master/wr_Inventory.dic0bed2be1bb756beacf8341b252c568e9size=24329date=2022-11-14T11:17:18
+file,ghost/master/wr_aitalk.dic8a31498aa585042a8660acba0465b164size=32664date=2023-04-12T11:27:52
+file,ghost/master/wr_anchor.dic7775e988ebaac794077f314c71da6922size=10671date=2023-04-23T13:41:15
+file,ghost/master/wr_bootend.diccc62837417b918a48830149ddff566ebsize=48165date=2023-04-23T13:56:53
+file,ghost/master/wr_commu.dic0aeeaef547715aad2fe84fa4e74080b6size=18425date=2023-04-10T00:52:39
+file,ghost/master/wr_etc.dice908eeb11c9c27b72580bc6bcf53ec0csize=74395date=2023-04-15T21:56:18
+file,ghost/master/wr_menu.dic5cd88a1206e562029868ff147fda742bsize=55263date=2023-04-15T21:57:07
+file,ghost/master/wr_mouse.dic23b4a5f6267cf7e892b16924f7a62519size=16659date=2023-04-14T17:45:59
+file,ghost/master/wr_nameteach.dic3e25ae1de301f72d256fc1c7a9c05ca3size=10229date=2022-10-24T10:17:01
+file,ghost/master/wr_string.dice2b167a2c57344eb3d2b28812e095fdfsize=10658date=2023-04-23T14:59:53
+file,ghost/master/wr_stuff.dic59f03ac92549b2aab32d37a1c1f6034dsize=2922date=2023-04-11T11:49:14
+file,ghost/master/wr_word.dic3488e456868b0b0e7f52149e242922b2size=10003date=2023-04-14T15:19:59
 file,ghost/master/yaya.dll574de3a1212adad81ddd883f883498dcsize=1241088date=2018-12-02T22:14:50
 file,ghost/master/yaya.txt8a50d78d6577b3bb949c3406d74ac331size=1520date=2022-09-15T16:51:57
 file,ghost/master/yaya_config.txt134ca91eba1f7864526eaa3a2142dd20size=3920date=2017-03-18T00:07:24
 file,install.txtbce7ac3f4a4080a3378cde915231cc86size=935date=2022-09-13T12:03:01
-file,readme.txtc0247a3c03352a056e7913ef8e0054bfsize=715date=2022-10-24T19:02:20
+file,readme.txt1981b7be439fef2db88e1a5c7bdcfc79size=823date=2023-04-23T20:01:22
+file,shell/master/Coordin.exe4290e2404ce4331d926dc043c27a472csize=184320date=2021-10-14T23:23:15
 file,shell/master/descript.txt79baa8e39760efd656396e3e793b1d1asize=5549date=2022-09-30T18:22:12
 file,shell/master/menu_background.png3ca97fc4d4e15404a4819b5b01f9bcfcsize=148206date=2021-10-15T09:44:20
 file,shell/master/menu_foreground.png15c69a26f4d5b6d46268df86576bfe20size=67288date=2021-10-15T09:49:21
@@ -96,6 +97,8 @@ file,shell/master/surface1051.pngdfdd05761b4a27dee376b70738f95b57size=5166dat
 file,shell/master/surface1052.pngb5cad4169353fa56a0a0316e9c55906dsize=4480date=2022-09-22T15:03:04
 file,shell/master/surface1053.pnge4c5f8978321ed09066373652cc84dc7size=4756date=2022-10-11T11:11:54
 file,shell/master/surface1054.png6da11c542102189ec061589fe0b471adsize=2856date=2022-08-30T17:27:20
+file,shell/master/surface1055.png66fc714e58811a3f595e0539a987f648size=3464date=2022-10-27T14:11:33
+file,shell/master/surface1056.pngd326df1e7fa12078a6a1d525245842ebsize=3460date=2022-10-27T14:12:22
 file,shell/master/surface1101.png84241584c4de000fd5dd68952398a8dfsize=2508date=2022-08-30T13:14:23
 file,shell/master/surface1102.png4be31256e5a2022b13766f458662a2f3size=2596date=2022-08-30T13:14:40
 file,shell/master/surface1103.pngc6c6d5334c9e2ad092eeaf0f556c7438size=2524date=2022-08-30T16:51:05
@@ -180,6 +183,12 @@ file,shell/master/surface1828.pngf12c6cb8dc31392407424270704f1d7bsize=9437dat
 file,shell/master/surface1829.png639c99de9d26e7b0676fa91c63bbcea2size=7761date=2022-09-30T23:36:33
 file,shell/master/surface1830.png95853f82f3f9b593586d7d38e16483b8size=10399date=2022-09-30T23:51:14
 file,shell/master/surface1831.pngae18d6bb10ce6f6bb3674183fb3ccec4size=3593date=2022-09-30T23:51:50
+file,shell/master/surface1832.png6a5a898b356952c00e0a0011751e36a4size=3961date=2022-10-27T17:53:07
+file,shell/master/surface1833.png6122f553ddce01138203965463c6435esize=9151date=2022-10-27T17:51:24
+file,shell/master/surface1834.png5d03b4b387b9c5b54119fb852951b80esize=8561date=2022-10-27T17:57:39
+file,shell/master/surface1835.pnga88065d2dad825c78fdebbd51dc7373csize=9298date=2022-10-27T17:58:46
+file,shell/master/surface1836.png80b7acfbb6526a6477910552b2faedbasize=12758date=2022-11-05T12:17:46
+file,shell/master/surface1837.pngf7fc4f6f1221493347f5553d5b211f40size=7405date=2022-11-05T12:18:05
 file,shell/master/surface2501.png285a66163af198c4dad5eb76ea4bea57size=5224date=2021-10-14T22:53:51
 file,shell/master/surface2502.pngd93888bd68b977940960984b33ec0b90size=5224date=2021-10-14T22:53:59
 file,shell/master/surface2503.png112d0b56e098c70c738619e312716cf1size=5225date=2021-10-14T22:54:12
@@ -222,7 +231,83 @@ file,shell/master/surface930.png5a38fa515d2ab4b9ea291a8bb2dc259csize=36237dat
 file,shell/master/surface931.png8f573b206509734217591e0a2523deaasize=37263date=2022-09-12T11:28:53
 file,shell/master/surface932.png07750c5606632979a5230650d804b88fsize=35264date=2022-09-12T11:29:34
 file,shell/master/surface933.png0a15856623296f5fb14dc73af1d80022size=76648date=2022-10-11T11:06:42
-file,shell/master/surfaces.txt47acf2a8f2a0f19f0a3238fbeee22754size=53572date=2022-10-20T12:25:18
-file,shell/master/surfacetable.txt406395c09a9189f2a20cd2769f8b725bsize=4684date=2022-10-13T13:30:39
+file,shell/master/surface934.png9c4cd9aee33b56912243f1a1f24dba17size=62240date=2022-10-27T13:25:45
+file,shell/master/surface935.pngf1524ae4e63c930dc84253c63617ca60size=62593date=2022-10-27T15:37:35
+file,shell/master/surface936.png55b2ae67309d5858f19c7a170b75cd98size=67677date=2022-10-27T15:15:41
+file,shell/master/surface937.png959cdfd0cd7465df17b8785b1275474dsize=32606date=2022-11-05T13:37:39
+file,shell/master/surfaces.txta2273d4679a047d8cac3743b64e601f9size=55626date=2023-04-23T13:37:34
+file,shell/master/surfacetable.txt5d055f4535316cd722ecf242cabb7b4esize=4769date=2023-04-23T13:34:13
 file,shell/master/thumbnail.png76262bc1eab7ef2daf88d3113c1365a2size=101531date=2022-10-13T12:55:56
-file,thumbnail.png6702a9acaff88eafeb7eb36ca8c6b13csize=101532date=2022-10-13T12:56:07
+file,shell/wretched shell 2021/descript.txt1a9f4cfdd5b182e758b09a5777bd4f98size=5497date=2022-11-13T13:11:19
+file,shell/wretched shell 2021/install.txt230172df67982007b7334d353694fa83size=105date=2022-11-13T13:05:28
+file,shell/wretched shell 2021/menu_background.png3ca97fc4d4e15404a4819b5b01f9bcfcsize=148206date=2021-10-15T10:44:22
+file,shell/wretched shell 2021/menu_foreground.png15c69a26f4d5b6d46268df86576bfe20size=67288date=2021-10-15T10:49:22
+file,shell/wretched shell 2021/menu_sidebar.pngf5137bee004f563007845e9552e329b1size=11081date=2021-10-15T10:59:48
+file,shell/wretched shell 2021/readme.txtaee7bd0a1215ea01d840340c4dd3dd14size=42date=2022-11-13T12:41:40
+file,shell/wretched shell 2021/surface0.pngefaaf7a0e0a4e531c04fc54e7249a3cdsize=25177date=2021-10-20T11:02:56
+file,shell/wretched shell 2021/surface10.png3ca47dd399fb71f0e2391b3dc8a42614size=5225date=2021-10-14T23:53:24
+file,shell/wretched shell 2021/surface1001.pnge8f1fc0eb9b82d506730ca19023efe6csize=4046date=2021-10-20T10:56:54
+file,shell/wretched shell 2021/surface1002.pngfe48039b95820604ac3b5b3c81cc2790size=2767date=2021-10-20T10:57:54
+file,shell/wretched shell 2021/surface1003.pngfe264e60ac8d8ce4eac902261608e709size=2511date=2021-10-20T12:07:40
+file,shell/wretched shell 2021/surface1004.png6e427cc7c32a3178677d59e6beb7c78dsize=2250date=2021-10-24T21:46:04
+file,shell/wretched shell 2021/surface1005.png7eb4c3fca6953c87bdc0380927e8ff4asize=2152date=2021-10-24T21:46:26
+file,shell/wretched shell 2021/surface1006.png289d9645b1060528a8bea250c2e3d2d0size=3104date=2021-10-29T16:00:18
+file,shell/wretched shell 2021/surface1101.png0bb43b243eeaeaac523fdee44294983bsize=2186date=2021-10-20T11:18:10
+file,shell/wretched shell 2021/surface1102.png77bc0d3b68cec0762a7ba58a1266c829size=2314date=2021-10-20T11:19:08
+file,shell/wretched shell 2021/surface1103.png7bdaa681ad7e67b16083e56348f718dasize=2225date=2021-10-20T11:20:36
+file,shell/wretched shell 2021/surface1104.png25f1da53910f67d50b42d73cdf687446size=2266date=2021-10-20T11:21:22
+file,shell/wretched shell 2021/surface1105.png7a8a8b1593e8ccfb4607c3ccf71113e6size=2267date=2021-10-20T11:22:38
+file,shell/wretched shell 2021/surface1106.png7411c7bf137c9590b4c09cf0e9d2bf4esize=2324date=2021-10-20T11:22:28
+file,shell/wretched shell 2021/surface1107.png62ba3fcd1dadb2c9259a3e7f98ac49dcsize=2721date=2021-10-20T11:23:42
+file,shell/wretched shell 2021/surface1108.png912d0983dae6df2b4763373c7a71b880size=2791date=2021-10-20T11:24:26
+file,shell/wretched shell 2021/surface1109.pnga33b931e46887f767ac786708dde51bfsize=2669date=2021-10-20T11:26:48
+file,shell/wretched shell 2021/surface1110.png13249b6fdd5be47640703eb478446b7esize=2751date=2021-10-20T11:27:24
+file,shell/wretched shell 2021/surface1111.png6d86886c3f31ca5888f3705e62b32171size=2154date=2021-10-20T11:28:08
+file,shell/wretched shell 2021/surface1112.pngfb841ac7a9fcf9c52765736ddba0a60bsize=2284date=2021-10-20T11:28:34
+file,shell/wretched shell 2021/surface1200.png12cef37e0b660759bd708e6bab7b4fa1size=17700date=2021-10-24T18:08:44
+file,shell/wretched shell 2021/surface1201.pngca51ff13ab2e78e7ee88df92fc6885dasize=17686date=2021-10-24T18:09:54
+file,shell/wretched shell 2021/surface1202.png9f7f02197e6338ba175b25c066e6fdebsize=15146date=2021-10-24T23:08:30
+file,shell/wretched shell 2021/surface1300.png8a8743db0e393359913733b914f93231size=4605date=2021-10-20T11:00:10
+file,shell/wretched shell 2021/surface1301.png34a08c485e38a605ff1251ed5935da3asize=5319date=2021-10-20T11:14:00
+file,shell/wretched shell 2021/surface1302.pngd47aec0699f42b66d9fe87115ee44141size=4327date=2021-10-20T11:15:42
+file,shell/wretched shell 2021/surface1303.pngd3fe261ff64471e50b453c6a29fbdf4bsize=4563date=2021-10-20T11:16:30
+file,shell/wretched shell 2021/surface1304.png005a2c97cb1f724ffddd6ec093dde912size=4715date=2021-10-20T11:39:00
+file,shell/wretched shell 2021/surface1305.pngf1b22ed1199b743ae4fc2ee81c1983b3size=5025date=2021-10-20T11:43:14
+file,shell/wretched shell 2021/surface1306.pnga9cdae9b501a6728f8d0bb280d4d8169size=4975date=2021-10-22T22:57:14
+file,shell/wretched shell 2021/surface1307.png3aa2861cee90160bc5002f1aa07952fbsize=4758date=2021-10-20T12:47:56
+file,shell/wretched shell 2021/surface1308.png259502aa2238f2579501e505049db1e2size=4717date=2021-10-20T13:29:38
+file,shell/wretched shell 2021/surface1309.png6a2f8e1d8b07ffd1fdc5b0e9c0fdee15size=3467date=2021-10-24T22:09:56
+file,shell/wretched shell 2021/surface1400.png69b6fb8124f83b04026b5240c0c5f4cesize=7845date=2021-10-20T10:18:10
+file,shell/wretched shell 2021/surface1401.png2ff2bbed7528cc9e478b8e60b196598fsize=12333date=2021-10-20T10:18:22
+file,shell/wretched shell 2021/surface1402.pnga23ac24778c2bcd79c6dea6513eb543fsize=8394date=2021-10-20T10:20:38
+file,shell/wretched shell 2021/surface1403.pngb3a1e46ef0542d65d7203b70cd442872size=12253date=2021-10-20T10:20:58
+file,shell/wretched shell 2021/surface1404.pngf9c7dc483104473fe2d5f01ddd752261size=6461date=2021-10-20T10:43:34
+file,shell/wretched shell 2021/surface1405.pngd2982f426a2452b4914833c6e12e0b66size=9182date=2021-10-20T11:46:04
+file,shell/wretched shell 2021/surface1406.png8c28627a2ad7a5fa49ce4a848079bcc2size=14640date=2021-10-20T11:46:28
+file,shell/wretched shell 2021/surface1407.pnge3d185e58e946f16e8ac667d7bbafbadsize=11966date=2021-10-20T11:55:52
+file,shell/wretched shell 2021/surface1408.pngc1708300629dd11f0f1ed357486cc4basize=11834date=2021-10-20T12:30:02
+file,shell/wretched shell 2021/surface1409.png0ea384b5918e2a73bc29982f0475a2f6size=13394date=2021-10-20T12:40:54
+file,shell/wretched shell 2021/surface1410.png61e01b4a29eb06b7ca8d1270edc0584fsize=6358date=2021-10-20T13:13:56
+file,shell/wretched shell 2021/surface1411.png893bfa5dbb4a461302f912bd9b432203size=10002date=2021-10-20T13:14:18
+file,shell/wretched shell 2021/surface1600.png9a618a8d5d30862e39f5912a9c5d910esize=5574date=2021-10-20T10:42:42
+file,shell/wretched shell 2021/surface1601.pngc83af1e7f0ba27b24fb48ce2f8ddc731size=5201date=2021-10-20T13:12:02
+file,shell/wretched shell 2021/surface1602.png2698c3595cfe3aa12640480a3b7759e7size=7348date=2021-10-20T13:12:26
+file,shell/wretched shell 2021/surface1603.pngb417b6989a30962b8d038b5b540744casize=3358date=2021-10-24T19:52:52
+file,shell/wretched shell 2021/surface1700.pngbab28bb8c728861aed5abd2ef8b25a67size=22374date=2021-10-20T11:32:52
+file,shell/wretched shell 2021/surface2001.png851db55011517b0ad67b54d66e97e3ccsize=5225date=2021-10-14T23:53:34
+file,shell/wretched shell 2021/surface2002.png62deeea29bef771f51f98afdede6a9a1size=5225date=2021-10-14T23:53:44
+file,shell/wretched shell 2021/surface2501.png285a66163af198c4dad5eb76ea4bea57size=5224date=2021-10-14T23:53:52
+file,shell/wretched shell 2021/surface2502.pngd93888bd68b977940960984b33ec0b90size=5224date=2021-10-14T23:54:00
+file,shell/wretched shell 2021/surface2503.png112d0b56e098c70c738619e312716cf1size=5225date=2021-10-14T23:54:14
+file,shell/wretched shell 2021/surface2504.pngc00d3097a7bd8a2f754dd100d8a02a75size=5224date=2021-10-14T23:54:22
+file,shell/wretched shell 2021/surface2505.png4b987c586f3c53921670268fb8664123size=5226date=2021-10-14T23:54:30
+file,shell/wretched shell 2021/surface2506.png94af1ca3249dfaa6e84d216f4f1742bcsize=5225date=2021-10-14T23:54:38
+file,shell/wretched shell 2021/surface2507.png027481c508daed8a48d65aa463339937size=5224date=2021-10-14T23:54:46
+file,shell/wretched shell 2021/surface2508.pngcb290b968d112b26fbeae4e9007fdc13size=5224date=2021-10-14T23:54:54
+file,shell/wretched shell 2021/surface2509.png468ddafcdadd4de616a1331c95242d6bsize=5224date=2021-10-14T23:55:02
+file,shell/wretched shell 2021/surface901.png413329930f871cbedb38c1d435b1b1a8size=25706date=2021-10-20T11:54:24
+file,shell/wretched shell 2021/surface902.pngb4e7c07b78fb09629c1baf0d7132cd2dsize=25427date=2021-10-20T13:16:16
+file,shell/wretched shell 2021/surfaces.txt3f9238344718d3084dbc92ae8d8e59f4size=64526date=2021-12-07T16:03:06
+file,shell/wretched shell 2021/surfacetable.txt3442d5501ceb633b3b14324ba5292218size=3445date=2021-10-29T21:46:54
+file,shell/wretched shell 2021/thumbnail.png142391157adf179e30c5603989c9761csize=99130date=2022-11-13T12:38:46
+file,thumbnail.png18c6af5bccd3632cbb53aadf9c94675csize=162799date=2022-11-03T18:26:37

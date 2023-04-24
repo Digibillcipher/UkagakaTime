@@ -555,6 +555,9 @@ OnStartTalking
 
 OnNeedlePoke //heheeheheheehehe
 {
+	_shell = reference1
+	justpunched = 0
+	floored = 0
 	if reference0 == 0 //in case you hover over the invisible kero
 	{
 		if sleeping == 1
@@ -572,12 +575,14 @@ OnNeedlePoke //heheeheheheehehe
 			"\0\s[80]Ouch?"
 			"\0\s[80]Ouch!"
 			--
-			" "
+			" \w8\w8"
 			--
 			"What was that for?"
 			"Don't poke me."
 			"Don't do that!"
-			"Was that a needle?"
+			//"Was that a needle?"
+			--
+			PokedWith(_shell)
 			--
 			"\e"
 		}
@@ -592,14 +597,16 @@ OnNeedlePoke //heheeheheheehehe
 			"\0\s[50]Ouch?"
 			"\0\s[50]Ouch!"
 			--
-			" "
+			" \w8\w8"
 			--
 			"What was that for?"
 			"Don't poke me."
 			"Don't do that!"
-			"Was that a needle?"
+			//"Was that a needle?"
 			--
-			"\e"
+			PokedWith(_shell)
+			--
+			"\e\w8"
 		}
 		else
 		{
@@ -612,14 +619,44 @@ OnNeedlePoke //heheeheheheehehe
 			"\0\s[89]Ouch?"
 			"\0\s[7]Ouch!"
 			--
-			" "
+			" \w8\w8"
 			--
-			"What was that for?"
-			"Don't poke me."
-			"Don't do that!"
-			"Was that a needle?"
+			"\s[29]What was that for?"
+			"\s[29]Don't poke me."
+			"\s[7]Don't do that!"
+			//"Was that a needle?"
+			--
+			PokedWith(_shell)
 			--
 			"\e"
 		}
 	}
+}
+
+PokedWith
+{
+	_text = ""
+	_shell = _argv[0]
+	if _shell == "The True Needle"
+	{
+		_text = "\w8\w8\w8 And why was that needle so, \f[italic,true]scribbly?\f[italic,false]"
+	}
+	elseif _shell == "Close-Up View"
+	{
+		_text = "\w8\w8\w8 And why was that needle so \f[italic,true]HUGE?\f[italic,false]"
+	}
+	elseif _shell == "Tiny Pokey Pixels"
+	{
+		_text = "\w8\w8\w8 And why was that needle so, \f[italic,true]blocky?\f[italic,false]"
+	}
+	elseif _shell == "Syringe"
+	{
+		_text = "\w8\w8\w8 \f[italic,true]And what the %(insertswearheretwo) was in that syringe?\f[italic,false]"
+	}
+	elseif _shell == "Eggdle"
+	{
+		_text = "\w8\w8\w8 Wait, \w8\w8\s[77]was that a %(insertswearherethree) \f[italic,true]egg???\f[italic,false]"
+	}
+	lastneedleshell = _shell
+	_text
 }

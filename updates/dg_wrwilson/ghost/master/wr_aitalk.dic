@@ -88,7 +88,7 @@ RandomTalk : nonoverlap
 	}
 	elseif sleeping == 1
 	{
-		if RAND(10) < 2
+		if RAND(10) < 2 && bequiet == 0
 		{
 			"\![raise,OnGenerateSleepNoise]\w8\0%(sleepnoise)\e"
 		}
@@ -108,259 +108,292 @@ RandomTalk : nonoverlap
 			}
 		}
 	}
-	else
+	elseif bequiet == 0
 	{
-	//Okay, where the fuck am I?
-	
-	"\0\s[24]\f[sup,true]This seems to be some sort of computing device...\f[sup,false]\e"
-	
-	"\0\s[90]\f[sup,true]This device states the year is %(year), is that right?...\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]I'd heard of Atanasoff's computing ideas...\w8 is this what became of them?\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]This machine lacks belts and seems to be electrically powered, it's fascinating.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]The displaying capabilities of this machine are incredible.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]I thought this device would've had vacuum tubes...\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]It's oddly warm here.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]I wonder, does this machine utilize shadow magic to function?\f[sup,false]\e"
-	
-	"\0\s[90]\f[sup,true]What manner of science, or magic, allows me to be here anyway?\f[sup,false]\e"
-	
-	"\0\s[90]\f[sup,true]Wait, how is it that I'm able to breathe in here?\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]The schematics for this machine must be enormous...\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]Can a device this complex be even crafted by human hands?\f[sup,false]\e"
-	
-	"\0%(eyedles)Do you happen to have the schematic diagrams for this device? Or are they so large that they have to be bought separately?\e"
-	
-	if programtalk == "ON"
-	{
-		if "Windows" _in_ os_name
+		//Okay, where the fuck am I?
+		
+		"\0\s[24]\f[sup,true]This seems to be some sort of computing device...\f[sup,false]\e"
+		
+		"\0\s[90]\f[sup,true]This device states the year is %(year), is that right?...\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I'd heard of Atanasoff's computing ideas...\w8 is this what became of them?\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]This machine lacks belts and seems to be electrically powered, it's fascinating.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]The displaying capabilities of this machine are incredible.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I thought this device would've had vacuum tubes...\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]It's oddly warm here.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I wonder, does this machine utilize shadow magic to function?\f[sup,false]\e"
+		
+		"\0\s[90]\f[sup,true]What manner of science, or magic, allows me to be here anyway?\f[sup,false]\e"
+		
+		"\0\s[90]\f[sup,true]Wait, how is it that I'm able to breathe in here?\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]The schematics for this machine must be enormous...\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]Can a device this complex be even crafted by human hands?\f[sup,false]\e"
+		
+		"\0%(eyedles)Do you happen to have the schematic diagrams for this device? Or are they so large that they have to be bought separately?\e"
+		
+		if programtalk == "ON"
 		{
-			"%(OnProgramSearch)"
+			if "Windows" _in_ os_name
+			{
+				"%(OnProgramSearch)"
+			}
+			else
+			{
+				programtalk = "DISABLED"
+			}
+		}
+		
+		if seemouse == "ON"
+		{
+			"%(OnLookMouse)\e"
+		}
+		
+		//Constant mumbling
+		
+		"\0\s[24]\f[sup,true]Maybe I should go mining in the caves. \s[25]I'd have to refuel my lantern though.\f[sup,false]\e"
+		
+		"\0\s[25]I need to go to the ruins for gears, what a pain that'll be.\e"
+		
+		"\0\s[25]\f[sup,true]I should take some of my extra jerky to the Pig King.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I should collect some nightmare fuel when I get back.\f[sup,false]\e"
+		
+		"\0\s[51]This place is, \s[29]slightly better than the Constant.\e"
+		
+		"\0\s[29]At least I'm not going to be eaten alive here.\e"
+		
+		"\0\s[31]I suppose this is a, \s[29]relatively safe place.\e"
+		
+		"\0\s[24]\f[sup,true]I wonder why the spiders in the Constant only have six legs.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]I need to make a trip to the Dragonfly's desert to search the tumbleweed.\f[sup,false]\e"
+		
+		"\0\s[24]\f[sup,true]There has to be an easier way to deal with those %(annoyingmobs)s.\f[sup,false]\e"
+		
+		"\0%(eyedles)Sometimes I think the world got a lot wetter after I got back from being out at sea.\e"
+		
+		"\0\s[38]\w6\s[39]\w7\s[40]\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\s[39]\w7\s[38]\w6%(idles)"
+		
+		//Other survivors
+		
+		"\0\s[52]Sometimes I find whole forests burned to a crisp. \s[61]I'm not sure they're natural either...\e" //Willow
+		
+		"\0\s[24]I wonder who, or what, keeps putting flowers on the headstones.\e" //Wendy
+		
+		"\0\s[24]Who's publishing books out here?\e" //Wickerbottom
+		
+		"\0\s[31]I've seen patches of tree stumps that look like they've been chewed instead of chopped, \s[52]but I've never seen a beaver in the Constant.\e" //Woodie
+		
+		"\0\s[61]Once in a great while, I'll find a balloon. Just floating there, \f[italic,1]really\f[italic,0] creeps me out.\8\w8\w8\w8\w8\c\0\s[24]Maybe it has something to do with that mime.\e" //Wes
+		
+		"\0\s[31]I found a spear made with gold once, \w8\s[51]it was stuck in the side of a Koalefant. \s[24]I wonder who made it?\e" //Wigfrid
+		
+		//Reactions
+		
+		if anchormax > 0
+		{
+			"\0\s[25]Butter\w3-flies, \w8dammit that's a good one, \s[51]didn't know Maxwell liked puns.\e"
+			"\0\s[24]Next time I contact Maxwell, I should tell him about this place.\e" //Maxwell
+			"\0\s[51]I think one of Maxwell's clockworks went rogue. \s[30]Sometimes I come back to camp to find all my gears stolen.\e" //WX-78
+			
+			if anchorthr > 0
+			{
+				"\0%(eyedles)I didn't know Maxwell had a sense of humour until I heard him describe a Froggle Bunwich, \s[37]I think he could've heard me laugh all the way from the Nightmare Throne!\s[84]\e"
+			}
+			
 		}
 		else
 		{
-			programtalk = "DISABLED"
+			"\0\s[24]Next time I contact anMaxwell, I should tell him about this place.\e" //Maxwell
+			"\0\s[51]I think one of anMaxwell's clockworks went rogue. \s[30]Sometimes I come back to camp to find all my gears stolen.\e" //WX-78
 		}
-	}
-	
-	if seemouse == "ON"
-	{
-		"%(OnLookMouse)\e"
-	}
-	
-	//Constant mumbling
-	
-	"\0\s[24]\f[sup,true]Maybe I should go mining in the caves. \s[25]I'd have to refuel my lantern though.\f[sup,false]\e"
-	
-	"\0\s[25]I need to go to the ruins for gears, what a pain that'll be.\e"
-	
-	"\0\s[25]\f[sup,true]I should take some of my extra jerky to the Pig King.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]I should collect some nightmare fuel when I get back.\f[sup,false]\e"
-	
-	"\0\s[51]This place is, \s[29]slightly better than the Constant.\e"
-	
-	"\0\s[29]At least I'm not going to be eaten alive here.\e"
-	
-	"\0\s[31]I suppose this is a, \s[29]relatively safe place.\e"
-	
-	"\0\s[24]\f[sup,true]I wonder why the spiders in the Constant only have six legs.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]I need to make a trip to the Dragonfly's desert to search the tumbleweed.\f[sup,false]\e"
-	
-	"\0\s[24]\f[sup,true]There has to be an easier way to deal with those %(annoyingmobs)s.\f[sup,false]\e"
-	
-	"\0%(eyedles)Sometimes I think the world got a lot wetter after I got back from being out at sea.\e"
-	
-	"\0\s[38]\w6\s[39]\w7\s[40]\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\s[39]\w7\s[38]\w6%(idles)"
-	
-	//Other survivors
-	
-	"\0\s[52]Sometimes I find whole forests burned to a crisp. \s[61]I'm not sure they're natural either...\e" //Willow
-	
-	"\0\s[24]I wonder who, or what, keeps putting flowers on the headstones.\e" //Wendy
-	
-	"\0\s[24]Who's publishing books out here?\e" //Wickerbottom
-	
-	"\0\s[31]I've seen patches of tree stumps that look like they've been chewed instead of chopped, \s[52]but I've never seen a beaver in the Constant.\e" //Woodie
-	
-	"\0\s[61]Once in a great while, I'll find a balloon. Just floating there, \f[italic,1]really\f[italic,0] creeps me out.\8\w8\w8\w8\w8\c\0\s[24]Maybe it has something to do with that mime.\e" //Wes
-	
-	"\0\s[31]I found a spear made with gold once, \w8\s[51]it was stuck in the side of a Koalefant. \s[24]I wonder who made it?\e" //Wigfrid
-	
-	//Reactions
-	
-	if anchormax > 0
-	{
-		"\0\s[25]Butter\w3-flies, \w8dammit that's a good one, \s[51]didn't know Maxwell liked puns.\e"
-		"\0\s[24]Next time I contact Maxwell, I should tell him about this place.\e" //Maxwell
-		"\0\s[51]I think one of Maxwell's clockworks went rouge. \s[30]Sometimes I come back to camp to find all my gears stolen.\e" //WX-78
+		
+		if anchorweb > 0
+		{
+			"\0\s[25]I know Webber will be fine while I'm here,\s[53] that kid's very hardy.\e" //Webber
+		}
+		else
+		{
+			"\0\s[25]I know anWebber will be fine while I'm here,\s[53] that kid's very hardy.\e" //Webber
+		}
 		
 		if anchorthr > 0
 		{
-			"\0%(eyedles)I didn't know Maxwell had a sense of humour until I heard him describe a Froggle Bunwich, \s[37]I think he could've heard me laugh all the way from the Nightmare Throne!\s[84]\e"
+			"\0\s[30]The Nightmare Throne's cushion was rock hard, \s[25]nothing can top my pity.\e"
+		}
+		else
+		{
+			"\0\s[30]The anNightmare Throne's cushion was rock hard, \s[25]nothing can top my pity.\e"
 		}
 		
+		if petpet >= 50
+		{
+			"\0\s[29]You must really like my hair.\e"
+			"\0\s[29]Is my hair really that nice? I find leaves in it all the time...\e"
+		}
+		
+		if glasses == 1
+		{
+			"\0\s[24]\f[sup,true]The lenses of my glasses are gone, \w8\w8\w8\s[25]I guess they'd only make my vision blurry anyway.\f[sup,false]\e"
+			"\0\s[90]\f[sup,true]Where did %(heshe) find my lost glasses anyway...?\f[sup,false]\e"
+		}
+		
+		//Hewwo
+		
+		"\0\s[29]What are you looking at?\e"
+		
+		"\0%(eyedles)So what are you doing?\e"
+		
+		"\0\s[30]I'm sure this is very entertaining for you.\e"
+		
+		"\0\s[9]Not much I can do here, is there?\e"
+		
+		"\0%(eyedles)Are you doing anything interesting?\e"
+		
+		"\0%(eyedles)I'm not used to standing around all day, \s[29]it feels weird.\e"
+		
+		//Time keeps on ticking ticking ticking...
+		
+		if timeslot == "latenight" || timeslot == "midnight" || timeslot == "earlymorning"
+		{
+			"\0\s[33]\w8\w8\w8\e"
+			
+			"\0\s[25]\w8\w8\w8\e"
+			
+			"\0\s[9]\w8\w8\w8\e"
+		}
+		
+		if passhour > 4
+		{
+			"\![raise,OnStartNotes]\0\s[24]\e:chain=startakingnotes"
+		}
+		
+		//Seasonal grumbling
+			
+			//Winter
+		
+			if month >= 12 || month == 1 || month == 2
+		{
+			"\0\s[24]\f[sup,true]I should attempt to gather some more Beefalo wool.\f[sup,false]\e"
+			
+			"\0\s[24]\f[sup,true]Do I have enough fuel for the rest of winter?\f[sup,false]\e"
+			
+			"\0\s[25]\f[sup,true]At least my thermal stone is toasty.\f[sup,false]\e"
+			
+			"\0\s[24]\f[sup,true]Some of the vegetables in my refrigerator are going bad.\f[sup,false]\e"
+			
+			"\0\s[31]It's hard to appreciate the beauty of winter when you're trying to survive through it.\e"
+			
+			"\0%(eyedles)So what are your snowy months like?\e"
+			
+			"\0\s[25]\f[sup,true]Deerclops better not destroy my camp while I'm here.\f[sup,false]\e"
+			
+			"\0\s[25]\f[sup,true]I hope Pengulls don't nest in my camp again.\f[sup,false]\e"
+		}
+		
+			//Spring
+		
+			if month == 3 || month == 4 || month == 5
+		{
+			"\0\s[31]They say %(CHR(34))April showers bring May flowers,%(CHR(34)) \w8\s[29]but why does the Constant have to have showers of frogs?\e"
+			
+			"\0\s[24]\f[sup,true]I should collect some ice before it melts.\f[sup,false]\e"
+			
+			"\0\s[90]\f[sup,true]Perhaps I could get the frogs and the moose, geese, into a battle, imagine the frog legs...\f[sup,false]\e"
+			
+			"\0\s[31]It's hard to dry meats when it's raining all the time.\e"
+			
+			"\0\s[31]I've tried digging out the wet rabbit dens but they just collapse even further.\e"
+			
+			"\0\s[51]Why do the bees have to become so aggressive in the spring?\e"
+			
+			"\0\s[51]I really don't care for being wet and cold all the time, \s[8]so this place is much nicer in comparison.\e"
+			
+			"\0\s[51]I think those lure plants deliberately grow right where I don't want them.\e"
+		}
+		
+			//Summer
+			
+			if month == 6 || month == 7 || month == 8
+		{
+			"\0\s[52]It's super hot in the Constant right now, \s[8]so this place is much nicer in comparison.\e"
+			
+			"\0\s[9]I complained about the rain and now it's all gone.\e"
+			
+			"\0\s[52]The plants in the Constant are withering from the weather.\e"
+			
+			"\0\s[90]\f[sup,true]I hope a wildfire doesn't start while I'm gone.\f[sup,false]\e"
+			
+			"\0\s[24]\f[sup,true]I should check on the Antlion when I get back.\f[sup,false]\e"
+			
+			"\0\s[25]\f[sup,true]The heat is reducing the efficiency of my refrigerator.\f[sup,false]\e"
+			
+			"\0\s[31]I'm glad the hounds ignore my camp while I'm here, \s[9]It'd be up in flames otherwise.\e"
+			
+			"\0\s[52]\f[sup,true]At least my thermal stone is cool.\f[sup,false]\e"
+		}
+		
+			//Autumn
+		
+			if month == 9 || month == 10 || month == 11
+		{
+			"\0\s[51]I'm glad the hounds ignore my camp while I'm here, \s[25]It'd be up in flames otherwise.\e"
+			
+			"\0\s[53]The autumn is the best time to collect wood from the birch forests, because of the increase in nuts.\w8\w8\w8\w8\w8\s[60] Well except for when the trees get angry with me.\e"
+			
+			"\0\s[90]\f[sup,true]Did I Bearger-proof my supplies?\f[sup,false]\e"
+			
+			"\0\s[27]My crops are growing well this autumn!\s[83]\e"
+			
+			"\0\s[6]It's a great time to gather supplies because of the weather this season.\e"
+			
+			"\0\s[24]\f[sup,true]I should tend to my crops when I get back.\f[sup,false]\e"
+			
+			"\0\s[24]\f[sup,true]I should make sure the spiders don't take over the pine forest. \s[25]I always need %(spiderguts) anyway.\f[sup,false]\e"
+			
+			"\0\s[24]\w8\w8\w8\s[25]\w4I could be doing so much more productive things right now...\e"
+		}
+	
 	}
 	else
 	{
-		"\0\s[24]Next time I contact anMaxwell, I should tell him about this place.\e" //Maxwell
-		"\0\s[51]I think one of anMaxwell's clockworks went rouge. \s[30]Sometimes I come back to camp to find all my gears stolen.\e" //WX-78
-	}
-	
-	if anchorweb > 0
-	{
-		"\0\s[25]I know Webber will be fine while I'm here,\s[53] that kid's very hardy.\e" //Webber
-	}
-	else
-	{
-		"\0\s[25]I know anWebber will be fine while I'm here,\s[53] that kid's very hardy.\e" //Webber
-	}
-	
-	if anchorthr > 0
-	{
-		"\0\s[30]The Nightmare Throne's cushion was rock hard, \s[25]nothing can top my pity.\e"
-	}
-	else
-	{
-		"\0\s[30]The anNightmare Throne's cushion was rock hard, \s[25]nothing can top my pity.\e"
-	}
-	
-	if petpet >= 50
-	{
-		"\0\s[29]You must really like my hair.\e"
-		"\0\s[29]Is my hair really that nice? I find leaves in it all the time...\e"
-	}
-	
-	if glasses == 1
-	{
-		"\0\s[24]\f[sup,true]The lenses of my glasses are gone, \w8\w8\w8\s[25]I guess they'd only make my vision blurry anyway.\f[sup,false]\e"
-		"\0\s[90]\f[sup,true]Where did %(heshe) find my lost glasses anyway...?\f[sup,false]\e"
-	}
-	
-	//Hewwo
-	
-	"\0\s[29]What are you looking at?\e"
-	
-	"\0%(eyedles)So what are you doing?\e"
-	
-	"\0\s[30]I'm sure this is very entertaining for you.\e"
-	
-	"\0\s[9]Not much I can do here, is there?\e"
-	
-	"\0%(eyedles)Are you doing anything interesting?\e"
-	
-	"\0%(eyedles)I'm not used to standing around all day, \s[29]it feels weird.\e"
-	
-	//Time keeps on ticking ticking ticking...
-	
-	if timeslot == "latenight" || timeslot == "midnight" || timeslot == "earlymorning"
-	{
-		"\0\s[33]\w8\w8\w8\e"
+		if seemouse == "ON"
+		{
+			"%(OnLookMouse)\e"
+		}
 		
-		"\0\s[25]\w8\w8\w8\e"
+		if timeslot == "latenight" || timeslot == "midnight" || timeslot == "earlymorning"
+		{
+			"\0\s[33]\w8\w8\w8\e"
+			
+			"\0\s[25]\w8\w8\w8\e"
+			
+			"\0\s[9]\w8\w8\w8\e"
+		}
 		
-		"\0\s[9]\w8\w8\w8\e"
-	}
-	
-	if passhour > 4
-	{
-		"\![raise,OnStartNotes]\0\s[24]\e:chain=startakingnotes"
-	}
-	
-	//Seasonal grumbling
+		if passhour > 4
+		{
+			"\![raise,OnStartNotes]\0\s[24]\e:chain=startakingnotes"
+		}
 		
-		//Winter
-	
-		if month >= 12 || month == 1 || month == 2
-	{
-		"\0\s[24]\f[sup,true]I should attempt to gather some more Beefalo wool.\f[sup,false]\e"
+		"\0\s[38]\w6\s[39]\w7\s[40]\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\s[39]\w7\s[38]\w6%(idles)"
 		
-		"\0\s[24]\f[sup,true]Do I have enough fuel for the rest of winter?\f[sup,false]\e"
+		"\0\s[24]\w8\w8\w8\w8\s[90]\w8\s[25]\w8\w8%(sidles)"
 		
-		"\0\s[25]\f[sup,true]At least my thermal stone is toasty.\f[sup,false]\e"
+		"\0%(sidles)\w8\w8\w8\w8\w8%(upsidles)\w8\w8\w8\w8\w8\w8%(idles)"
 		
-		"\0\s[24]\f[sup,true]Some of the vegetables in my refrigerator are going bad.\f[sup,false]\e"
+		"\0%(bacdles)\w8\w8\w8\w8\w8%(upbacdles)\w8\w8\w8\w8\w8\w8%(idles)"
 		
-		"\0\s[31]It's hard to appreciate the beauty of winter when you're trying to survive through it.\e"
+		"\0%(sidles)\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8%(idles)"
 		
-		"\0%(eyedles)So what are your snowy months like?\e"
-		
-		"\0\s[25]\f[sup,true]Deerclops better not destroy my camp while I'm here.\f[sup,false]\e"
-		
-		"\0\s[25]\f[sup,true]I hope Pengulls don't nest in my camp again.\f[sup,false]\e"
-	}
-	
-		//Spring
-	
-		if month == 3 || month == 4 || month == 5
-	{
-		"\0\s[31]They say %(CHR(34))April showers bring May flowers,%(CHR(34)) \w8\s[29]but why does the Constant have to have showers of frogs?\e"
-		
-		"\0\s[24]\f[sup,true]I should collect some ice before it melts.\f[sup,false]\e"
-		
-		"\0\s[90]\f[sup,true]Perhaps I could get the frogs and the moose, geese, into a battle, imagine the frog legs...\f[sup,false]\e"
-		
-		"\0\s[31]It's hard to dry meats when it's raining all the time.\e"
-		
-		"\0\s[31]I've tried digging out the wet rabbit dens but they just collapse even further.\e"
-		
-		"\0\s[51]Why do the bees have to become so aggressive in the spring?\e"
-		
-		"\0\s[51]I really don't care for being wet and cold all the time, \s[8]so this place is much nicer in comparison.\e"
-		
-		"\0\s[51]I think those lure plants deliberately grow right where I don't want them.\e"
-	}
-	
-		//Summer
-		
-		if month == 6 || month == 7 || month == 8
-	{
-		"\0\s[52]It's super hot in the Constant right now, \s[8]so this place is much nicer in comparison.\e"
-		
-		"\0\s[9]I complained about the rain and now it's all gone.\e"
-		
-		"\0\s[52]The plants in the Constant are withering from the weather.\e"
-		
-		"\0\s[90]\f[sup,true]I hope a wildfire doesn't start while I'm gone.\f[sup,false]\e"
-		
-		"\0\s[24]\f[sup,true]I should check on the Antlion when I get back.\f[sup,false]\e"
-		
-		"\0\s[25]\f[sup,true]The heat is reducing the efficiency of my refrigerator.\f[sup,false]\e"
-		
-		"\0\s[31]I'm glad the hounds ignore my camp while I'm here, \s[9]It'd be up in flames otherwise.\e"
-		
-		"\0\s[52]\f[sup,true]At least my thermal stone is cool.\f[sup,false]\e"
-	}
-	
-		//Autumn
-	
-		if month == 9 || month == 10 || month == 11
-	{
-		"\0\s[51]I'm glad the hounds ignore my camp while I'm here, \s[25]It'd be up in flames otherwise.\e"
-		
-		"\0\s[53]The autumn is the best time to collect wood from the birch forests, because of the increase in nuts.\w8\w8\w8\w8\w8\s[60] Well except for when the trees get angry with me.\e"
-		
-		"\0\s[90]\f[sup,true]Did I Bearger-proof my supplies?\f[sup,false]\e"
-		
-		"\0\s[27]My crops are growing well this autumn!\s[83]\e"
-		
-		"\0\s[6]It's a great time to gather supplies because of the weather this season.\e"
-		
-		"\0\s[24]\f[sup,true]I should tend to my crops when I get back.\f[sup,false]\e"
-		
-		"\0\s[24]\f[sup,true]I should make sure the spiders don't take over the pine forest. \s[25]I always need %(spiderguts) anyway.\f[sup,false]\e"
-		
-		"\0\s[24]\w8\w8\w8\s[25]\w4I could be doing so much more productive things right now...\e"
-	}
-	
+		"\0\s[29]\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8%(idles)"
 	}
 	
 	//And so we reach the end of randomtalk! I again reiterate, YOU CAN AND SHOULD WRITE YOUR OWN NEW LINES OF DIALOGUE FOR THIS! I included some random example phrases here for you just to replace the text, but there really aren't that many. You'll want to add more, and doing so is easy! Just copy and paste a line and redo the text. Repeat as many times as you want with as many conversations as you want. You can always expand this section!
@@ -425,7 +458,15 @@ OnSitDown
 fallasleep
 {{CHAIN
 	sleeping = 1
-	"\0\s[48]\e:chain=end"
+	
+	if bequiet == 0
+	{
+		"\0\s[48]\![raise,OnGenerateSleepNoise]\w8\0%(sleepnoise)\e:chain=end"
+	}
+	else
+	{
+		"\0\s[48]\e:chain=end"
+	}
 }}CHAIN
 
 OnFallAsleep
@@ -804,8 +845,14 @@ OnSurfaceRestore
 	{
 		"\0\s[48]\e"
 	}
+	elseif justpunched == 1
+	{
+		justpunched = 0
+		"\0\s[44]\w8\w8\s[29]\w8\w8\e"
+	}
 	else
 	{
+		floored = 0
 		"\0%(idles)\1\s[10]\e"
 		"\0%(sidles)\1\s[10]\e"
 	}

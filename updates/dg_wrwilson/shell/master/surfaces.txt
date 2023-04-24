@@ -2472,17 +2472,92 @@ collision3,73,122,121,161,RightHan
 4pattern1,-1,10,overlay,0,0
 }
 
+//GetRekt
+surface92
+{
+element0,overlay,surface934.png,0,0
 
+//FellEyes
+6interval, runonce
+6pattern0,1056,0,overlay,0,0
+6pattern1,1055,5,overlay,0,0
 
+//FellMain
+8interval, runonce
+8pattern0,934,10,replace,0,0
+}
 
+//GetRektPost
+surface93
+{
+element0,overlay,surface934.png,0,0
 
+//Collisions
+collision0,64,152,191,236,FellHead
 
+//Blinking
+0interval,random,4
+0pattern0,-1,10,overlay,0,0
+0pattern1,1056,5,overlayfast,0,0
+0pattern2,1055,10,overlayfast,0,0
+0pattern3,-1,3,overlay,0,0
+}
 
+//GetPet
+surface94
+{
+element0,overlay,surface935.png,0,0
+}
 
+//GetPetAgain
+surface95
+{
+element0,overlay,surface936.png,0,0
 
+//Collisions
+collision0,51,139,188,270,FellHead2
+}
 
+//KaraokeSurface
+surface96
+{
+element0,overlay,surface937.png,0,0
+}
 
+//SadTwo
+surface97
+{
+element0,overlay,surface932.png,0,0
+element1,overlay,surface1204.png,0,0
 
+//Collision
+collision0,127,8,248,85,Head
+collision1,163,87,236,150,Face
+
+//Blinking
+0interval,random,4
+0pattern0,-1,10,overlay,0,0
+0pattern1,1010,5,overlayfast,0,0
+0pattern2,1009,10,overlayfast,0,0
+0pattern3,-1,3,overlay,0,0
+
+//Talking
+1interval,talk,4
+1pattern0,0,0,alternativestart,[2.3.4]
+
+2interval,never
+2pattern0,1106,10,overlay,0,0
+2pattern1,1105,13,overlay,0,0
+2pattern2,-1,10,overlay,0,0
+
+3interval,never
+3pattern0,1105,14,overlay,0,0
+3pattern1,-1,10,overlay,0,0
+
+4interval,never
+4pattern0,1106,14,overlay,0,0
+4pattern1,-1,10,overlay,0,0
+}
 
 
 
@@ -2563,7 +2638,7 @@ surface.append1,24,26,90
 }
 
 //Sad
-surface.append4
+surface.append4,97
 {
 //Glasses
 52interval,bind
@@ -2688,6 +2763,40 @@ surface.append62-64
 52pattern1,1831,0,interpolate,0,0
 }
 
+//GetRekt
+surface.append92,93
+{
+//Glasses
+52interval,bind
+52pattern0,1832,0,add,0,0
+52pattern1,1833,0,interpolate,0,0
+}
+
+//GetPet
+surface.append94
+{
+//Glasses
+52interval,bind
+52pattern0,1834,0,add,0,0
+}
+
+//GetPetAgain
+surface.append95
+{
+//Glasses
+52interval,bind
+52pattern0,1835,0,interpolate,0,0
+}
+
+//KaraokeSurface
+surface.append96
+{
+//Glasses
+52interval,bind
+52pattern0,1836,0,add,0,0
+52pattern1,1837,0,interpolate,0,0
+}
+
 //--Unique Collision cursors------------------
 sakura.cursor 
 { 
@@ -2707,6 +2816,10 @@ mouseup6,LeftHan,system:hand
 mousedown6,LeftHan,system:hand
 mouseup7,RightHan,system:hand 
 mousedown7,RightHan,system:hand
+mouseup8,FellHead,system:hand 
+mousedown8,FellHead,system:grip
+mouseup9,FellHead2,system:hand 
+mousedown9,FellHead2,system:grip
 } 
 
 //--Tooltips------------------
@@ -2714,5 +2827,7 @@ sakura.tooltips
 { 
 Head,dirt
 SitHead,dirt
-SleepHead,dirt 
+SleepHead,dirt
+FellHead,dirt
+FellHead2,fluffy
 }

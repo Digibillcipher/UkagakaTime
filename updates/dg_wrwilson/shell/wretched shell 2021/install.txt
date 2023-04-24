@@ -1,0 +1,5 @@
+Charset,UTF-8
+type,shell
+name,The Wretched Scientist 2021
+directory,wretched shell 2021
+accept,Wilson

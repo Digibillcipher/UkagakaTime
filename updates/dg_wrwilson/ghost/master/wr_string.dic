@@ -45,14 +45,33 @@ On_recommendrootbutton.caption
 
 On_sakura.recommendsites
  {
-	 
-	 "Zarla's Ashido.com"
-	 --
-	 "%ASC(1)https://www.ashido.com/%ASC(2)"
-	 --
-	 "Digi_056's Tumblr"
-	 --
-	 "%ASC(1)https://digi-056.tumblr.com/%ASC(2)"
+	"Digi_056's Tumblr"
+	--
+	"%ASC(1)https://digi-056.tumblr.com/%ASC(2)"
+	--
+	"Digi_056's Pastel Hell"
+	--
+	"%ASC(1)https://digibillcipher.github.io/%ASC(2)"
+	--
+	"Zarla's Ashido.com"
+	--
+	"%ASC(1)https://www.ashido.com/%ASC(2)"
+	--
+	"Zarla's DrDowasure.com"
+	--
+	"%ASC(1)http://www.drdowasure.com/%ASC(2)"
+	--
+	"Zichqec's Ukagaka Hub"
+	--
+	"%ASC(1)https://zichqec.github.io/s-the-skeleton/%ASC(2)"
+	--
+	"Ukagaka Dream Team Wiki"
+	--
+	"%ASC(1)https://ukagakadreamteam.com/wiki/home%ASC(2)"
+	--
+	"Galla's Ghosts"
+	--
+	"%ASC(1)https://gallathegalla.github.io/gtg-ghosts/%ASC(2)"
 	 /*
 	"Ghost Template Walkthrough"
 	--
@@ -106,7 +125,7 @@ On_sakura.recommendsites
 
 On_portalrootbutton.caption
  {
-	"More Websites?"
+	"Wilson Resources"
 	//"Yet More Websites?"
  }
 
@@ -115,6 +134,21 @@ On_portalrootbutton.caption
  
 On_sakura.portalsites
  {
+	"Wretched Wilson DST Mod"
+	--
+	"%ASC(1)https://steamcommunity.com/sharedfiles/filedetails/?id=1562957526%ASC(2)"
+	--
+	"Ukagaka Dream Team Contact Page"
+	--
+	"%ASC(1)https://ukagakadreamteam.com/wiki/info/ukagaka_dream_team#where_to_find_us%ASC(2)"
+	--
+	"Github Repository (Downloads/Changelogs)"
+	--
+	"%ASC(1)https://github.com/Digibillcipher/UkagakaTime%ASC(2)"
+	--
+	"Digi's Ukagaka Webpage"
+	--
+	"%ASC(1)https://digibillcipher.github.io/index_files/ukagaka.htm%ASC(2)"
  	/*"Site Name 1"
 	"Site Name 1 Alternate"
 	--

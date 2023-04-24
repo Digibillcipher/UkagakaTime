@@ -75,7 +75,7 @@ OnNameTeach
 	{
 		username = "Survivor" //this sets the user's name to Survivor.
 		
-		"\0\s[9]I guess I'll pick.\n\w8Your called Survivor now.\e"
+		"\0\s[29]I guess I'll pick.\n\w8You're called Survivor now.\e"
 		//You can change this snip to whatever.
 	}
 	else //if the user put in something not specified above, ie a proper name the ghost can use. 

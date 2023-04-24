@@ -9,6 +9,70 @@
 
 //This file is very short, so don't worry! And if you aren't planning on using anchor words, you just have to delete a few things and you'll be done!
 
+OldDefSurface : array
+{
+	35 //37
+	24
+	24
+	24
+	24
+	2
+	2
+	34
+	24
+	24
+	24
+	25
+	0
+	24
+	23
+	22
+	31
+	31
+	20
+	26
+	32
+	32
+	24
+	2
+	34
+	25
+	25
+	25
+	24
+	24
+	24
+	20
+	3
+	32
+	32
+	32
+	24
+	24
+	24
+	2
+	2
+	2
+	2
+	24
+	5
+	6
+	27
+	35
+	6
+	6
+	26
+	6
+	24
+	24
+	24
+	2
+	2
+	20
+	32
+	25
+	4
+}
 
 //--OnTranslate
 
@@ -26,6 +90,34 @@ OnTranslate
 	_talk = REPLACE(_talk, "anCodex Umbra", "\_a[CodexUmbra]Codex Umbra\_a")
 	_talk = REPLACE(_talk, "\0", "\0\f[name,%(currentfont)]\f[height,%(currentfontsize)]")
 	_talk = REPLACE(_talk, "\1", "\1\f[name,%(kerocurrentfont)]\f[height,%(kerocurrentfontsize)]")
+	
+	if nowshell == "shell 2021" || nowshell == "Old Definition"
+	{
+		LOGGING("Old Def Shell")
+		_surfaceregex = RE_GREP(_talk, '(?<=\\s\[).+?(?=\])')
+		//_surfacepos = RE_GETPOS() not sure if needed
+		_surfacenum = RE_GETSTR()
+		foreach _surfacenum; _surface
+		{
+			LOGGING("ForEachLoop" + _surface)
+			_oldsurface = 0
+			case _surface
+			{
+				when 0-36
+				{
+					_oldsurface = _surface
+				}
+				others
+				{
+					_surfaceindex = _surface - 37
+					_oldsurface = OldDefSurface[_surfaceindex]
+					LOGGING(_oldsurface + ":check1")
+				}
+			}
+			_talk = REPLACE(_talk, "\s[%(_surface)]", "\s[%(_oldsurface)]")
+			LOGGING(_talk + ":check2")
+		}
+	}
 	
 	if reference1 == "" && reference2 == "" { //send input box : no event (ref2) , no special flag (ref1)
 		EVAL('"' + REPLACE(_talk,'"','" + CHR(0x22) + "') + '"')

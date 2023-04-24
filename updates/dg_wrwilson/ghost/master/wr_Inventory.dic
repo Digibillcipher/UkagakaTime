@@ -44,6 +44,165 @@ MaxStacks : array
 	1 //32 - Log Suit
 }
 
+ItemIndexer : array
+{
+	"log"
+	"gold"
+	"silk"
+	"rock"
+	"morsel" //Will have to check for other types first
+	"meat" //Will have to check for other types first
+	"monstermeat"
+	"fish"
+	"ice"
+	"gear"
+	"egg"
+	"darkpetal"
+	"nitre"
+	
+	"cookedmorsel"
+	"cookedmeat"
+	"cookedmonstermeat"
+	"charcoal"
+	"jerky" //Will have to check for other types first
+	"smalljerky"
+	"monsterjerky"
+	"nightmarefuel"
+	"board"
+	"cutstone"
+	"rope"
+	
+	"meatball"
+	"baconandegg"
+	"berr" //y or ies
+	"buttermuffin"
+	"frogglebunwich"
+	"honeynugget"
+	"pierogi"
+	"monsterlasagna"
+	"logsuit"
+}
+
+ItemSingular : array
+{
+	"Log"
+	"Gold"
+	"Silk"
+	"Rock"
+	"Morsel"
+	"Meat"
+	"Monster Meat"
+	"Fish"
+	"Ice"
+	"Gear"
+	"Egg"
+	"Dark Petal"
+	"Nitre"
+	
+	"Cooked Morsel"
+	"Cooked Meat"
+	"Cooked Monster Meat"
+	"Charcoal"
+	"Jerky"
+	"Small Jerky"
+	"Monster Jerky"
+	"Nightmare Fuel"
+	"Board"
+	"Cut Stone"
+	"Rope"
+	
+	"Meatball"
+	"Bacon and Egg"
+	"Berry"
+	"Butter Muffin"
+	"Froggle Bunwich"
+	"Honey Nugget"
+	"Pierogi"
+	"Monster Lasagna"
+	"Log Suit"
+}
+
+ItemPlural : array
+{
+	"Logs"
+	"Gold"
+	"Silk"
+	"Rocks"
+	"Morsels"
+	"Meat"
+	"Monster Meat"
+	"Fish"
+	"Ice"
+	"Gears"
+	"Eggs"
+	"Dark Petals"
+	"Nitre"
+	
+	"Cooked Morsels"
+	"Cooked Meat"
+	"Cooked Monster Meat"
+	"Charcoal"
+	"Jerky"
+	"Small Jerky"
+	"Monster Jerky"
+	"Nightmare Fuel"
+	"Boards"
+	"Cut Stones"
+	"Rope"
+	
+	"Meatballs"
+	"Bacon and Eggs"
+	"Berries"
+	"Butter Muffins"
+	"Froggle Bunwichs"
+	"Honey Nuggets"
+	"Pierogi"
+	"Monster Lasagna"
+	"Log Suits"
+}
+
+ItemWorth : array
+{
+	//Tradeable items
+	3 //0 - Logs
+	3 //1 - Gold
+	2 //2 - Silk
+	2 //3 - Rocks
+	2 //4 - Morsel
+	3 //5 - Meat
+	3 //6 - Monster Meat
+	3 //7 - Fish
+	2 //8 - Ice
+	3 //9 - Gears
+	3 //10 - Egg
+	1 //11 - Dark Petals
+	2 //12 - Nitre
+	
+	//Craftable items
+	4 //13 - Cooked Morsel
+	4 //14 - Cooked Meat
+	4 //15 - Cooked Monster Meat
+	4 //16 - Charcoal
+	5 //17 - Jerky
+	4 //18 - Small Jerky
+	5 //19 - Monster Jerky
+	3 //20 - Nightmare Fuel
+	4 //21 - Boards
+	3 //22 - Cut Stone
+	3 //23 - Rope
+	
+	//Shouldn't be needed
+	999 //24 - Meatballs
+	999 //25 - Bacon and Eggs
+	999 //26 - Berries
+	999 //27 - Butter Muffin
+	999 //28 - Froggle Bunwich
+	999 //29 - Honey Nuggets
+	999 //30 - Pierogi
+	999 //31 - Monster Lasagna
+	999 //32 - Log Suit
+}
+
 GenerateWilsonInventory
 {
 	_output = (0,0,0,0,0,0,0,0,0,0,0,0,0)
@@ -129,8 +288,8 @@ UserOpenSlots
 
 DisplayInventory
 {
-	_inventory = GenerateWilsonInventory //Generate an inventory. You'd want to put this in your OnBoot or whatever, and save it to a global variable so it stays as it is until he closes and you generate a new one
-	_userinventory = GenerateUserInventory
+	//wilsoninventory = GenerateWilsonInventory //Generate an inventory. You'd want to put this in your OnBoot or whatever, and save it to a global variable so it stays as it is until he closes and you generate a new one
+	//survivorinventory = GenerateUserInventory
 	
 	"\0%(whwr)%(eyedles)\b2\_q\![no-autopause]\![set,autoscroll,disable]\![close,inputbox,__SYSTEM_ALL_INPUT__]\*"
 	--
@@ -143,9 +302,6 @@ DisplayInventory
 	"and Flint, "
 	--
 	"the Wretched Notebook, "
-	//"the \q[Wretched Notebook,wrnotebook], \n"
-	//"the \__q[wrnotebook]Wretched Notebook\__q, \n"
-	//"the \f[anchorcolor,default]\_a[wrnotebook]Wretched Notebook\_a, \n"
 	--
 	"a Wretched Spear, "
 	--
@@ -153,87 +309,27 @@ DisplayInventory
 	--
 	"As well as "
 	--
-	if _inventory[0] == 1; "1 Log, "; elseif _inventory[0] > 0; "%(_inventory[0]) Logs, "
-	--
-	if _inventory[1] > 0; "%(_inventory[1]) Gold, "
-	--
-	if _inventory[2] > 0; "%(_inventory[2]) Silk, "
-	--
-	if _inventory[3] == 1; "1 Rock, "; elseif _inventory[3] > 0; "%(_inventory[3]) Rocks, "
-	--
-	if _inventory[4] == 1; "1 Morsel, "; elseif _inventory[4] > 0; "%(_inventory[4]) Morsels, "
-	--
-	if _inventory[5] > 0; "%(_inventory[5]) Meat, "
-	--
-	if _inventory[6] > 0; "%(_inventory[6]) Monster Meat, "
-	--
-	if _inventory[7] > 0; "%(_inventory[7]) Fish, "
-	--
-	if _inventory[8] > 0; "%(_inventory[8]) Ice, "
-	--
-	if _inventory[9] == 1; "1 Gear, "; elseif _inventory[9] > 0; "%(_inventory[9]) Gears, "
-	--
-	if _inventory[10] == 1; "1 Egg, "; elseif _inventory[10] > 0; "%(_inventory[10]) Eggs, "
-	--
-	if _inventory[11] == 1; "1 Dark Petal, "; elseif _inventory[11] > 0; "%(_inventory[11]) Dark Petals, "
-	--
-	if _inventory[12] > 0; "%(_inventory[12]) Nitre, "
-	--
-	"and "
-	--
-	if _inventory[24] == 1; "1 Meatball."; elseif _inventory[24] > 0; "%(_inventory[24]) Meatballs."
-	--
-	if _inventory[25] > 0; "%(_inventory[25]) Bacon and Eggs."
-	--
-	if _inventory[26] == 1; "1 Berry."; elseif _inventory[26] > 0; "%(_inventory[26]) Berries."
-	--
-	if _inventory[27] == 1; "1 Butter Muffin."; elseif _inventory[27] > 0; "%(_inventory[27]) Butter Muffins."
-	--
-	if _inventory[28] == 1; "1 Froggle Bunwich."; elseif _inventory[28] > 0; "%(_inventory[28]) Froggle Bunwiches."
-	--
-	if _inventory[29] == 1; "1 Honey Nugget."; elseif _inventory[29] > 0; "%(_inventory[29]) Honey Nuggets."
-	--
-	if _inventory[30] > 0; "%(_inventory[30]) Pierogi."
-	--
-	if _inventory[31] == 1; "1 Monster Lasagna."; elseif _inventory[31] > 0; "%(_inventory[31]) Monster Lasagnas."
-	--
-	if _inventory[32] > 0; "1 Log Suit."
+	ListWilsonInventory
 	--
 	"\n\n[half]\f[bold,true]Your Inventory:\f[bold,false]\n\n[half]"
 	--
-	if _userinventory[0] == 1; "1 Log, "; elseif _userinventory[0] > 0; "%(_userinventory[0]) Logs, "
+	ListUserInventory
 	--
-	if _userinventory[1] > 0; "%(_userinventory[1]) Gold, "
-	--
-	if _userinventory[2] > 0; "%(_userinventory[2]) Silk, "
-	--
-	if _userinventory[3] == 1; "1 Rock, "; elseif _userinventory[3] > 0; "%(_userinventory[3]) Rocks, "
-	--
-	if _userinventory[4] == 1; "1 Morsel, "; elseif _userinventory[4] > 0; "%(_userinventory[4]) Morsels, "
-	--
-	if _userinventory[5] > 0; "%(_userinventory[5]) Meat, "
-	--
-	if _userinventory[6] > 0; "%(_userinventory[6]) Monster Meat, "
-	--
-	if _userinventory[7] > 0; "%(_userinventory[7]) Fish, "
-	--
-	if _userinventory[8] > 0; "%(_userinventory[8]) Ice, "
-	--
-	if _userinventory[9] == 1; "1 Gear, "; elseif _userinventory[9] > 0; "%(_userinventory[9]) Gears, "
-	--
-	if _userinventory[10] == 1; "1 Egg, "; elseif _userinventory[10] > 0; "%(_userinventory[10]) Eggs, "
-	--
-	if _userinventory[11] == 1; "1 Dark Petal, "; elseif _userinventory[11] > 0; "%(_userinventory[11]) Dark Petals, "
-	--
-	if _userinventory[12] > 0; "%(_userinventory[12]) Nitre, "
-	--
-	if garland == 0; "some Grass, and a Garland. "; else; "and some Grass. "
+	if garland == 0; "some Grass, and a Garland."; else; "and some Grass."
 	--
 	"\n\n[half]\![*]\q[Trade,wantrade]"
+	--
+	if username == "Digi" || username == "Dev"; "\n\![*]\q[Refresh Items,refreshtrades]"
 	--
 	"\n\![*]\q[Go back,BACKTOMENU]"
 	--
 	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.refreshtrades
+{
+	OnFreshTrades
+	DisplayInventory
 }
 
 OnWrnotebook
@@ -247,7 +343,7 @@ OnWrnotebook
 
 Select.wantrade
 {
-	"\0%(eyedles)You want to trade with me? \w8\*"
+	"\0\s[89]You want to trade with me? \w8\w8\*"
 	--
 	//"Please tell me what items and amounts, for example:\n"
 	//--
@@ -256,60 +352,652 @@ Select.wantrade
 	//"\![open,inputbox,OnWantrade,-1,%(RAND(8)+2) Fish for %(RAND(8)+2) Eggs]"
 	//--
 	//"\w8\w8\w8\w8Put what you want from me first, and what you're offering second."
-	"What are you offering?\![open,inputbox,OnWantrade,-1]"
+	"What are you offering?\![close,inputbox,__SYSTEM_ALL_INPUT__]\![open,inputbox,OnWantrade,-1]"
 	--
 	"\w8\w8\w8\s[29] Please don't tell me the value in Longhand, or Roman numerals..."
 	--
-	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	"%(whwr)\b2\_q\![no-autopause]\![set,autoscroll,disable]"
+	--
+	"\n\n[half]\f[bold,true]Your Inventory:\f[bold,false]\n\n[half]"
+	--
+	ListUserInventory
+	--
+	if garland == 0; "some Grass, and a Garland."; else; "and some Grass."
+	--
+	"\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.wantrading
+{
+	"\0\s[89]What are you offering?\![close,inputbox,__SYSTEM_ALL_INPUT__]\![open,inputbox,OnWantrade,-1]"
+	--
+	"\w8\w8\w8\s[29] Please don't tell me the value in Longhand, or Roman numerals..."
+	--
+	"%(whwr)\b2\_q\![no-autopause]\![set,autoscroll,disable]"
+	--
+	"\n\n[half]\f[bold,true]Your Inventory:\f[bold,false]\n\n[half]"
+	--
+	ListUserInventory
+	--
+	if garland == 0; "some Grass, and a Garland."; else; "and some Grass."
+	--
+	"\n\n[half]\![*]\q[Go back,viewinv]"
 	--
 	"\n\![*]\q[Nevermind,CANCEL]\e"
 }
 
 OnWantrade
 {
-	tradefirsthalf = reference0
-	"\0%(eyedles)What do you want?\*\![open,inputbox,OnWantrade2,-1]"
+	_tradefirsthalf = reference0
+	_tradefirsthalf = TOLOWER(_tradefirsthalf)
+	_tradefirsthalf = REPLACE(_tradefirsthalf," ","") //removes spaces
+	_tradefirsthalf = REPLACE(_tradefirsthalf,".","") //removes periods
+	_tradefirsthalf = REPLACE(_tradefirsthalf,"-","") //removes dashes
+	
+	//Validate First Half
+	if "diary" _in_ _tradefirsthalf
+	{
+		OnCalledDiary
+	}
+	elseif "note" _in_ _tradefirsthalf || "book" _in_ _tradefirsthalf || "tome" _in_ _tradefirsthalf || "journal" _in_ _tradefirsthalf
+	{
+		OnWrnotebook
+	}
+	elseif "spear" _in_ _tradefirsthalf || "suit" _in_ _tradefirsthalf || "armor" _in_ _tradefirsthalf || "armour" _in_ _tradefirsthalf ||  "feather" _in_ _tradefirsthalf || "pen" _in_ _tradefirsthalf
+	{
+		OnNotYours
+	}
+	else
+	{
+		firstdigits = OnGetDigits(_tradefirsthalf)
+		_string = OnRemoveDigits(_tradefirsthalf)
+		if firstdigits == "no digits" && _string == "no string"
+		{
+			"\0\s[89]You didn't specify what you have to trade."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		elseif _string == "no string"
+		{
+			"\0\s[89]You didn't specify what you have to trade."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		elseif firstdigits == "no digits"
+		{
+			"\0\s[89]You didn't specify the amount."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		else
+		{
+			if "monstermeat" _in_ _string
+			{
+				firstitemindex = 6
+			}
+			elseif "cookedmorsel" _in_ _string
+			{
+				firstitemindex = 13
+			}
+			elseif "cookedmeat" _in_ _string
+			{
+				firstitemindex = 14
+			}
+			elseif "cookedmonstermeat" _in_ _string
+			{
+				firstitemindex = 15
+			}
+			elseif "smalljerky" _in_ _string
+			{
+				firstitemindex = 18
+			}
+			elseif "monsterjerky" _in_ _string
+			{
+				firstitemindex = 19
+			}
+			elseif "meatball" _in_ _string
+			{
+				firstitemindex = 24
+			}
+			elseif "baconandegg" _in_ _string
+			{
+				firstitemindex = 25
+			}
+			elseif "grass" _in_ _string
+			{
+				firstitemindex = 999
+			}
+			else
+			{
+				firstitemindex = OnIndexInString(_string,ItemIndexer)
+			}
+			
+			firstamounthave = survivorinventory[firstitemindex]
+			
+			if firstamounthave == 1
+			{
+				firstitem = ItemSingular[firstitemindex]
+			}
+			else
+			{
+				firstitem = ItemPlural[firstitemindex]
+			}
+			
+			if firstamounthave
+			{
+				if firstdigits > firstamounthave
+				{
+					"\0\s[89]You only have %(firstamounthave) %(firstitem), do you want to trade all of them?"
+					--
+					"%(whwr)\n\n[half]"
+					--
+					"\n\![*]\q[Yes,yesallitems]"
+					--
+					"\n\![*]\q[Go back,wantrading]"
+					--
+					"\n\![*]\q[Nevermind,CANCEL]\e"
+				}
+				else
+				{
+					OnContinueTrade
+				}
+			}
+			elseif firstitemindex == 999
+			{
+				"\0\s[89]I don't need any more grass %(username)."
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+			else
+			{
+				"\0\s[89]You don't have any of those."
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+		}
+	}
+}
+
+Select.yesallitems
+{
+	firstdigits = firstamounthave
+	OnContinueTrade
+}
+
+OnContinueTrade
+{
+	if firstdigits == 1
+	{
+		firstitem = ItemSingular[firstitemindex]
+	}
+	if firstdigits == 1
+	{
+		"\0%(eyedles)Alright, you're giving me 1 %(firstitem), \w8\w8what do you want for it?\*\![open,inputbox,OnWantrade2,-1]"
+	}
+	else
+	{
+		"\0%(eyedles)Alright, you're giving me %(firstdigits) %(firstitem), \w8\w8what do you want for them?\*\![open,inputbox,OnWantrade2,-1]"
+	}
 	--
-	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	"%(whwr)\b2\_q\![no-autopause]\![set,autoscroll,disable]"
+	--
+	"\n\n[half]\f[bold,true]Wilson's Inventory:\f[bold,false]\n\n[half]"
+	--
+	"Some Twigs, "
+	--
+	"Grass, "
+	--
+	"and Flint, "
+	--
+	"the Wretched Notebook, "
+	--
+	"a Wretched Spear, "
+	--
+	if garland == 1; "a Feather Pencil, and the Garland. "; else; "and a Feather Pencil. "
+	--
+	"As well as "
+	--
+	ListWilsonInventory
+	--
+	"\n\n[half]\![*]\q[Go back,wantrading]"
 	--
 	"\n\![*]\q[Nevermind,CANCEL]\e"
 }
 
 OnWantrade2
 {
-	tradenexthalf = reference0
-	_tradefirsthalftwo = TOLOWER(tradefirsthalf)
-	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo," ","") //removes spaces
-	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo,".","") //removes periods
-	_tradefirsthalftwo = REPLACE(_tradefirsthalftwo,"-","") //removes dashes
-	_tradenexthalftwo = TOLOWER(tradenexthalf)
-	_tradenexthalftwo = REPLACE(_tradenexthalftwo," ","") //removes spaces
-	_tradenexthalftwo = REPLACE(_tradenexthalftwo,".","") //removes periods
-	_tradenexthalftwo = REPLACE(_tradenexthalftwo,"-","") //removes dashes
-	_tradetext = (_tradefirsthalftwo + _tradenexthalftwo)
-	//_NoTradeBacksKeywords("Cooked",)
+	_tradenexthalf = reference0
+	_tradenexthalf = TOLOWER(_tradenexthalf)
+	_tradenexthalf = REPLACE(_tradenexthalf," ","") //removes spaces
+	_tradenexthalf = REPLACE(_tradenexthalf,".","") //removes periods
+	_tradenexthalf = REPLACE(_tradenexthalf,"-","") //removes dashes
 	
-	if "diary" _in_ _tradetext
+	//Validate Second Half
+	if "diary" _in_ _tradenexthalf
 	{
 		OnCalledDiary
 	}
-	elseif "note" _in_ _tradetext || "book" _in_ _tradetext || "tome" _in_ _tradetext || "journal" _in_ _tradetext
+	elseif "note" _in_ _tradenexthalf || "book" _in_ _tradenexthalf || "tome" _in_ _tradenexthalf || "journal" _in_ _tradenexthalf
 	{
 		OnWrnotebook
 	}
-	elseif "spear" _in_ _tradetext || "suit" _in_ _tradetext || "armor" _in_ _tradetext || "armour" _in_ _tradetext
+	elseif "spear" _in_ _tradenexthalf || "suit" _in_ _tradenexthalf || "armor" _in_ _tradenexthalf || "armour" _in_ _tradenexthalf
 	{
 		OnBattleEquipment
 	}
-	elseif "feather" _in_ _tradetext || "pen" _in_ _tradetext
+	elseif "feather" _in_ _tradenexthalf || "pen" _in_ _tradenexthalf
 	{
 		OnFeatherPencil
 	}
-	else//if OnFindInString()
+	else
 	{
-		
+		nextdigits = OnGetDigits(_tradenexthalf)
+		_string = OnRemoveDigits(_tradenexthalf)
+		if nextdigits == "no digits" && _string == "no string"
+		{
+			"\0\s[89]You didn't specify what you want from me."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		elseif _string == "no string"
+		{
+			"\0\s[89]You didn't specify what you want from me."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		elseif nextdigits == "no digits"
+		{
+			"\0\s[89]You didn't specify the amount."
+			--
+			"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+			--
+			"\n\![*]\q[Nevermind,CANCEL]\e"
+		}
+		else
+		{
+			if "monstermeat" _in_ _string
+			{
+				nextitemindex = 6
+			}
+			elseif "cookedmorsel" _in_ _string
+			{
+				nextitemindex = 13
+			}
+			elseif "cookedmeat" _in_ _string
+			{
+				nextitemindex = 14
+			}
+			elseif "cookedmonstermeat" _in_ _string
+			{
+				nextitemindex = 15
+			}
+			elseif "smalljerky" _in_ _string
+			{
+				nextitemindex = 18
+			}
+			elseif "monsterjerky" _in_ _string
+			{
+				nextitemindex = 19
+			}
+			elseif "meatball" _in_ _string
+			{
+				nextitemindex = 24
+			}
+			elseif "baconandegg" _in_ _string
+			{
+				nextitemindex = 25
+			}
+			elseif "grass" _in_ _string
+			{
+				nextitemindex = 999
+			}
+			elseif "flint" _in_ _string
+			{
+				nextitemindex = 9999
+			}
+			elseif "twigs" _in_ _string
+			{
+				nextitemindex = 9999
+			}
+			else
+			{
+				nextitemindex = OnIndexInString(_string,ItemIndexer)
+			}
+			
+			wilsonamounthave = wilsoninventory[nextitemindex]
+			
+			if wilsonamounthave == 1
+			{
+				nextitem = ItemSingular[nextitemindex]
+			}
+			else
+			{
+				nextitem = ItemPlural[nextitemindex]
+			}
+			
+			if firstitemindex == nextitemindex
+			{
+				"\0\s[29]Just what are you trying to pull here?"
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+			elseif wilsonamounthave
+			{
+				case nextitemindex
+				{
+					when 0-12
+					{
+						if nextdigits > wilsonamounthave
+						{
+							"\0\s[89]I only have %(wilsonamounthave) %(nextitem), do you want all of them?"
+							--
+							"%(whwr)\n\n[half]"
+							--
+							"\n\![*]\q[Yes,yesallitemstwo]"
+							--
+							"\n\![*]\q[Go back,wantrading]"
+							--
+							"\n\![*]\q[Nevermind,CANCEL]\e"
+						}
+						else
+						{
+							OnContinueTradeTwo
+						}
+					}
+					when 13-23
+					{
+						if nextdigits == 1 || wilsonamounthave == 1
+						{
+							"\0\s[89]What are you going to do with that anyway?"
+						}
+						else
+						{
+							"\0\s[89]What are you going to do with those anyway?"
+						}
+						--
+						"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+						--
+						"\n\![*]\q[Nevermind,CANCEL]\e"
+					}
+					when 24-30
+					{
+						if nextdigits == 1 || wilsonamounthave == 1
+						{
+							"\0\s[29]Hey, I'm going to eat that."
+						}
+						else
+						{
+							"\0\s[29]Hey, I'm going to eat those."
+						}
+						--
+						"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+						--
+						"\n\![*]\q[Nevermind,CANCEL]\e"
+					}
+					when 31
+					{
+						"\0\s[29]Don't question it."
+						--
+						"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+						--
+						"\n\![*]\q[Nevermind,CANCEL]\e"
+					}
+				}
+			}
+			elseif nextitemindex == 999
+			{
+				"\0\s[89]You already have plenty of grass %(username)."
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+			elseif nextitemindex == 9999
+			{
+				"\0\s[89]What are you going to do with those anyway?"
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+			else
+			{
+				"\0\s[89]I don't have any of those."
+				--
+				"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+				--
+				"\n\![*]\q[Nevermind,CANCEL]\e"
+			}
+		}
 	}
-	//"\0%(_tradetext)\e"
+}
+
+Select.yesallitemstwo
+{
+	nextdigits = wilsonamounthave
+	OnContinueTradeTwo
+}
+
+OnContinueTradeTwo
+{
+	//Calculate worth
+	firstitemworth = (firstdigits * ItemWorth[firstitemindex])
+	nextitemworth = (nextdigits * ItemWorth[nextitemindex])
+	
+	if nextdigits == 1
+	{
+		nextitem = ItemSingular[nextitemindex]
+	}
+	else
+	{
+		nextitem = ItemPlural[nextitemindex]
+	}
+	
+	if firstdigits == 1
+	{
+		firstitem = ItemSingular[firstitemindex]
+	}
+	else
+	{
+		firstitem = ItemPlural[firstitemindex]
+	}
+	
+	if firstitemworth > nextitemworth
+	{
+		_check = firstitemworth - nextitemworth
+		if _check <= ROUND(nextitemworth / 2)
+		{
+			worthit = "yes"
+		}
+		else
+		{
+			worthit = "no 1st"
+		}
+	}
+	elseif firstitemworth < nextitemworth
+	{
+		_check = nextitemworth - firstitemworth
+		if _check <= ROUND(firstitemworth / 2)
+		{
+			worthit = "yes"
+		}
+		else
+		{
+			worthit = "no 2nd"
+		}
+	}
+	else
+	{
+		worthit = "equal"
+	}
+	
+	"\0\s[24]%(nextdigits) %(nextitem) for %(firstdigits) %(firstitem)\w8.\w8.\w8.\w8.\w8"
+	--
+	if worthit == "equal"
+	{
+		"\0\s[37]Sounds good to me!"
+	}
+	elseif worthit == "yes"
+	{
+		"\0\s[53]That seems reasonable."
+	}
+	elseif worthit == "no 1st"
+	{
+		"\0\s[31]That deal sounds a bit, \s[29]too, good."
+	}
+	elseif worthit == "no 2nd"
+	{
+		"\0\s[31]That just doesn't seem worth it, \w8sorry."
+	}
+	--
+	if worthit == "equal" || worthit == "yes"
+	{
+		OnTradeCheck
+	}
+	else
+	{
+		"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+	//"\0You want %(nextdigits) %(nextitem) worth %(nextitemworth) for %(firstdigits) %(firstitem) worth %(firstitemworth), in range? %(worthit).\e"
+}
+
+OnTradeCheck
+{
+	if UserOpenSlots == 0
+	{
+		"\w8\w8 \s[53]However, \w8you don't have anywhere to put "
+		--
+		if nextdigits == 1
+		{
+			"a %(nextitem)."
+		}
+		else
+		{
+			"%(nextitem)."
+		}
+		--
+		"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+	elseif WilsonOpenSlots == 0
+	{
+		"\w8\w8 \s[53]However, \w8I don't have anywhere to put "
+		--
+		if firstdigits == 1
+		{
+			"a %(firstitem)."
+		}
+		else
+		{
+			"%(firstitem)."
+		}
+		--
+		"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+	elseif OnUserSpaceCheck == 0
+	{
+		"\w8\w8 \s[53]However, \w8you don't have enough room for "
+		--
+		if nextdigits == 1
+		{
+			"a %(nextitem)."
+		}
+		else
+		{
+			"%(nextdigits) %(nextitem)."
+		}
+		--
+		"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+	elseif OnWilsonSpaceCheck == 0
+	{
+		"\w8\w8 \s[53]However, \w8I don't have enough room for "
+		--
+		if firstdigits == 1
+		{
+			"a %(firstitem)."
+		}
+		else
+		{
+			"%(firstdigits) %(firstitem)."
+		}
+		--
+		"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+	else
+	{
+		"%(whwr)\n\n[half]\![*]\q["
+		--
+		"Okay"
+		"Alright"
+		"Trade"
+		"Confirm"
+		--
+		",OnDoTrade]"
+		--
+		"\n\![*]\q[Go back,viewinv]"
+		--
+		"\n\![*]\q[Nevermind,CANCEL]\e"
+	}
+}
+
+OnDoTrade
+{
+	survivorinventory[firstitemindex] -= firstdigits //Remove items from user
+	survivorinventory[nextitemindex] += nextdigits //Give items to user
+	wilsoninventory[firstitemindex] += firstdigits //Give items to Wilson
+	wilsoninventory[nextitemindex] -= nextdigits //Take items from Wilson
+	
+	tradescompleted = tradescompleted + 1
+	
+	"\0\s[5]Done!\e"
+}
+
+OnUserSpaceCheck
+{
+	_check = 1
+	if UserInventory[nextitemindex] + nextdigits >= MaxStacks[nextitemindex]
+	{
+		_check = 0
+	}
+	_check
+}
+
+OnWilsonSpaceCheck
+{
+	_check = 1
+	if UserInventory[nextitemindex] + nextdigits >= MaxStacks[nextitemindex]
+	{
+		_check = 0
+	}
+	_check
 }
 
 OnCalledDiary
@@ -341,18 +1029,120 @@ OnFeatherPencil
 	"\n\![*]\q[Nevermind,CANCEL]\e"
 }
 
+OnNotYours
+{
+	"\0\s[51]Hey, that's not yours."
+	--
+	"%(whwr)\n\n[half]\![*]\q[Go back,viewinv]"
+	--
+	"\n\![*]\q[Nevermind,CANCEL]\e"
+}
 
+OnGetDigits
+{
+	_digits = _argv[0]
+	_digits = TRANSLATE(_digits,'a-z','')
+	if _digits
+	{
+		_digits = TOINT(_digits)
+	}
+	else
+	{
+		_digits = "no digits"
+	}
+	_digits
+}
 
+OnRemoveDigits
+{
+	_string = _argv[0]
+	_string = TRANSLATE(_string,'0-9','')
+	if _string {}
+	else
+	{
+		_string = "no string"
+	}
+	_string
+}
 
+OnIndexInString //Modified FindInString
+{
+    _string = _argv[0]
+    _argv[0] = IARRAY
+	_found = 0
+	_index = 0
+    foreach _argv; _arg
+    {
+        if _arg _in_ _string
+        {
+            _found = 1
+            break
+        }
+		else
+		{
+			_index = _index + 1
+		}
+    }
+	if _found == 0
+	{
+		_index = -1
+	}
+    _index
+}
 
+ListWilsonInventory //%(ListWilsonInventory)
+{
+	_display = ""
+	for _i = 0; _i < ARRAYSIZE(wilsoninventory); _i++
+	{
+		if wilsoninventory[_i] == 1
+		{
+			_item = ItemSingular[_i]
+			if _i > 23
+			{
+				_display += "and 1 %(_item)."
+			}
+			else
+			{
+				_display += "1 %(_item), "
+			}
+		}
+		elseif wilsoninventory[_i] > 1
+		{
+			_item = ItemPlural[_i]
+			_amount = wilsoninventory[_i]
+			if _i > 23
+			{
+				_display += "and %(_amount) %(_item)."
+			}
+			else
+			{
+				_display += "%(_amount) %(_item), "
+			}
+		}
+	}
+	"%(_display)"
+}
 
-
-
-
-
-
-
-
+ListUserInventory
+{
+	_display = ""
+	for _i = 0; _i < ARRAYSIZE(survivorinventory); _i++
+	{
+		if survivorinventory[_i] == 1
+		{
+			_item = ItemSingular[_i]
+			_display += "1 %(_item), "
+		}
+		elseif survivorinventory[_i] > 1
+		{
+			_item = ItemPlural[_i]
+			_amount = survivorinventory[_i]
+			_display += "%(_amount) %(_item), "
+		}
+	}
+	"%(_display)"
+}
 
 
 

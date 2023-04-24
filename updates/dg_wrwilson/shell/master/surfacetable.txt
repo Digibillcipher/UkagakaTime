@@ -105,6 +105,12 @@ scope,0
 89,Confusion
 90,TheThinker2
 91,WaveConfusion
+92,GetRekt
+93,GetRektPost
+94,GetPet
+95,GetPetAgain
+96,KaraokeSurface
+97,SadTwo
 }
 
 //First, we define a group. Then we give that group a name, in this case, G. You generally have VERY little space to read with the Surface Test, so you'll want these group names to be pretty short. But you can adjust and change it as you try this out.

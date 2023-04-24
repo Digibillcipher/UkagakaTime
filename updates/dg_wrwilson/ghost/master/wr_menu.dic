@@ -19,10 +19,11 @@ OpenSakuraMenu
 	if justpunched == 1
 	{
 		justpunched = 0
-		--
+		punchedmenuflag = 1
 		"\0\s[44]\w7\s[29]\w6"
 		--
-		"\0\b2What's up?"
+		//"\0\b2What's up?"
+		"\0\b2Do you... want something...?"
 		"\0\b2Need something?"
 		"\0\b2Hmm..."
 		"\0\b2Yes...?"
@@ -33,11 +34,13 @@ OpenSakuraMenu
 		noteshour = 0
 		takingnotes = 0
 		sitting = 0
+		punchedmenuflag = 0
 		--
 		"\0\s[39]\w7\s[38]\w6"
 		--
-		"\0%(eyedles)\b2What's up?"
-		"\0\s[8]\b2Need something?%(eyedles)"
+		//"\0%(eyedles)\b2What's up?"
+		"\0%(eyedles)\b2Do you want something?"
+		"\0%(eyedles)\b2Need something?"
 		"\0%(eyedles)\b2Hmm?"
 		"\0%(eyedles)\b2Yes?"
 	}
@@ -45,31 +48,40 @@ OpenSakuraMenu
 	{
 		noteshour = 0
 		sleeping = 0
+		punchedmenuflag = 0
 		--
 		"\0\s[54]\w6\s[55]\w8\w8\s[39]\w7\s[38]\w6%(eyedles)\b2"
 		--
 		"Seems that I fell asleep..."
-		"Ow my neck... "
+		"\s[9]Ow my neck... "
+		"\s[9]Ow my wrist..."
 		"I suppose I needed that..."
 		"A terrible rest is better than none I suppose..."
-		"My cheek hurts..."
+		"\s[9]My cheek hurts..."
 		"\s[21]\f[sup,true]Hope I didn't drool on my Notebook...\f[sup,false]"
-		"What's up?"
+		"\s[46]Ugh, \w8\w8\s[9]I think I got charcoal on my hand..."
+		//"What's up?"
 		"Need something?"
 		"Hmm?"
 		"Yes?"
+		"Do you want something?"
+		"What did you wake me for?"
 		
 	}
 	else
 	{
-		"\0%(eyedles)\b2What's up?"
-		"\0\s[8]\b2Need something?%(eyedles)"
+		punchedmenuflag = 0
+		//"\0%(eyedles)\b2What's up?"
+		"\0%(eyedles)\b2Do you want something?"
+		"\0%(eyedles)\b2Need something?"
 		"\0%(eyedles)\b2Hmm?"
 		"\0%(eyedles)\b2Yes?"
 		"\0%(eyedles)\b2Greetings"
 	}
 	--
+	OnCalculateTrust
 	MenuRun
+	
 }
 
 //--MenuRun
@@ -81,6 +93,7 @@ MenuRun
  	ap = GetAP
 	StartedCommu = 0
 	AlreadyResponded = 0
+	floored = 0
 	//These four statements basically get the day of the week, whether it's AM or PM, the hour, and the time. It's putting together the information to display the time at the bottom of the balloon. Pay it no mind.
 	--
 	"%(whwr)\n\n[half]\_q\b2\![no-autopause]" //The \n\n means two new lines as detailed in the walkthrough, and \_q means quick session, meaning all the text from this point on will display instantly instead of a few letters at a time like normal ghost dialogue.
@@ -101,9 +114,11 @@ MenuRun
 	"\![*]\q[What's up?,OnAiTalk]\n"
 	"\![*]\q[Any knowledge to share?,OnAiTalk]\n"
 	"\![*]\q[What's on your mind?,OnAiTalk]\n"
+	"\![*]\q[Thinking about anything?,OnAiTalk]\n"
 	"\![*]\q[Talk to me,OnAiTalk]\n"
 	"\![*]\q[What's up?,OnAiTalk]\n"
 	"\![*]\q[Any knowledge to share?,OnAiTalk]\n"
+	"\![*]\q[Thinking about anything?,OnAiTalk]\n"
 	"\![*]\q[Say something,saysomething]\n"
 	--
 	if username == "Digi" || username == "Dev"
@@ -164,7 +179,7 @@ MenuRun
 //Leave this alone
 OnLastTalk 
 {
-"%(lastTalk)\e"
+	"%(lastTalk)\e"
 }
 
 //This is figuring out what day of the week it is. Leave it alone.
@@ -361,8 +376,7 @@ Select.saysomething
 	
 SaySomething
 	{
-		"\0\s[6]\w8\w8Something.\e"
-		"\0\s[27]\w8\w8Something.\e"
+		"\0\s[6]\w8\w8Something.\w8\w8\w8\s[37]\e"
 	}
 	
 Select.devmenu
@@ -381,6 +395,49 @@ DevMenu
 		"\![*]\q[Make Write,makewrite]\n"
 		--
 		"\![*]\q[Reset Font,OnSetFontDefault]\n"
+		--
+		"\![*]\q[Feign Punch,feignpunch]\n"
+		--
+		"\![*]\q[Refresh Items,freshtrades]\n"
+		--
+		"\![*]\q[Apologise,OnApologise]\n"
+		--
+		"\![*]\q[ResetStats,OnReset]\n"
+		--
+		"susorry:%(susorry)\n"
+		--
+		"validapologies:%(validapologies)\n"
+		--
+		"trust:%(trust)\n"
+		--
+		"tradescompleted:%(tradescompleted)\n"
+		--
+		"nopets:%(nopets)\n"
+		--
+		"numberactions:%(numberactions)\n"
+		--
+		"Opinion:%(Opinion)\n"
+		--
+		//"largestfactor:%(largestfactor)\n"
+		//_array = (_pokepoke, _punch, _pet, _trade)
+		
+		if largestfactor == 0
+		{
+			"largestfactor:poking\n"
+		}
+		elseif largestfactor == 1
+		{
+			"largestfactor:punching\n"
+		}
+		elseif largestfactor == 2
+		{
+			"largestfactor:petting\n"
+		}
+		else
+		{
+			"largestfactor:trading\n"
+		}
+		
 		--
 		"\n\![*]\q[Go back,BACKTOMENU]"
 		--
@@ -429,6 +486,44 @@ MakeSleep
 		--
 		"\0\s[48]\e"
 	}
+	
+Select.feignpunch
+	{
+		FeignPunch
+	}
+	
+FeignPunch
+	{
+		justpunched = 1
+		takingnotes = 0
+		noteshour = 0
+		--
+		"\t\0\s[42]\w8\s[43]\w8"
+	}
+
+Select.freshtrades
+{
+	OnFreshTrades
+	DevMenu
+}
+
+OnFreshTrades
+{
+	wilsoninventory = GenerateWilsonInventory //Generate an inventory. You'd want to put this in your OnBoot or whatever, and save it to a global variable so it stays as it is until he closes and you generate a new one
+	survivorinventory = GenerateUserInventory
+}
+
+OnReset
+{
+	punchy = 0
+	petpet = 0
+	pokepoke = 0
+	susorry = 0
+	validapologies = 0
+	tradescompleted = 0
+	nopets = 0
+}
+
 
 Select.statistics
 	{
@@ -438,7 +533,7 @@ Select.statistics
 
 Statistics
 	{
-		"\0\s[91]"
+		"\0\b2\s[91]"
 		--
 			if punchy == 0
 			{
@@ -467,7 +562,7 @@ Statistics
 			}
 			elseif petpet == 1 && punchy > 0
 			{
-				"\s[29]and you, pet me, once?"
+				"\s[29] And you, pet me, once?"
 			}
 			elseif petpet == 1
 			{
@@ -475,7 +570,7 @@ Statistics
 			}
 			elseif petpet == 2 && punchy > 0
 			{
-				"\s[29]and you, pet me, twice?"
+				"\s[29] And you, pet me, twice?"
 			}
 			elseif petpet == 2
 			{
@@ -500,12 +595,112 @@ Statistics
 			}
 			elseif pokepoke > 2
 			{
-				"\nAlso, you've poked me %(pokepoke) times with a needle."
+				"\nAlso, you've poked me %(pokepoke) times"
+				--
+				if lastneedleshell == "The True Needle"
+				{
+					"\w8, lastly, \w8with a scribbly needle."
+				}
+				elseif lastneedleshell == "Close-Up View"
+				{
+					"\w8, lastly, \w8with a huge needle."
+				}
+				elseif lastneedleshell == "Tiny Pokey Pixels"
+				{
+					"\w8, lastly, \w8with a blocky needle."
+				}
+				elseif lastneedleshell == "Syringe"
+				{
+					"\w8, lastly, \w8with a syringe."
+				}
+				elseif lastneedleshell == "Eggdle"
+				{
+					"\w8, lastly, \f[italic,true]\s[77]\w8with an egg???\f[italic,false]"
+				}
+				else
+				{
+					" with a needle"
+				}
 			}
 			else //if pokepoke doesn't exist
 			{
 				""
 			}
+		--
+		"\n\n\w8\w8\w8"
+		--
+		if largestfactor == 0
+		{
+			//"largestfactor:poking\n"
+			if pokepoke < 10
+			{
+				"\s[29]What's with the poking anyway?"
+			}
+			elseif pokepoke < 20
+			{
+				"\s[29]You seem to poke me a lot..."
+			}
+			else
+			{
+				"\s[29]I wish you wouldn't poke me all the time."
+			}
+		}
+		elseif largestfactor == 1
+		{
+			//"largestfactor:punching\n"
+			if punchy < 4
+			{
+				"\s[29]I hope you don't make it a habit of,\w8\s[89] accidentally?\w8\s[29] punching me in the face."
+			}
+			elseif punchy < 7
+			{
+				"\s[7]It's not normal to punch people in the face without good reason, you know."
+			}
+			elseif punchy < 11
+			{
+				"\s[89]Why are you doing this? \w8Why are you punching me of all people? There must be a reason."
+			}
+			elseif punchy < 31
+			{
+				"\s[64]You use me like a punching bag, I just don't understand why you'd do such a thing..."
+			}
+			else
+			{
+				"\s[29]\f[italic,true]\w8I think we both know you're just a fucking cunt.\f[italic,false]."
+			}
+		}
+		elseif largestfactor == 2
+		{
+			//"largestfactor:petting\n"
+			if petpet < 10
+			{
+				"\s[69]You seem to like my hair?"
+			}
+			elseif petpet < 20
+			{
+				"%(embarrassed)You must really like my hair."
+			}
+			else
+			{
+				"%(embarrassed)My hair\w8.\w8.\w8. You play with it a lot..."
+			}
+		}
+		else
+		{
+			//"largestfactor:trading\n"
+			if tradescompleted < 10
+			{
+				"\s[35]Thanks for trading with me."
+			}
+			elseif tradescompleted < 20
+			{
+				"\s[37]You know all these supplies you've been trading me have been extremely useful."
+			}
+			else
+			{
+				"\s[5]Your generosity knows no bounds, I don't know how to thank you enough!"
+			}
+		}
 		--
 		"\n\n[half]\w8%(whwr)"
 		--
@@ -958,7 +1153,8 @@ Select.TALKPOOR
 Select.TALKNONE
 	{
  		talktime = "Never..."
-		aitalkinterval = 0
+		aitalkinterval = 300
+		bequiet = 1
 		
 		"\0\s[28]Okay fine.\e"
 	}
@@ -1213,8 +1409,9 @@ OnSetFontDefault
 Select.CANCEL
 	{
 		"\![close,inputbox,__SYSTEM_ALL_INPUT__]\0%(eyedles)Okay then.\e"
-		
 		"\![close,inputbox,__SYSTEM_ALL_INPUT__]\0%(eyedles)Alright.\e"
+		--
+		OnCalculateTrust
  	}
 
 	
@@ -1224,7 +1421,7 @@ Select.dosomething
 {
 	"\0%(eyedles)\b2"
 	--
- 	"\Alright what?"
+ 	"Alright what?"
  	"Okay what?"
 	"Yes what?"
 	--
@@ -1234,7 +1431,22 @@ Select.dosomething
 	--
 	"\![*]\q[Please sit down,canyousit]\n"
 	--
-	"\![*]\q[Hey watch this,watchthis]\n"
+	if seemouse == "ON"
+	{
+		"\![*]\q[Hey watch this,watchthis]\n"
+	}
+	--
+	if programtalk == "ON"
+	{
+		if "Windows" _in_ os_name
+		{
+			"\![*]\q[See anything interesting?,seeanything]\n"
+		}
+		else
+		{
+			programtalk = "DISABLED"
+		}
+	}
 	--
  	"\![*]\q[Open the Calendar,CALENDAR]\n"
 	--
@@ -1295,8 +1507,15 @@ WatchThis
 	"\e"
 }
 
+Select.seeanything
+{
+	SeeAnything
+}
 
-
+SeeAnything
+{
+	"%(OnProgramSearch)"
+}
 
 //When the user clicks Open Calender. This will open the calender function of SSP, an in-built feature that you don't have to worry about in the least.
 Select.CALENDAR
@@ -1396,21 +1615,19 @@ OnChoiceTimeout
 	}
 	else
 	{
-		"\0\s[8]Did you forget?"
-		"\0\s[8]Something come up?"
-		"\0\s[8]Seems you have something better to do."
-		"\0\s[8]Busy?"
-		"\0\s[31]Did you forget?"
-		"\0\s[31]Something come up?"
-		"\0\s[31]Seems you have something better to do."
-		"\0\s[31]Busy?"
-		"\0\s[53]Did you forget?"
-		"\0\s[53]Something come up?"
-		"\0\s[53]Seems you have something better to do."
-		"\0\s[53]Busy?"
+		"\0\s[8]"
+		"\0\s[31]"
+		"\0\s[53]"
+		--
+		"Did you forget?"
+		"Something come up?"
+		"Seems you have something better to do."
+		"Something more pressing then?"
+		"Busy?"
 		--
 		"\w8\w8\w8%(eyedles)\e"
 	}
+	OnCalculateTrust
  }
 
  

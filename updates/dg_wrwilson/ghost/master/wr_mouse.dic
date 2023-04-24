@@ -50,6 +50,11 @@ MouseMoveSakura
  			{
 				if takingnotes == 1
 				{
+					if punchy >= 10 //replace with trust check
+					{
+						nopets += 2
+					}
+					petpet += 1
 					"\0\s[87]"
 					--
 					"Hey...I'm trying to write here..."
@@ -65,8 +70,19 @@ MouseMoveSakura
 					--
 					"\e"
 				}
+				elseif justpunched == 1
+				{
+					"\0\s[44]\w8.\w8.\w8."
+					nopets += 2
+					petpet += 1
+				}
 				else
 				{
+					if punchy >= 10
+					{
+						nopets += 2
+					}
+					petpet += 1
 					"\0%(embarrassed)"
 					--
 					"Are you petting me?"
@@ -81,7 +97,6 @@ MouseMoveSakura
 					"\e"
 				}
 				//Replace these with whatever petting responses you like. You can also add more dialogue here if you want, or cut them down. Though removing them entirely seems a bit counter-intuitive to all that work we've been doing.
-				petpet += 1
  			}
  			elseif reference4 == "Face" //Another area set up by the collisions in surfaces.txt. You can expand this list with as many elseifs as you need depending on how many collisions you've set up.
  			{
@@ -102,6 +117,10 @@ MouseMoveSakura
  			}
 			elseif reference4 == "SitHead"
  			{
+				if punchy >= 10
+				{
+					nopets += 2
+				}
 				petpet += 1
 				"\0\s[56]"
 				--
@@ -121,10 +140,41 @@ MouseMoveSakura
  			}
 			elseif reference4 == "SleepHead"
  			{
- 				"\![raise,OnGenerateSleepNoise]\w8\0%(sleepnoise)\e"
-				petpet += 1
+ 				"\![raise,OnGenerateSleepNoise]\w8\0%(sleepnoise)"
+				--
+				"\e"
+				//petpet += 1 why would he remember this?
  			}
-			
+			elseif reference4 == "FellHead"
+			{
+				if punchy >= 10
+				{
+					nopets += 2
+				}
+				petpet += 1
+				"\0\s[94]"
+				--
+				"Huh?"
+				"What?"
+				"What are you-?"
+				--
+				"\w6\s[95]\c\0That's not funny...\e"
+			}
+			elseif reference4 == "FellHead2"
+			{
+				if punchy >= 10
+				{
+					nopets += 2
+				}
+				petpet += 1
+				"\0\s[95]"
+				--
+				"Stop that..."
+				"That's not funny..."
+				"Quit it..."
+				--
+				"\e"
+			}
  		}
 	}
  	else
@@ -231,9 +281,13 @@ MouseDoubleClickSakura
 	}
 	elseif reference4 == "NoteB"
 	{
-		if anchornoteb == 0
+		if anchornoteb == 0 && takingnotes == 1 //don't want his idle to cause stuff to be wonky
 		{
 			"\0\s[50]Hey, leave my anWretched Notebook alone.\e"
+		}
+		elseif takingnotes == 0
+		{
+			"\0\s[39]\w7\s[38]\w6\s[51]Hey, leave my Wretched Notebook alone.\e"
 		}
 		else
 		{
@@ -315,6 +369,10 @@ PunchTheBoi
 		"\0\w8.\w8.\w8."
 		"\0\w8.\w8.\w8."
 		}
+		elseif punchy == 31
+		{
+		"\0Well, \f[italic,true]\w8you're just a fucking cunt aren't you?\f[italic,false]"
+		}
 		else
 		{
 
@@ -324,6 +382,7 @@ PunchTheBoi
 		justpunched = 1
 		takingnotes = 0
 		noteshour = 0
+		noneedapology = 0
 }
  
 Select.staysleep

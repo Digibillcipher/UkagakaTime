@@ -75,6 +75,16 @@ OnFirstBoot
 	kerofontsize = "Default"
 	currentfontprint = "Belisa Plumilla Manual Plus"
 	OnOsCheck
+	floored = 0
+	backwards = 0
+	nowshell = "master"
+	tradescompleted = 0
+	punchedmenuflag = 0
+	validapologies = 0
+	noneedapology = 1
+	basetrust = 200 //I don't want to deal with negatives :P
+	trust = 0
+	bequiet = 0
 	if reference0 == 0 //Don't touch this line.
  	{
 		//---- Alright, here is where the dialogue for your ghost begins! Again, I hope you've studied up on the walkthrough's guide to dialogue coding! However, there are a few unique things about this first conversation that you should keep in mind.
@@ -85,9 +95,9 @@ OnFirstBoot
 		--
 		"\![enter,passivemode]\0\s[10]\b2\*"
 		--
-		"Hey! As stated in both Wilson's and his Balloon's readmes there are two fonts that are recommended to be installed, "
+		"Hey! \w2As stated in both Wilson's and his Balloon's readmes there are two fonts that are recommended to be installed, \w2Wilson will assume you've done this. \w4"
 		--
-		"navigate to the Balloon's folder, dg_don'tstarve, and there they'll be in .ttf format.\n\n[half]"
+		"Navigate to your SSP install, \w2then the balloon folder, \w2then dg_dontstarve, \w2and there they'll be in .ttf format.\n\n[half]"
 		--
 		"\![*]\q[Okay,okay]\e"
 		
@@ -113,12 +123,27 @@ OnFirstBoot
  		"\0\s[29]Was that on purpose?\e"
  	}
 }
+//--dayslot
+
+//Like the above, but to find out what day it is. You can primarily use this for specialized dialogue on certain days, like the user's birthday. Either way, don't touch it.
+
+dayslot
+{
+	"%(month)month %(day)day"
+}
+
+
 
 Select.okay
 {
 	"\c\0\s[76]Huh? \s[79]\w8\w4\s[78]\w8\w4\s[76]\w6Where am I?\w8\w8\w8"
 	--
 	"\c\0\s[20]Is this even the Constant anymore?\w8\w8"
+	--
+	if dayslot == "4month 23day"
+	{
+	"\c\0...and on my birthday of all days...\w8\w8"
+	}
 	--
 	"\c\0\s[61]Oh, \w8um, \w8hello.\w2.\w2.\w8\w8"
 	--
@@ -223,14 +248,7 @@ timeslot
 //***********************************************************************
 
 
-//--dayslot
 
-//Like the above, but to find out what day it is. You can primarily use this for specialized dialogue on certain days, like the user's birthday. Either way, don't touch it.
-
-dayslot
-{
-	"%(month)month %(day)day"
-}
 //-----------------------Normal Booting----------------------------
 
 //From this point on, the dialogue will be for any normal boot of your ghost. You can specialize this for certain days or times if you like, or if you're uninterested, leave it very simple.
@@ -257,6 +275,8 @@ OnBoot
 	noteshour = 0
 	sitting = 0
 	sleeping = 0
+	floored = 0
+	noneedapology = 1
 	OnOsCheck
 		"%(OnCheckPos)"
 		//"\![get,property,OnCheckPos,currentghost.scope(0).rect]"
@@ -285,10 +305,24 @@ OnBoot
 	//***********************************************************************
 	
 	{
-				"\0\s[5]It's %(bornmonthprint) %(borndayprint). \nHappy birthday, %(username)!\e" 
-				
+		if dayslot == "4month 23day"
+		{
+			"\0\s[5]It's our birthday today! \nHappy birthday, %(username)!%(whwr)\n\n[half]"
+			--
+			"\![*]\q[Happy Birthday!,birthday]\e"
+		}
+		else
+		{
+			"\0\s[5]It's %(bornmonthprint) %(borndayprint). \nHappy birthday, %(username)!\e" 
+		}	
 				//Notice in this dialogue that there are two new envelopes, %(bornmonthprint) and %(borndayprint). These two things basically display the user's birthday - bornmonthprint is the month and borndayprint is the day. These were defined when the user put in their birthday in the menu.dic file. See word.dic for more info on envelopes.
 				//If the user didn't or hasn't put in their birthday yet, this dialogue will basically never get called. Which makes sense.
+	}
+	elseif dayslot == "4month 23day"
+	{
+		"\0\s[5]Greetings %(username)! It's my birthday today!%(whwr)\n\n[half]"
+		--
+		"\![*]\q[Happy Birthday!,birthday]\e"
 	}
 	
 	//elseif dayslot == "6month 6day" //Like above, this if statement is checking the date. It's looking for the sixth month and the sixth day.
@@ -312,6 +346,12 @@ OnBoot
 	}
 }
 
+Select.birthday
+{
+	"\0\s[24]Let's see if it's the year %(year)\w8.\w8.\w8."
+	--
+	"\c\0\s[97]That makes me HOW OLD!???\e"
+}
 
 //--normalboottalk
 
@@ -383,7 +423,7 @@ normalboottalk
 		}
 		else //the last timeslot we haven't done is midnight, which is what's under here.
 		{
-		"\0%(eyedles)Seems you're burning both ends of the stick.\e"
+		"\0%(eyedles)Seems you're burning both ends of the candle.\e"
 			
 		"\0%(eyedles)Burning the midnight oil I see.\e"
 		
@@ -414,41 +454,137 @@ OnClose
 		"\0\s[39]\w7\s[38]\w6%(eyedles)"
 		--
 		"Seems that I fell asleep, "
-		"Ow my neck... "
+		"\s[9]Ow my neck... "
+		"\s[9]Ow my wrist..."
 		"I suppose I needed that..."
+		"A terrible rest is better than none I suppose..."
+		"\s[9]My cheek hurts..."
+		"\s[21]\f[sup,true]Hope I didn't drool on my Notebook...\f[sup,false]"
+		"\s[46]Ugh, \w8\w8\s[9]I think I got charcoal on my hand..."
 		--
 		if RAND(100) < 40 //see above about the random number generator
-				{
-					"\0%(eyedles)Goodbye %(username).\w8\w8"
-				}
-				else
-				{
-				if timeslot == "earlymorning" || timeslot == "morning" || timeslot == "lunch"
-					{
-						"\0%(eyedles)Have a nice day.\w8\w8"
-					}
-				elseif timeslot == "afternoon"
-					{
-						"\0%(eyedles)Have a good afternoon.\w8"
-					
-					}
-				elseif timeslot == "evening"
-					{
-						"\0\s[8]Have a good evening.\w8"
-						"\0\s[31]It's getting dark, I'll need to set up camp.\w8"
-					}
-				elseif timeslot == "latenight"
-					{
-							"\0\s[8]Going to bed yourself?\w8"
-							"\0\s[31]Goodnight.\w8"
-					}
-				else //like above, this is the midnight time slot since it's the last one left.
-					{
-							"\0\s[29]Now to get some proper sleep.\w8"
-							"\0\s[29]I hope this means you're going to bed now.\w8"
-							"\0\s[29]Goodnight.\w8"
-					}
-				}
+		{
+			"\0%(eyedles)Goodbye %(username).\w8\w8"
+		}
+		else
+		{
+		if timeslot == "earlymorning" || timeslot == "morning" || timeslot == "lunch"
+			{
+				"\0%(eyedles)Have a nice day.\w8\w8"
+			}
+		elseif timeslot == "afternoon"
+			{
+				"\0%(eyedles)Have a good afternoon.\w8"
+			
+			}
+		elseif timeslot == "evening"
+			{
+				"\0\s[8]Have a good evening.\w8"
+				"\0\s[31]It's getting dark, I'll need to set up camp.\w8"
+			}
+		elseif timeslot == "latenight"
+			{
+				"\0\s[8]Going to bed yourself?\w8"
+				"\0\s[31]Goodnight.\w8"
+			}
+		else //like above, this is the midnight time slot since it's the last one left.
+			{
+				"\0\s[29]Now to get some proper sleep.\w8"
+				"\0\s[29]I hope this means you're going to bed now.\w8"
+				"\0\s[29]Goodnight.\w8"
+			}
+		}
+	}
+	elseif takingnotes == 1
+	{
+		if RAND(100) < 40 //see above about the random number generator
+		{
+			"\0\s[50]Goodbye %(username).\w8\w8"
+		}
+		else
+		{
+		if timeslot == "earlymorning" || timeslot == "morning" || timeslot == "lunch"
+			{
+				"\0\s[50]Have a nice day.\w8\w8"
+			}
+		elseif timeslot == "afternoon"
+			{
+				"\0\s[50]Have a good afternoon.\w8"
+			
+			}
+		elseif timeslot == "evening"
+			{
+				"\0\s[50]Have a good evening.\w8"
+				"\0\s[50]It's getting dark, I'll need to set up camp.\w8"
+			}
+		elseif timeslot == "latenight"
+			{
+				"\0\s[50]Going to bed yourself?\w8"
+				"\0\s[50]Goodnight.\w8"
+			}
+		else //like above, this is the midnight time slot since it's the last one left.
+			{
+				"\0\s[50]Now to get some proper sleep.\w8"
+				"\0\s[50]I hope this means you're going to bed now.\w8"
+				"\0\s[50]Goodnight.\w8"
+			}
+		}
+	}
+	elseif sitting == 1
+	{
+		if RAND(100) < 40 //see above about the random number generator
+		{
+			"\0\s[80]Goodbye %(username).\w8\w8"
+		}
+		else
+		{
+		if timeslot == "earlymorning" || timeslot == "morning" || timeslot == "lunch"
+			{
+				"\0\s[80]Have a nice day.\w8\w8"
+			}
+		elseif timeslot == "afternoon"
+			{
+				"\0\s[80]Have a good afternoon.\w8"
+			
+			}
+		elseif timeslot == "evening"
+			{
+				"\0\s[80]Have a good evening.\w8"
+				"\0\s[80]It's getting dark, I'll need to set up camp.\w8"
+			}
+		elseif timeslot == "latenight"
+			{
+				"\0\s[80]Going to bed yourself?\w8"
+				"\0\s[80]Goodnight.\w8"
+			}
+		else //like above, this is the midnight time slot since it's the last one left.
+			{
+				"\0\s[80]Now to get some proper sleep.\w8"
+				"\0\s[80]I hope this means you're going to bed now.\w8"
+				"\0\s[80]Goodnight.\w8"
+			}
+		}
+	}
+	elseif justpunched == 1
+	{
+		"\0\s[44]\w8.\w8.\w8."
+		--
+		if timeslot == "earlymorning" || timeslot == "morning" || timeslot == "lunch"
+		{
+			"Have a nice day...\w8"
+		}
+		elseif timeslot == "afternoon"
+		{
+			"Have a good afternoon...\w8"
+		}
+		elseif timeslot == "evening"
+		{
+			"Have a good evening...\w8"
+		}
+		else
+		{
+			"Goodnight...\w8"
+		}
 	}
 	else
 	{
@@ -547,6 +683,7 @@ OnClose
 
  OnWindowStateMinimize
 {
+	floored = 0
 	if takingnotes == 1
 	{
 		"\0\s[50]What are you doing?\e"
@@ -560,6 +697,10 @@ OnClose
 		"\0\s[48]Zzz.....\e"
 		"\0\s[48]Zzzz.....\e"
 		"\0\s[48]Zzzzz.......\e"
+	}
+	elseif justpunched == 1
+	{
+		"\0\s[44]\w8.\w8.\w8.\e"
 	}
 	else
 	{
@@ -590,6 +731,10 @@ OnWindowStateRestore
 		"\0\s[48]Zzzz.....\e"
 		"\0\s[48]Zzzzz.......\e"
 	}
+	elseif justpunched == 1
+	{
+		"\0\s[44]\w8.\w8.\w8.\e"
+	}
 	else
 	{
 		"\0%(scaredfidgetatyou)Well that was strange.\e"
@@ -604,19 +749,20 @@ OnWindowStateRestore
  
 OnGhostChanging
  {
+	floored = 0
 	if reference0 == "Wilson" //Replace this with the name of your Sakura character as you put in install.txt or descript.txt. I set this up to use the full ghost's name with Hunter and Smoker but I forget exactly how I did it and I'm having trouble getting it to work again. I think I just didn't define the Sakura or Kero names in either descript.txt or install.txt. You can experiment with it yourself. Otherwise, leave it as your Sakura character's name.
 	{
 		if takingnotes == 1
 		{
 			takingnotes = 0
 			noteshour = 0
-			"\s[50]I'll be back in a sec.\w8\w8\e"
+			"\s[50]I'll be back in a moment.\w8\w8\e"
 		}
 		elseif sitting == 1
 		{
 			sitting = 0
 			noteshour = 0
-			"\0\s[80]I'll be back in a sec.\w8\w8\e"
+			"\0\s[80]I'll be back in a moment.\w8\w8\e"
 		}
 		elseif sleeping == 1
 		{
@@ -625,17 +771,24 @@ OnGhostChanging
 			"\0\s[54]\w6\s[55]\w8\w8\s[39]\w7\s[38]\w6%(eyedles)"
 			--
 			"Seems that I fell asleep..."
-			"Ow my neck... "
+			"\s[9]Ow my neck... "
+			"\s[9]Ow my wrist..."
 			"I suppose I needed that..."
 			"A terrible rest is better than nothing I suppose..."
-			"My cheek hurts..."
+			"\s[9]My cheek hurts..."
 			"\s[21]\f[sup,true]Hope I didn't drool on my Notebook...\f[sup,false]"
+			"\s[46]Ugh, \w8\w8\s[9]I think I got charcoal on my hand..."
 			--
-			"\0\w8\w8%(eyedles)I'll be back in a sec.\w8\w8\e"
+			"\w8\w8\w8\c\0%(eyedles)I'll be back in a moment.\w8\w8\e"
+		}
+		elseif justpunched == 1
+		{
+			justpunched = 0
+			"\0\s[44]I'll be back in a moment.\w8\w8\e"
 		}
 		else
 		{
-			"\0%(eyedles)I'll be back in a sec.\w8\w8\e"
+			"\0%(eyedles)I'll be back in a moment.\w8\w8\e"
 		}
 		//Replace this dialogue with whatever you like.
 	}
@@ -660,13 +813,20 @@ OnGhostChanging
 			"\0\s[54]\w6\s[55]\w8\w8\s[39]\w7\s[38]\w6%(eyedles)"
 			--
 			"Seems that I fell asleep..."
-			"Ow my neck... "
+			"\s[9]Ow my neck... "
+			"\s[9]Ow my wrist..."
 			"I suppose I needed that..."
 			"A terrible rest is better than nothing I suppose..."
-			"My cheek hurts..."
+			"\s[9]My cheek hurts..."
 			"\s[21]\f[sup,true]Hope I didn't drool on my Notebook...\f[sup,false]"
+			"\s[46]Ugh, \w8\w8\s[9]I think I got charcoal on my hand..."
 			--
 			"\0%(scaredfidgetatyou)Oh, %(reference0) wants to switch with me?\w8\w8\e"
+		}
+		elseif justpunched == 1
+		{
+			justpunched = 0
+			"\0\s[44]%(reference0) wants to switch with me...\w8\w8\e"
 		}
 		else
 		{
@@ -737,11 +897,12 @@ OnShellChanged
 		{
 			nowshell = "master" //This is the folder name for your shell. Not the same as the above! 
 		
+			"\0%(eyedles)\e"
 			//"\0\s[49]I feel less, flat...\e"
 			//"\0\s[0]This dialogue is for switching to our default shell.\w8\1\s[18]No really, will anyone actually put in the work to use these functions?\w8\0\s[9]\n\n[half]Shh.\e"
 			//Replace dialogue as required.
 		}
-		elseif reference0 == "The Wretched Scientist 2021" //You can use as many elseifs for as many shells as you've got.
+		elseif reference0 == "The Wretched Scientist 2021 [ODf]" //You can use as many elseifs for as many shells as you've got.
 		{
 			nowshell = "shell 2021"
 		
@@ -750,16 +911,25 @@ OnShellChanged
 			//"\0\s[0]This is another bit of dialogue for switching to this hypothetical shell.\w8\1\s[18]Man if you actually use this, you should tell Zar, it'll blow her mind.\w8\0\n\n[half]\s[9]Shut up, we're not supposed to be in-character here.\e"
 			//Replace these bits with whatever you have in mind.
 		}
-		elseif reference0 == "Another totally real shell wow"
-		{
-			nowshell = "thiswouldbesomuchwork"
+		//elseif reference0 == "Another totally real shell wow"
+		//{
+			//nowshell = "thiswouldbesomuchwork"
 		
-			"\1\s[10]This dialogue is after we've switched to another totally real shell.\e"
+			//"\1\s[10]This dialogue is after we've switched to another totally real shell.\e"
 			//Replace this as well.
-		}
+		//}
 		else //For any shell without a specific name, or if you don't want to bother with individual responses to a shell.
 		{
-		"\0\s[0]Here we are.\e"
+			if "[ODf]" _in_ reference0
+			{
+				nowshell = "Old Definition"
+			}
+			else
+			{
+				nowshell = "New Definition"
+			}
+			--
+			"\0\s[0]Here we are.\e"
 		//Note the %(reference[0]) here! This time that should store the name of whatever shell you're switching to. Replace this bit of dialogue as you need.
 		}
 	}
@@ -770,6 +940,7 @@ OnShellChanged
 
 OnDressupChanged
 {
+	floored = 0
 	if reference0 == 0 //in OnDressupChanged, reference0 refers to the character, therefore this is evaluating which character in question is getting dressed up. 0 is the main character, as you know from the walkthrough by now.
 	{
 		if takingnotes == 1
@@ -874,6 +1045,39 @@ OnDressupChanged
 				else // This checks if you're taking it off.
 				{
 					"\![raise,OnGenerateSleepNoise]\w8\0%(sleepnoise)\e"
+					--
+					glasses = 0
+				}
+			}
+		}
+		elseif justpunched == 1
+		{
+			if reference1 == "Garland" //This is the name of the clothing item in the descript.txt file, I'm pretty sure.
+			{
+				if reference2 == 1 //This checks if you're putting it on.
+				{
+					"\0\s[44]\w8.\w8.\w8.\e"
+					--
+					garland = 1
+				}
+				else // This checks if you're taking it off.
+				{
+					"\0\s[44]\w8.\w8.\w8.\e"
+					--
+					garland = 0
+				}
+			}
+			elseif reference1 == "Glasses" //This is the name of the clothing item in the descript.txt file, I'm pretty sure.
+			{
+				if reference2 == 1 //This checks if you're putting it on.
+				{
+					"\0\s[44]\w8.\w8.\w8.\e"
+					--
+					glasses = 1
+				}
+				else // This checks if you're taking it off.
+				{
+					"\0\s[44]\w8.\w8.\w8.\e"
 					--
 					glasses = 0
 				}
