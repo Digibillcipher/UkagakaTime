@@ -1,10 +1,12 @@
-**!!ATTENTION SURVIVORS!!**<br/>
-If you are on an update before v1.1.3
-Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if you haven't already done so.
+<img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
+
+**!!ATTENTION SURVIVORS!!**<br>
+If you are on an update before v1.1.3!!<br>
+Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if you haven't done so already.
 
 **The Wretched Scientist v1.1.3 Update**
 
-* Old shell now included, although some things will be unavailable or strange looking while using
+* Old shell now included, although some things will be unavailable or strange looking while using<br>
 (I recommend you flip him around in shell scaling while using it)
 * Most actions can be preformed without causing wilson to wake up or stop sitting/writing
 * Added specific reactions to needle shells
@@ -34,15 +36,22 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * ~~Garland removed until I re-add it lol~~
 
 ------------------------------------------------------------
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_dontstarve/balloons0.png">
+
+**DG - Don't Starve Balloon v1.1.1 Update**
+
+* Added two more balloon sizes
+* Added network updates
 
 **DG - Don't Starve Balloon v1.1.0 Update**
 
 * Increased the text area by a small amount, updated readme, and included my WilsonPH font
 
-You might want to completely re-install it since it's folder name has changed from z_dontstarve to dg_dontstarve
+The text balloon's folder name was changed from z_dontstarve to dg_dontstarve in 1.1.0<br>
+If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two balloon options with the same name
 
 **SSP Base Program**
 http://ssp.shillest.net/
-<br/>
+<br>
 **Ukagaka Dream Team Getting Started Page**
 https://ukagakadreamteam.com/wiki/guide/beginner_guide
