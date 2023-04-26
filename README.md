@@ -42,7 +42,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 * Added two more balloon sizes
 * Added network updates
-* increased symmetry
+* Increased symmetry
 
 **DG - Don't Starve Balloon v1.1.0 Update**
 
