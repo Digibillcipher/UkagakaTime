@@ -6,8 +6,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **The Wretched Scientist v1.1.3 Update**
 
-* Old shell now included, although some things will be unavailable or strange looking while using<br>
-(I recommend you flip him around in shell scaling while using it)
+* Old shell now included, although some things will be unavailable or strange looking while using
 * Most actions can be preformed without causing wilson to wake up or stop sitting/writing
 * Added specific reactions to needle shells
 * More complicated relationship system
