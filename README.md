@@ -1,10 +1,10 @@
-**Welcome to Digi_056's Ukagaka Github Repository!**<br>
+# Welcome to Digi_056's Ukagaka Github Repository!<br>
 This is where I keep the downloads for my ukagaka projects and where their updates are hosted from.<br>
 Latest .nars are kept in the top folder while old versions are available in the "legacy" folder.<br>
 To download, click the file and download the raw file.
 
 ------------------------------------------------------------
-**Ghosts!**
+# Ghosts!
 
 **The Wretched Scientist**<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
@@ -52,7 +52,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
 ------------------------------------------------------------
-**Shells!**
+# Shells!
 
 **Squirt**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/hydrate/squirt/thumbnail.png">
@@ -77,16 +77,17 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/injector/thumbnail.png">
 
 * A set of three shells for both Needle and Hydrate! Select via dressup!
-* Each one is themed off an injector from a different video game! (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
+* Each one is themed off an injector from a different video game!<br>
+(Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
 **Hatsune Neon**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
 
 * A Hatsune Miku themed shell for both FLUX and FLELE!
-* Additional hotspots when used with FLUX!
+* Additional hotspots when used with FLUX!<br>
 More information can be found in her readme
 ------------------------------------------------------------
-**Balloons!**
+# Balloons!
 
 **Digi's Don't Starve**<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_dontstarve/balloons0.png">
@@ -112,7 +113,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 * A Winamp media player themed text balloon!
 
 ------------------------------------------------------------
-**Calendars!**
+# Calendars!
 
 **Winamp Calendar**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/calendar_skin/winamp_calendar/appearance.png">
@@ -120,7 +121,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 * A Winamp media player themed calendar skin!
 
 ------------------------------------------------------------
-**Links!**
+# Links!
 
 **Needle**
 https://ukagaka.zichqec.com/ghost/needle
@@ -134,8 +135,8 @@ http://navy.nm.land.to/ukgk/flele/
 **FLUX**
 https://ukagaka.zichqec.com/ghost/flux
 <br>
-**Ukagaka Dream Team Getting Started Page**
-https://ukagakadreamteam.com/wiki/guide/beginner_guide
-<br>
 **SSP**
 http://ssp.shillest.net/
+<br>
+**Ukagaka Dream Team Getting Started Page**
+https://ukagakadreamteam.com/wiki/guide/beginner_guide
