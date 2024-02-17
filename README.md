@@ -8,7 +8,7 @@ To download, click the file and download the raw file.
 **The Wretched Scientist**<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
 
-* A funny messed up scientist to vibe with you!
+* A funny messed up scientist to vibe with you!<br>
 More information can be found on my website: https://digibillcipher.github.io/index_files/ukagaka.htm
 
 **!!ATTENTION SURVIVORS!!**<br>
