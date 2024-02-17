@@ -3,7 +3,6 @@ This is where I keep the downloads for my ukagaka projects and where their updat
 Latest .nars are kept in the top folder while old versions are available in the "legacy" folder.<br>
 To download, click the file and download the raw file.
 
-------------------------------------------------------------
 # Ghosts!
 
 **The Wretched Scientist**<br>
@@ -51,7 +50,6 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
-------------------------------------------------------------
 # Shells!
 
 **Squirt**<br>
@@ -86,7 +84,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * A Hatsune Miku themed shell for both FLUX and FLELE!
 * Additional hotspots when used with FLUX!<br>
 More information can be found in her readme
-------------------------------------------------------------
+
 # Balloons!
 
 **Digi's Don't Starve**<br>
@@ -112,7 +110,6 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 
 * A Winamp media player themed text balloon!
 
-------------------------------------------------------------
 # Calendars!
 
 **Winamp Calendar**<br>
@@ -120,7 +117,6 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 
 * A Winamp media player themed calendar skin!
 
-------------------------------------------------------------
 # Links!
 
 **Needle**
