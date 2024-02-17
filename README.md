@@ -6,7 +6,7 @@ To download, click the file and download the raw file.
 ------------------------------------------------------------
 **Ghosts!**
 
-**The Wretched Scientist**
+**The Wretched Scientist**<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
 
 * A funny messed up scientist to vibe with you!
@@ -46,7 +46,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * ~~Nerd~~ Glasses dress-up
 * ~~Garland removed until I re-add it lol~~
 
-**The Rain Station**
+**The Rain Station**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/ghost/the_rain_station/thumbnail.png">
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
@@ -54,32 +54,32 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 ------------------------------------------------------------
 **Shells!**
 
-**Squirt**
+**Squirt**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/hydrate/squirt/thumbnail.png">
 
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
-**Hands Included**
+**Hands Included**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/hands_included/appearance.png">
 
 * A shell for Needle!
 * Comes with hands included!
 * May or may not blink!
 
-**Fluffidle**
+**Fluffidle**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/fluffidle/appearance.png">
 
 * A shell for Needle!
 * Is the fur sharp or soft? You decide! :D
 
-**Injector**
+**Injector**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/injector/thumbnail.png">
 
 * A set of three shells for both Needle and Hydrate! Select via dressup!
 * Each one is themed off an injector from a different video game! (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
-**Hatsune Neon**
+**Hatsune Neon**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
 
 * A Hatsune Miku themed shell for both FLUX and FLELE!
@@ -88,7 +88,7 @@ More information can be found in her readme
 ------------------------------------------------------------
 **Balloons!**
 
-**Digi's Don't Starve**
+**Digi's Don't Starve**<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_dontstarve/balloons0.png">
 
 * A Don't Starve themed text balloon!
@@ -106,7 +106,7 @@ More information can be found in her readme
 The text balloon's folder name was changed from z_dontstarve to dg_dontstarve in 1.1.0<br>
 If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two balloon options with the same name
 
-**Winamp Balloon**
+**Winamp Balloon**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/balloon/winamp_balloon/thumbnail.png">
 
 * A Winamp media player themed text balloon!
@@ -114,7 +114,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 ------------------------------------------------------------
 **Calendars!**
 
-**Winamp Calendar**
+**Winamp Calendar**<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/calendar_skin/winamp_calendar/appearance.png">
 
 * A Winamp media player themed calendar skin!
