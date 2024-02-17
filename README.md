@@ -10,7 +10,8 @@ To download, click the file and download the raw file.
 <img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
 
 * A funny messed up scientist to vibe with you!<br>
-More information can be found on my website: https://digibillcipher.github.io/index_files/ukagaka.htm
+More information can be found on my website:<br>
+https://digibillcipher.github.io/index_files/ukagaka.htm
 
 **!!ATTENTION SURVIVORS!!**<br>
 If you are on an update before v1.1.3!!<br>
