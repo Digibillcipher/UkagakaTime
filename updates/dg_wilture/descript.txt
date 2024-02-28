@@ -1,0 +1,15 @@
+charset,UTF-8
+type,shell
+
+name,Wilture
+craftman,Digi
+craftmanurl,https://digi-056.tumblr.com/
+homeurl,https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wilture/
+
+seriko.alignmenttodesktop,free
+seriko.use_self_alpha,1
+
+sakura.menu, auto
+sakura.bindgroup200.name,Option,Arms
+sakura.bindgroup201.name,Option,Nakey
+sakura.bindgroup202.name,Option,Nakey+Arms
