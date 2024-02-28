@@ -57,7 +57,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Wilture**<br>
 (dg_wilture.nar)<br>
-no image yet<br>
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wilture/surface21.png">
 
 * A shell for Slugcat!
 * Wilson-ify your slugcat!
@@ -152,6 +152,9 @@ http://navy.nm.land.to/ukgk/flele/
 <br>
 **FLUX**
 https://ukagaka.zichqec.com/ghost/flux
+<br>
+**Slugcat**
+https://ukagakadreamteam.com/wiki/ghost/slugcat
 <br>
 **SSP**
 http://ssp.shillest.net/
