@@ -59,8 +59,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (dg_wilture.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wilture/surface21.png">
 
-* A shell for Slugcat!
-* Wilson-ify your slugcat!
+* A Wilson-y shell for Slugcat!
 * Comes with optional arms!
 * Update now with the Ghost Explorer!<br>
 (Ctrl+E > Type > Shell > Right Click "Wilture" > Network Update!)
