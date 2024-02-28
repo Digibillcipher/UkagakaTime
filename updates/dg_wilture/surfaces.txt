@@ -26,6 +26,10 @@ surface0
 	animation6.interval,random,4
 	animation6.pattern1,overlay,6,0,0,0
 	animation6.pattern2,overlay,-1,50,0,0
+
+	//Hee Hoo Stare
+	animation0.interval,runonce
+	animation0.pattern1,overlay,5,0,0,0
 	
 	//*Looks at u*
 	animation1.interval,never
@@ -88,6 +92,10 @@ surface100
 	collision3,117,164,283,265,head
 	
 	element0,overlay,surface0.png,0,0
+
+	//Hee Hoo Stare
+	animation0.interval,runonce
+	animation0.pattern1,overlay,5,0,0,0
 	
 	//Down
 	animation101.interval,never
