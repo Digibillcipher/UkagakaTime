@@ -55,6 +55,16 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 # Shells!
 
+**Wilture**<br>
+(dg_wilture.nar)<br>
+no image yet<br>
+
+* A shell for Slugcat!
+* Wilson-ify your slugcat!
+* Comes with optional arms!
+* Update now with the Ghost Explorer!<br>
+(Ctrl+E > Type > Shell > Right Click "Wilture" > Network Update!)
+
 **Squirt**<br>
 (Squirt.nar)<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/hydrate/squirt/thumbnail.png">
