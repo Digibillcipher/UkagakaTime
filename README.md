@@ -94,6 +94,13 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * Each one is themed off an injector from a different video game!<br>
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
+**Sewing Pin**<br>
+(dg_injector.nar)<br>
+(no image yet)<br>
+
+* A set of three sewing pin shells for both Needle!
+* Select style and colors via dressup!
+
 **Hatsune Neon**<br>
 (dg_miku.nar)<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
