@@ -98,7 +98,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (dg_injector.nar)<br>
 (no image yet)<br>
 
-* A set of three sewing pin shells for both Needle!
+* A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
 
 **Hatsune Neon**<br>
