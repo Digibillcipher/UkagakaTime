@@ -55,6 +55,17 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 # Shells!
 
+**Five Rotten Pebbles (FLUX)**<br>
+(dg_pebblesflux.nar)<br>
+(no image yet)<br>
+
+* An annoyed off-the-string Iterator to play your music!
+* Pet him! Boop Him! Poke him with Needle!
+* Perform charades in hopes of getting him to answer your questions!
+* Cough up randomly colored pearls for him to hold!
+* Update capable!<br>
+(Open FLUX menu > Config > Check for shell updates!)
+
 **Wilture**<br>
 (dg_wilture.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wilture/surface21.png">
@@ -95,8 +106,8 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
 **Sewing Pin**<br>
-(dg_injector.nar)<br>
-(no image yet)<br>
+(dg_sewingpin.nar)<br>
+<img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/sewing_pin/thumbnail.png">
 
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
