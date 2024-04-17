@@ -57,7 +57,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Five Rotten Pebbles (FLUX)**<br>
 (dg_pebblesflux.nar)<br>
-(no image yet)<br>
+<img src="https://ukagakadreamteam.com/wiki/_media/shell/flux/five_rotten_pebbles/appearance.png">
 
 * An annoyed off-the-string Iterator to play your music!
 * Pet him! Boop Him! Poke him with Needle!
