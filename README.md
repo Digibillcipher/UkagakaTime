@@ -64,8 +64,8 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * Perform charades in hopes of getting him to answer your questions!
 * Cough up randomly colored pearls for him to hold!
 * Downpour content mentioned! Be warned!
-* Update available now!<br>
-(Open FLUX menu > Config > Check for shell updates!)
+* Update now with the Ghost Explorer!<br>
+(Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
 **Wilture**<br>
 (dg_wilture.nar)<br>
