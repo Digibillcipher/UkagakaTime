@@ -1,0 +1,659 @@
+//Everything in this file is commented out on purpose. Only uncomment functions that you're planning to use! FLUX checks for the EXISTENCE of a function, and if the function exists, it executes it rather than doing the default behavior. It does not check if there's actually anything IN the function. So if you're not using one of these functions, comment it out or erase it!
+
+//Also, I will reiterate again: Try not to use the base SHIORI functions found on Ukadoc here! I may update FLUX in the future to have that same function, and then your shell's custom code wouldn't work anymore until you update it! If you really need one, ask me about it and I can consider adding the function to FLUX so you can use it. And if you're doing really complex stuff, you might just want to make your own ghost lol
+
+//For the same reason, if you're adding new custom functions, try to give them fairly unique names! Same with variables, especially. More notes about this in the documentation file.
+
+
+//Write the current version of your shell here, and it'll be noted on the main menu. Try it out!
+shellver
+{
+	"1.0.1"
+}
+
+//Set up the path to your tray icon here, and it'll automatically change to it whenever your shell is loaded. Note that you'll need to keep the /../../shell/ part as it is, just edit the path after that
+//OnCustom_trayicon
+//{
+	//"\![set,tasktrayicon,/../../shell/your_shell/your_shells_icon.ico]"
+//}
+
+//Custom dialogue for when FLUX is booted. If you want, you can use the _timesince bit I've commented out for the number of days since FLUX was last loaded. Note that a notify command and trayicon command will always happen before any dialogue. Uses the same references as OnBoot.
+OnCustom_OnBoot
+{
+	"\1\s[-1]\0"
+	--
+	_timesince = FUNCTIONEX("time_check.dll","how_many_days",lastclosed[0],lastclosed[1],lastclosed[2],0,0,0) * -1
+	if _timesince == 0
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me?"
+		"\s[5]\i[1]Here we go again, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	elseif _timesince == 1
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again this cycle, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me this cycle?"
+		"\s[5]\i[1]Here we go again this cycle, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	else
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again. \w8\w8\w8It seems it's been %(_timesince) cycles since we last met, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me after so long?"
+		"\s[5]\i[1]Here we go again now, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+}
+
+//Custom dialogue for when FLUX is closed. Note that the command to stop sound and a notifyother command will always happen first. Also, don't end dialogues here with a \e, FLUX automatically appends \w8\w8\-\e at the end of any dialogues here. Uses the same references as OnClose.
+OnCustom_OnClose
+{
+	"\s[5]Oh? \w8You're leaving? \w8\w8\w8\i[1]I'm sure you will be back soon."
+	"\s[5]\i[1]So long, \w8little slugcat."
+	"\s[5]Are you off to find another pearl? \w8\w8\i[1]Maybe you're just hungry."
+	"\s[5]\i[1]Are you going to bother someone else now?"
+}
+
+//Custom dialogue when FLUX is swapping to another ghost. Same notes as above. Uses the same references as OnGhostChanging.
+OnCustom_OnGhostChanging
+{
+	"\s[5]Oh? \w8You're leaving? \w8\w8\w8\i[1]I'm sure you will be back soon."
+	"\s[5]\i[1]So long, \w8little slugcat."
+	"\s[5]Are you off to find another pearl? \w8\w8\i[1]Maybe you're just hungry."
+	"\s[5]\i[1]Are you going to bother someone else now?"
+}
+
+//Custom dialogue when FLUX was switched to from another ghost. If you want, you can use the _timesince bit I've commented out for the number of days since FLUX was last closed. Note that a notify command will always happen before any dialogue. Uses the same references as OnGhostChanged.
+OnCustom_OnGhostChanged
+{
+	"\1\s[-1]\0"
+	--
+	_timesince = FUNCTIONEX("time_check.dll","how_many_days",lastclosed[0],lastclosed[1],lastclosed[2],0,0,0) * -1
+	if _timesince == 0
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me?"
+		"\s[5]\i[1]Here we go again, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	elseif _timesince == 1
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again this cycle, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me this cycle?"
+		"\s[5]\i[1]Here we go again this cycle, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	else
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again. \w8\w8\w8It seems it's been %(_timesince) cycles since we last met, \w8little slugcat."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me after so long?"
+		"\s[5]\i[1]Here we go again now, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+}
+
+//Custom dialogue when changing away from a shell. Uses the same references as OnShellChanging.
+OnCustom_OnShellChanging
+{
+	"\s[5]Oh? \w8You're leaving? \w8\w8\w8\i[1]I'm sure you will be back soon."
+	"\s[5]\i[1]So long, \w8little slugcat."
+	"\s[5]Are you off to find another pearl? \w8\w8\i[1]Maybe you're just hungry."
+	"\s[5]\i[1]Are you going to bother someone else now?"
+}
+
+//Custom dialogue after changing to a new shell. If you have any issues with this function not being called properly, please let me know! The whole shell change system is a little slow/janky because it has to copy over all of the information in this file, and then reload itself, before it can run this dialogue. Reference values here should be the same as OnShellChanged.
+OnCustom_OnShellChanged
+{
+	"\1\s[-1]\0"
+	--
+	_timesince = FUNCTIONEX("time_check.dll","how_many_days",lastclosed[0],lastclosed[1],lastclosed[2],0,0,0) * -1
+	if _timesince == 0
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me?"
+		"\s[5]\i[1]Here we go again, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	elseif _timesince == 1
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again this cycle"
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me this cycle?"
+		"\s[5]\i[1]Here we go again this cycle, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+	else
+	{
+		"\s[5]Ah, \w8you've returned. \w8\w8\w8\i[1]I had a feeling you would find me again. \w8\w8\w8It seems it's been %(_timesince) cycles since we last met."
+		"\s[5]Little slugcat? \w8\w8Have you found a new pearl for me after so long?"
+		"\s[5]\i[1]Here we go again now, \w8\w8a little slugcat, \w8\w8and a wandering Iterator."
+		"\s[15]...\w8\w8\w8\w8\s[16]Oh! \w8\w8It's you, \w8\w8\i[1]a little slugcat."
+	}
+}
+
+//Custom dialogue for the randomtalk function. Having this function in your file will enable the 'say something' option on the main menu! I included an example if/else for splitting up your dialogue into singing vs idle dialogue, but you can ignore that if you want. If you want to use it, you'll need to create the Custom_SingingDialogue and Custom_IdleDialogue functions!
+//Note, the Singing function returns 1 if FLUX is playing music, and 0 if it's not.
+OnCustom_RandomTalk
+{
+	if Singing; Custom_SingingDialogue //This will be called if FLUX is playing music
+	else; Custom_IdleDialogue //This will be called if FLUX is NOT playing music
+}
+
+Custom_IdleDialogue
+{
+	"\s[5]\i[1]I can't tell if you have a mark of communication, \w8and I cannot give you one. \w8\s[0]\i[1]So I have no idea if I'm just talking to myself here."
+	"\s[5]You know, \w8it was a common misconception that Iterators are the puppets inside our cans. \w8\w8It is actually the other way around. \w8\w8We %(ItalT)are%(ItalF), our cans."
+	"\s[6]I wonder how the Iterators outside of our local group are doing. \w8\w8We've been unable to contact them for so long, \w8\w8and no-one has been able to repair the communication arrays until now. \w8\w8\w8It's also likely only ours has been. \w8\w8\w8\w8\s[9]\i[11]I would visit them, \w8but I highly doubt they would appreciate me showing up on their doorstep."
+	"\s[12]\i[11]NSH jokingly called me an %(CHR(34))Ear-terator%(CHR(34)) a while ago. \w8\w8\w8\w8I %(ItalT)still%(ItalF) haven't thought of a good enough come-back."
+	"\s[5]\i[1]How strange that I find myself so often accompanied by your kind, \w8\w8little slugcat."
+	"\s[5]\i[1]Shouldn't you be off bothering someone else?"
+	"\s[0]\i[1]Here I am, \w8\w8an Iterator, \w8\w8wandering the wilderness as only their puppet. \w8\w8Constantly fighting off lizards and being annoyed by slugcats."
+	"\s[0]\i[1]I wonder which shelter I'll sleep in this cycle."
+	"\s[9]\i[11]Moon has been doing much better lately. \w8\w8We've slowly been cutting off the damaged portions of her can and it seems to be making a difference."
+	"\s[12]\i[11]I %(ItalT)have%(ItalF) to get some cooking supplies together. \w8\w8\w8\s[1]\i[1]I'm sick and tired of eating raw meat like some sort of %(ItalT)animal.%(ItalF) \w8\w8\i[10]\s[13]\w8\w8\w8\w8\s[14]No offence."
+	"\s[5]\i[1]I will admit these pearls you've been giving me to play have had some rather, \w8%(ItalT)interesting,%(ItalF) \w8music."
+	"\s[5]I do wonder just where you are getting all of these pearls. \w8\w8\w8\w8\i[1]You're not stealing them from other Iterators, \w8\w8are you?"
+	"\s[9]\i[11]I wonder how NSH will react to me trekking out to him."
+	"\s[20]\i[1]My citizen wasn't taking very well to living out in the wilderness again, \w8\w8I suppose she got used to her life in my city."
+	"\s[12]\i[11]The other slugcats kept complaining about how well I can throw spears. \w8\w8\w8\s[14]I'm not %(ItalT)that%(ItalF) bad, \w8\w8\w8\s[21]am I?"
+	"\s[5]I'm sorry I can't answer all your questions, \w8\w8\i[1]my memory doesn't work the same way that it used to. \w8\w8\w8\w8\s[12]\i[11]It's hard to tell what's missing when you can't remember what was supposed to be there."
+	"\s[6]\i[1]NSH has seemed rather restless lately, \w8\w8but he hasn't mentioned why..."
+	"\s[12]\i[11]Suns hasn't talked with us very much yet, \w8\w8\s[14]although it's understandable why..."
+	"\s[6]We haven't contacted, \w8or been contacted, \w8by any other members of our local group other than No Significant Harassment and Seven Red Suns. \w8\w8Although we should probably get a message out soon, \w8\w8since there's no doubt they have seen my can's fire and subsequent collapse."
+	"\s[6]\i[1]Recently we found a pearl mentioning some Iterators fawning over a game called %(CHR(34))Football%(CHR(34)) they were forcing slugacats to play? \w8\w8They were challenged with taking a pearl to an opposite group as a goal and defending their own from the oposing group's team? \w8\w8\s[21]\i[1]It was very strange." //IDK what to tell you this is just a 17776 reference
+	"\s[12]\i[11]I know it is odd for me to say this, \w8\w8as an Iterator. \w8\w8But I have lost count as to how many times a lizard has thought I was a decent meal, \w8\w8\s[14]and then ate me."
+	"\s[14]I sure hope Wilson isn't performing any sort of ridiculous experiments while I'm out here, \w8\w8considering how the last one went."
+	"\s[12]\i[11]I suppose now, \w8\w8instead of being one of the bugs in the maze, \w8\w8I'm instead one that tumbled out onto the floor, \w8\w8and has begun feeding the others the crumbs that have fallen onto the floor of the kitchen."
+	"\s[12]\i[11]Sometimes I wonder what would've happened if the Ancients hadn't left us so soon. \w8\w8\s[6]\i[1]Would they have continued building us? \w8\w8And if so, \w8\w8when would they have stopped? \w8\w8Would they have simply continued to do so until we found the solution? \w8\w8Increasing our numbers until no space remained? \w8\w8\s[6]Would they then have started building us on top of each other? \w8\w8\w8\w8\s[12]\i[11]Well... \w8\w8\s[0]\i[1]I suppose it doesn't really matter.... does it?" //Don't mess with Wilson's portal and you'll never see it hehehe
+	"\s[0]\i[1]NSH really needs to send out one of his overseers to guide me. \w8\w8I swear that I'm heading in the right direction and yet I keep going in circles.... \w8\w8\w8\w8At this rate, \w8\w8I'll evolve into a red lizard before I get there." //Fat chance lmao
+}
+//This is inserted into the main menu, between the Shell/Dressup options and the Config option. This is really just for if you want to add a couple simple questions or something the user could ask your character, but if you want to add something else, go for it. Just don't break stuff haha. Note that the menu options before and after it automatically have linebreaks for it.
+OnCustom_Menu
+{
+	"\![*]\q[%(wawa),OnWawawawa]"
+}
+
+OnNowawa
+{
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\s[17]\i[1]"
+	}
+	else
+	{
+		"\s[5]\i[1]"
+	}
+	--
+	"Had enough?"
+	"Are you sparing me?"
+	"Did you run out of breath?"
+	"You done?"
+	"Finished?"
+	"No more noises to make?"
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\s[25]Ah, \w8silence."
+	}
+	else
+	{
+		"\s[0]\i[1]Ah, \w8silence."
+	}
+	--
+	"\e"
+}
+
+OnWawawawa
+{
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\b2\s[17]\i[1]"
+	}
+	else
+	{
+		"\b2\s[5]\i[1]"
+	}
+	--
+	"What? \w8What do you want?"
+	"Hmm? \w8You want my attention?"
+	"I can't understand you, \w8you know."
+	"Huh? \w8Are you trying to communicate?"
+	"Are you attempting to speak my language?"
+	"I don't know what you're saying, \w8slugcat."
+	"Can you say, \w8apple? \w8\w8APPLE."
+	"Yes? \w8Little slugcat?"
+	"What now?"
+	"Do you want something?"
+	"Huh? \w8What is it?"
+	--
+	"\n\n\![*]\q[%(wawa),OnWawawawa]\n\n"//hehehehe
+	--
+	"\![*]\q[*Perform Charades*,OnAskPebbles]\n\n"
+	--
+	"\![*]\q[*Give Pearls*,OnPearls]\n\n"
+	--
+	"\![*]\q[...,OnNowawa]\e"
+}
+
+OnAskPebbles
+{
+	//Why did my wife leave me and take the pups? -ueue_mlgpro
+	//Idk that's not my problem -Pebbles
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\b2\s[22]\i[5]"
+	}
+	else
+	{
+		"\b2\s[21]\i[1]"
+	}
+	--
+	"What? \w8What are you-?"
+	"What are you doing-?"
+	"Why are you waving your hands-?"
+	"Are you-?"
+	"Huh-?"
+	"What are-?"
+	"Little slugcat-?"
+	--
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\w8\w8\s[17]\i[1] "
+	}
+	else
+	{
+		"\w8\w8\s[5]\i[1] "
+	}
+	--
+	"Oh, \w8\w8\w8"
+	"Ah, \w8\w8\w8"
+	"I think I see, \w8\w8\w8"
+	"Wait I understand, \w8\w8\w8"
+	"Hold on I get it, \w8\w8\w8"
+	"Wait, \w8\w8\w8"
+	--
+	"you want to know "
+	"you want to ask "
+	"you're wondering "
+	"you're asking "
+	--
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"why if I have a mouth I don't move it while I'm speaking. \w8\w8\s[24]\i[11]\i[1]It's simply because I don't need to."
+		"if the rot on my body is at all dangerous. \w8\w8Luckily that is not the case, \w8\w8touching the rotten parts of me will neither infect you, \w8nor cause you harm in any way."
+		"what happened to my can. \w8\w8We set it ablaze so that the rot couldn't spread any further, \w8\w8if one cyst was able to crawl all the way into my puppet chamber on a quest to eat me, \w8we didn't want to risk any one or anything getting in or out of the structure."
+		"how I'm even out of my can in the first place. \w8\w8\s[19]\i[1]Well.. \w8\w8For a while I had been assisting a particularly strange slugcat as part of a deal in which he would use his skills to rid my systems of rot. \w8\w8During one cycle we found a rather large and persistent cyst making its way to my puppet chamber, \w8seemingly as though on a mission. \w8\w8\w8\s[17]\i[1]He attempted to keep it from reaching me to no avail. \w8\w8\w8Despite him tearing of a significant amount of it's tentacles and flesh, \w8\w8it simply let itself be torn apart so that could get into my chamber first. \w8\w8And as you might have guessed, \w8it succeed in getting inside and consuming my puppet. \w8\w8\w8\s[19]\i[1]This caused me to black out and wake up like this, \w8\w8\s[17]\i[1]it was an extremely jarring experience."
+		"how pearls work. \w8\w8\w8It's really quite simple, \w8\w8they-\w8\w8\w8\s[19]\w8\w8\w8\w8\w8\w8\s[22] they uh... \w8\w8\w8\w8\w8\w8\w8\s[26]%(ItalT)I don't remember...%(Italf)"
+		"about the, \w8\w8\w8\s[19]\i[1]blue \w8fruit? \w8\w8\s[17]\i[1]Oh, \w8\w8Moon might have already told you this but that name is actually a misnomer. \w8\w8It's actually one of the life stages of an insect or similar creature. \w8\w8You likely know it as %(CHR(34))blue fruit%(CHR(34)) because of its mostly sweet flavor and smooth texture."
+		"what am I doing way out here. \w8\w8I am actually on my way to NSH's can. \w8\w8Since we are finally capable of repairs, \w8\w8even if only minor ones, \w8\w8it's important that we find out what condition our fellow Iterators are in and assess what we can fix. \w8\w8It's easier to do this if one of us goes in person. \w8\w8The others stayed with Moon, \w8since I'm the only one who can both make the journey and determine how exactly we can make repairs."
+		"why it's so hard to, \w8\s[22]go through an Iterator...? \w8\w8\w8\w8\i[5]I don't know who you've been crawling around inside, \w8\w8but maybe it's because, \w8\w8\s[22]%(ItalT)you're not supposed to be in there?%(ItalF) \w8\w8\s[18]\i[5]\i[1]And you know it's a bit hard to think when you've got an %(ItalT)animal%(ItalF) crawling around the inside of your brain. \w8\w8\i[1]%(ItalT)Got it!?%(ItalF)"
+		"about when we first contacted No Significant Harassment and Seven Red Suns. \w8\w8At first, \w8we were only intending to contact NSH, \w8\w8but we soon found out that they had both been in contact for some time. \w8\w8\w8\s[26]\i[1]The ensuing argument between us was inevitable."
+		"about who fixed our communications array. \w8\w8\s[17]That would be Wilson, \w8\w8who I believe I mentioned before. \w8\w8\s[17]\i[1]He's a bit of an odd slugcat, \w8\w8\s[19]\i[1]although %(CHR(34))slugcat%(CHR(34)) is not quite the right term, \w8\s[17]\i[1]as he technically isn't one. \w8\w8Instead he simply resembles a slugcat more than anything else. \w8\w8\s[22]\i[5]He found his way into my chamber through an %(ItalT)\s[18]\i[5]improperly tested interdimensional portal he constructed...%(ItalF) \w8\w8\w8\w8\w8\s[22]\i[5]Simply ridiculous...\w8\w8\s[17]Oh, \w8\i[1]right....\w8\w8Anyway, \w8\w8he came inside around the same time as a striped slugcat and \s[19]they started to be drawn together \i[1]almost like a gravitational pull. \w8\w8\s[17]I could have easily separated them, \w8but I was so startled by the things happening in front of me that I simply watched. \w8\w8They were pulled into each other's forms, \w8combining in a horrific fashion. \w8\w8When he finally regained consciousness he seemed to realise I could have done something, \w8\w8even though it had only been the striped slugcat who had seen me control the gravity in my chamber. \w8\w8\i[1]I told him I was currently too busy with my own problems to find a way to reverse it, \w8\w8\s[17]but he then offered to help me in exchange! \w8\w8\i[1]I agreed to these terms and he helped remove the rot filling my systems until it finally consumed my puppet, \w8\w8which miraculously allowed me to leave my structure."
+		"if I've seen any other slugcats in my travels. \w8\w8Yes, \w8\w8occasionally I do see some. \w8\w8Although none of them have followed me around out here as much as you've been."
+		"if I know any other slugcats. \w8\w8Excluding the individual who only resembles a slugcat, \w8\w8I know three. \w8\w8The Artificer, \w8\w8who is my singular citizen, \w8\w8The Survivor, \w8\w8and their sibling, \w8\w8The Monk. \w8\w8I would ask what your name is, \w8\w8but slugcat names seem to require more translation than charades can provide."
+		"where my overseers are. \w8\w8I was disconnected from them when the rot consumed my puppet. \w8\w8This made communications with them rather difficult.. \w8\w8I've since let Looks to the Moon utilize them in my place."
+
+	}
+	else
+	{
+		"why if I have a mouth I don't move it while I'm speaking. \w8\w8\s[23]\i[11]\i[1]It's simply because I don't need to."
+		"if the rot on my body is at all dangerous? \w8\w8Luckily that is not the case, \w8\w8touching the rotten parts of me will neither infect you, \w8nor cause you harm in any way."
+		"what happened to my can. \w8\w8We set it ablaze so that the rot couldn't spread any further, \w8\w8if one cyst was able to crawl all the way into my puppet chamber on a quest to eat me, \w8we didn't want to risk any one or anything getting in or out of the structure."
+		"how I'm even out of my can in the first place. \w8\w8\s[6]\i[1]Well.. \w8\w8For a while I had been assisting a particularly strange slugcat as part of a deal in which he would use his skills to rid my systems of rot. \w8\w8During one cycle we found a rather large and persistent cyst making its way to my puppet chamber, \w8seemingly as though on a mission. \w8\w8\w8\s[5]\i[1]He attempted to keep it from reaching me to no avail. \w8\w8\w8Despite him tearing of a significant amount of it's tentacles and flesh, \w8\w8it simply let itself be torn apart so that could get into my chamber first. \w8\w8And as you might have guessed, \w8it succeed in getting inside and consuming my puppet. \w8\w8\w8\s[6]\i[1]This caused me to black out and wake up like this, \w8\w8\s[5]\i[1]it was an extremely jarring experience."
+		"how pearls work. \w8\w8\w8It's really quite simple, \w8\w8they-\w8\w8\w8\s[6]\w8\w8\w8\w8\w8\w8\s[21] they uh... \w8\w8\w8\w8\w8\w8\w8\s[20]%(ItalT)I don't remember...%(Italf)"
+		"about the, \w8\w8\w8\s[6]\i[1]blue \w8fruit? \w8\w8\s[5]\i[1]Oh, \w8\w8Moon might have already told you this but that name is actually a misnomer. \w8\w8It's actually one of the life stages of an insect or similar creature. \w8\w8You likely know it as %(CHR(34))blue fruit%(CHR(34)) because of its mostly sweet flavor and smooth texture."
+		"what am I doing way out here. \w8\w8I am actually on my way to NSH's can. \w8\w8Since we are finally capable of repairs, \w8\w8even if only minor ones, \w8\w8it's important that we find out what condition our fellow Iterators are in and assess what we can fix. \w8\w8It's easier to do this if one of us goes in person. \w8\w8The others stayed with Moon, \w8since I'm the only one who can both make the journey and determine how exactly we can make repairs."
+		"why it's so hard to, \w8\s[21]go through an Iterator...? \w8\w8\w8\w8\i[1]I don't know who you've been crawling around inside, \w8\w8but maybe it's because, \w8\w8\s[21]%(ItalT)you're not supposed to be in there?%(ItalF) \w8\w8\s[1]\i[5]\i[1]And you know it's a bit hard to think when you've got an %(ItalT)animal%(ItalF) crawling around the inside of your brain. \w8\w8\i[1]%(ItalT)Got it!?%(ItalF)"
+		"about when we first contacted No Significant Harassment and Seven Red Suns. \w8\w8At first, \w8we were only intending to contact NSH, \w8\w8but we soon found out that they had both been in contact for some time. \w8\w8\w8\s[20]\i[1]The ensuing argument between us was inevitable."
+		"about who fixed our communications array. \w8\w8\s[5]That would be Wilson, \w8\w8who I believe I mentioned before. \w8\w8\s[5]\i[1]He's a bit of an odd slugcat, \w8\w8\s[6]\i[1]although %(CHR(34))slugcat%(CHR(34)) is not quite the right term, \w8\s[5]\i[1]as he technically isn't one. \w8\w8Instead he simply resembles a slugcat more than anything else. \w8\w8\s[12]\i[11]He found his way into my chamber through an %(ItalT)\s[1]\i[1]improperly tested interdimensional portal he constructed...%(ItalF) \w8\w8\w8\w8\w8\s[14]Simply ridiculous...\w8\w8\s[5]Oh, \w8\i[1]right....\w8\w8Anyway, \w8\w8he came inside around the same time as a striped slugcat and \s[6]they started to be drawn together \i[1]almost like a gravitational pull. \w8\w8\s[5]I could have easily separated them, \w8but I was so startled by the things happening in front of me that I simply watched. \w8\w8They were pulled into each other's forms, \w8combining in a horrific fashion. \w8\w8When he finally regained consciousness he seemed to realise I could have done something, \w8\w8even though it had only been the striped slugcat who had seen me control the gravity in my chamber. \w8\w8\i[1]I told him I was currently too busy with my own problems to find a way to reverse it, \w8\w8\s[5]but he then offered to help me in exchange! \w8\w8\i[1]I agreed to these terms and he helped remove the rot filling my systems until it finally consumed my puppet, \w8\w8which miraculously allowed me to leave my structure."
+		"if I've seen any other slugcats in my travels. \w8\w8Yes, \w8\w8occasionally I do see some. \w8\w8Although none of them have followed me around out here as much as you've been."
+		"if I know any other slugcats. \w8\w8Excluding the individual who only resembles a slugcat, \w8\w8I know three. \w8\w8The Artificer, \w8\w8who is my singular citizen, \w8\w8The Survivor, \w8\w8and their sibling, \w8\w8The Monk. \w8\w8I would ask what your name is, \w8\w8but slugcat names seem to require more translation than charades can provide."
+		"where my overseers are. \w8\w8I was disconnected from them when the rot consumed my puppet. \w8\w8This made communications with them rather difficult. \w8\w8I've since let Looks to the Moon utilize them in my place."
+		
+	}
+	--
+	"\n\n\![*]\q[%(wawa),OnWawawawa]\n\n"//hehehehe
+	--
+	"\![*]\q[*Perform Charades*,OnAskPebbles]\n\n"
+	--
+	"\![*]\q[*Give Pearls*,OnPearls]\n\n"
+	--
+	"\![*]\q[...,OnNowawa]\e"
+}
+
+OnPearls
+{
+	OnRandPearls
+	--
+	"You have more pearls for me?"
+	"\i[1]Do you have a stash of these somewhere?"
+	"Yet more pearls?"
+	"\i[1]How is it that you seem to know which pearls contain music, \w8I wonder." //you are a suspicious slugcat indeed
+	"\i[1]I suppose you wish for me to play these pearls as well?"
+	"More!? \w8\w8\i[1]Are you digging these out of the rubble of someone's city?"
+	"\s[22]\i[5]Ugh, \w8\w8\s[22]could you at least wipe them off after you hack them up?"
+	"\s[22]\i[5]I am both shocked and disgusted by how many of these you can hold in your gullet."
+	"I'm at least glad that my touch won't corrupt these pearls, \w8\w8\i[1]not that I want to touch them after you've coughed them up."
+	"\i[1]Where are you stockpiling these?"
+	"\i[1]Listen, \w8\w8I think you need to tell me where you're getting all these pearls."
+	"Do you plan on sharing any of these with Moon? \w8\w8\i[1]Or just me?"
+	--
+	"\n\n\![*]\q[%(wawa),OnWawawawa]\n\n"//hehehehe
+	--
+	"\![*]\q[*Perform Charades*,OnAskPebbles]\n\n"
+	--
+	"\![*]\q[*Give Pearls*,OnPearls]\n\n"
+	--
+	"\![*]\q[...,OnNowawa]\e"
+}
+
+OnRandPearls
+{
+	_PLH = DressupNames[RAND(36) - 1]
+	_PRH = DressupNames[RAND(36) - 1]
+	_PTR = DressupNames[RAND(36) - 1]
+	_PTL = DressupNames[RAND(36) - 1]
+	_PBL = DressupNames[RAND(36) - 1]
+	_PBR = DressupNames[RAND(36) - 1]
+	_HLH = DressupNames[RAND(36) - 1]
+	_HRH = DressupNames[RAND(36) - 1]
+	_HTR = DressupNames[RAND(36) - 1]
+	_HTL = DressupNames[RAND(36) - 1]
+	_HBL = DressupNames[RAND(36) - 1]
+	_HBR = DressupNames[RAND(36) - 1]
+	"\b2\s[17]\![bind,Pearl Left Hand,%(_PLH),1]\![bind,Pearl Right Hand,%(_PRH),1]\![bind,Pearl Top Right,%(_PTR),1]\![bind,Pearl Top Left,%(_PTL),1]\![bind,Pearl Bottom Left,%(_PBL),1]\![bind,Pearl Bottom Right,%(_PBR),1]\![bind,Halo Left Hand,%(_HLH),1]\![bind,Halo Right Hand,%(_HRH),1]\![bind,Halo Top Right,%(_HTR),1]\![bind,Halo Top Left,%(_HTL),1]\![bind,Halo Bottom Left,%(_HBL),1]\![bind,Halo Bottom Right,%(_HBR),1]"
+}
+
+DressupNames : array
+{
+	"Violet"      //0
+	"Lemon"       //1
+	"Tangerine"   //2
+	"Cyan"        //3
+	"Forest"      //4
+	"Blue"        //5
+	"Lavender"    //6
+	"Crystal"     //7
+	"Pearl"       //8
+	"Seaside"     //9
+	"Maroon"      //10
+	"Flamingo"    //11
+	"Swamp"       //12
+	"Coral"       //13
+	"Necromancy"  //14
+	"Pistachio"   //15
+	"Midnight"    //16
+	"Seaglass"    //17
+	"Magenta"     //18
+	"Overgrowth"  //19
+	"Red"         //20
+	"Yellow"      //21
+	"Pink"        //22
+	"Sunglow"     //23
+	"Wine"        //24
+	"Purple"      //25
+	"Robin"       //26
+	"Green"       //27
+	"Sour"        //28
+	"Faded"       //29
+	"Onyx"        //30
+	"Orange"      //31
+	"Silver"      //32
+	"White"       //33
+	"Dream"       //34
+	"Pebbled"     //35
+	"Null"        //36
+	"Null"        //37
+	"Null"        //38
+	"Null"        //39
+}
+
+wawa //i couldn't get a loop working TT_TT
+{
+	_L = (RAND(5)+1)
+	if _L == 2
+	{
+		"%(WA)%(wa)"
+	}
+	elseif _L == 3
+	{
+		"%(WA)%(wa)%(wa)"
+	}
+	elseif _L == 4
+	{
+		"%(WA)%(wa)%(wa)%(wa)"
+	}
+	elseif _L == 5
+	{
+		"%(WA)%(wa)%(wa)%(wa)%(wa)"
+	}
+	else
+	{
+		"%(WA)%(wa)%(wa)%(wa)%(wa)%(wa)"
+	}
+}
+
+wa
+{
+	"mreh"
+	"wa"
+	"wah"
+	"waa"
+	"aaa"
+	"mrr"
+	"mrah"
+	"prrr"
+	"r"
+	"ah"
+}
+WA
+{
+	"Mreh"
+	"Wa"
+	"Wah"
+	"Waa"
+	"Aaa"
+	"Mrr"
+	"Mrah"
+	"Prrr"
+	"R"
+	"Ah"
+}
+
+ItalT //%(ItalT)
+{
+	"\f[italic,true]"
+}
+
+ItalF //%(ItalF)
+{
+	"\f[italic,default]"
+}
+//Custom dialogue pool for being pet! This function is specifically called when the player moves their mouse over the "stroke_p" hitbox for a short while, which is usually the head. FLUX uses the variable totalpets to track the total number of times FLUX has been pet; if you want to track this for your shell specifically you'll need to add a custom variable! Make sure the name is very definitely unique, though. sanspets would be too generic, but zichqec_sanspets would be unique enough that it should never overlap with anyone else's. Uses the same references as OnMouseMove.
+OnCustom_Petting
+{
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\s[18]\i[1]"
+	}
+	else
+	{
+		"\s[1]\i[1]"
+	}
+	--
+	"STOP THAT!"
+	"CEASE!"
+	"STOP THIS BEHAVIOR IMEDIATELY!"
+	"STOP THIS NOW."
+	"You are VERY ANNOYING!"
+	"I DEMAND THAT YOU CEASE THESE ACTIONS!"
+	"You are a HORRIBLE LITTLE SLUGCAT."
+	"CUT IT OUT!"
+	"JUST WHAT ARE YOU THINKING?"
+}
+
+//If you want to get a little more detailed with your stroking dialogues, you can set them up in this function. Note that this one is specifically for the Sakura character! If the user has their cursor over any hitboxes other than "stroke_p", this function will be called instead. Uses the same references as OnMouseMove.
+//OnCustom_MouseMoveSakura
+//{
+	
+//}
+
+//This is the same as the above function, but it will happen for any characters other than the Sakura! You only need this if you have more than one character. Uses the same references as OnMouseMove.
+//OnCustom_MouseMoveExtra
+//{
+	
+//}
+
+//If the user double clicks on an area of the Sakura with a hitbox it doesn't recognize for anything else (like the hotspots for the music player, or the menu), this function will be called instead. Note that if the user clicks on an area with no hitbox, it'll open the main menu! This uses the same references as OnMouseDoubleClick.
+OnCustom_MouseDoubleClickSakura
+{
+	if reference4 == "boop"
+	{
+		if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+		{
+			"\s[18]\i[1]"
+		}
+		else
+		{
+			"\s[1]\i[1]"
+		}
+		--
+		"STOP THAT!"
+		"CEASE!"
+		"STOP THIS BEHAVIOR IMEDIATELY!"
+		"STOP THIS NOW."
+		"You are VERY ANNOYING!"
+		"I DEMAND THAT YOU CEASE THESE ACTIONS!"
+		"You are a HORRIBLE LITTLE SLUGCAT."
+		"CUT IT OUT!"
+		"JUST WHAT ARE YOU THINKING?"
+		"HOW DARE YOU."
+		"DO NOT DO THAT AGAIN."
+		"DO NOT POKE ME."
+		"YOU WILL REGRET THIS."
+	}
+}
+
+//If the user double clicks on a character other than the Sakura, this function will be called instead. Uses the same references as OnMouseDoubleClick.
+//OnCustom_MouseDoubleClickExtra
+//{
+	
+//}
+
+//If the Sakura and Kero start overlapping. Uses the same references as OnOverlap, but will ONLY be called if the Sakura and Kero started overlapping.
+//OnCustom_Overlap
+//{
+	
+//}
+
+//If the Sakura and Kero stop overlapping, or any other characters start/stop overlapping. Uses the same references as OnOverlap. Sorry if this is a little confusing, but I wanted to offer a simple overlap pool while also offering the full possibilities of OnOverlap. Make sure you check out Ukadoc's information about OnOverlap if you're not sure how to use this!
+//OnCustom_OverlapExtra
+//{
+	
+//}
+
+//Called from OnSurfaceRestore if FLUX is NOT playing music. If this function does not exist, FLUX will set the Sakura to surface0 and the Kero to surface -1 by default. If you want to have a Kero character, or you want multiple/different idle frames, fill them in here! Note that this function is called in several places, so it does not have a consistent set of reference values. Instead, you can use one of YAYA's built-in arrays to determine which surfaces your shell is in. SHIORI3FW.LastSurface[0] would be the current surface number of the Sakura, SHIORI3FW.LastSurface[1] would be the current surface number of the Kero, etc. Note that these are stored as integers.
+OnCustom_IdleSurfaces
+{
+	"\1\s[-1]\0\s[0]\i[1]"
+}
+
+//Sister to the above, but this is for if FLUX is currently playing music. If this function does not exist, FLUX will set the Sakura to surface25, and the Kero to surface -1 by default. You need to keep at least one singing animation on surface25! Otherwise, go wild and add any additional surfaces you want here! Note that this function is called in several places, so it does not have a consistent set of reference values. Instead, you can use one of YAYA's built-in arrays to determine which surfaces your shell is in. SHIORI3FW.LastSurface[0] would be the current surface number of the Sakura, SHIORI3FW.LastSurface[1] would be the current surface number of the Kero, etc. Note that these are stored as integers.
+OnCustom_SingingSurfaces
+{
+	"\1\s[-1]\0"
+	--
+	if SHIORI3FW.LastSurface[0] != 25 || SHIORI3FW.Eventid == "OnWindowStateRestore" || SHIORI3FW.Eventid == "OnShellChanged" || SHIORI3FW.Eventid == "OnGetCoords2" //You can erase this if you want. If you set it up like this, your ghost won't change surfaces if it's already in the singing pose, and that way it won't be interrupted. You can also add more surface numbers here if you have multiple singing poses! The event ids here are to cover edge cases, don't get rid of those.
+	{
+		"\s[25]"
+	}
+}
+
+//These surfaces are the ones for when the user uses etc functions. They're called through an embed tag; reference0 will be "Error" if the function ends in an error, "Refuse" if it ends in something minor (like trying to add songs of an incompatible type), and "Action" if it's a normal action. You can skip this if check and just make it a single surface if you want! It's just so you can have your shell frown if something goes wrong, etc.
+OnCustom_ActionSurfaces
+{
+	"\1\s[-1]\0"
+	--
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\s[19]"
+	}
+	else
+	{
+		if reference0 == "Error"
+		{
+			"\s[7]"
+		}
+		elseif reference0 == "Refuse"
+		{
+			"\s[8]"
+		}
+		else
+		{
+			"\s[6]"
+		}
+	}
+}
+
+//Custom responses to Commu dialogues! Please be careful with this haha. Note that FLUX will always send its current stats after every commu. FLUX is also set up so that it won't respond unless no balloon is open. If it receives a message while the balloon is open, it will store it and respond later. You can use the ConvoTag variable here to send information back and forth that the user can't see, if you're not sure how this system works then ask me about it and I'll show you. My other ghosts make extensive use of it, and I'm planning to write a guide eventually. References are the same as OnCommunicate.
+//OnCustom_Commu
+//{
+	
+//}
+
+//Want to send some custom stats when your shell is pinged via commu? You can do that here if you like! DO NOT INCLUDE COMMAS IN THIS. IT WILL BREAK THE SIMPLE ARRAY THAT SENDS THE STATS. Try using | or something similar as a delimiter instead, and have the other ghost break it down on their side with SPLIT!
+//OnCustom_CommuStats
+//{
+	//"%(somestat1)|%(somestat2)|%(somestat3)"
+//}
+
+//This is for when the user sets their birthday, and it just so happens to be the current day. The 'birthday' array contains all the information about their birthday. If you want to say the birthday in this format: 'May 8th', you can use bitrhday[0]. For other formats, or to get just the month or day, please refer to the reference in fx_nameteach.dic, above the OnUserBornMonth function.
+//Note, a couple linebreaks and then buttons to go back to config menu are automatically placed after this dialogue. Don't end it with a \e!
+//OnCustom_BirthdaySet
+//{
+	
+//}
+
+//Custom dialogue for when the year rolls over at midnight! References are the same as OnSecondChange.
+//OnCustom_NewYear
+//{
+	
+//}
+
+//Custom dialogue for if another ghost has been uninstalled. This will be called if FLUX is switched to when another ghost was running alone and was uninstalled, or if FLUX is open when another ghost is uninstalled. Uses the same references as OnVanished.
+//There is a possible additional argument here. If the other ghost that was uninstalled was open alone, and it switched to FLUX after it finished, _argv[0] will contain 'boot'. Otherwise, it will be empty. You can use this to determine if FLUX just booted or not.
+OnCustom_OnVanished
+{
+	if "boot" _in_ _argv[0]
+	{
+		OnCustom_OnBoot
+	}
+}
+
+//Need to test some code? Here's a test variable specific to your shell. Type %(debug = 1) in script input to get this to show up on the main menu! Also, remember to reload your shell.
+//OnCustom_TestFunc
+//{
+	
+//}
+
+//heeeheehyohohohyheeehehe
+OnNeedlePoke
+{
+	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	{
+		"\s[18]\i[1]"
+	}
+	else
+	{
+		"\s[1]\i[1]"
+	}
+	--
+	"You are VERY ANNOYING!"
+	"You are a HORRIBLE LITTLE SLUGCAT."
+	"HOW DARE YOU."
+	"JUST WHAT ARE YOU THINKING?"
+	"DO NOT DO THAT AGAIN."
+	"DO NOT POKE ME."
+	"YOU ANIMAL!"
+	"HAVE YOU NO REASON?"
+	"YOU WILL REGRET THIS."
+}

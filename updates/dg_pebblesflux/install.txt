@@ -1,0 +1,5 @@
+Charset,UTF-8
+type,shell
+name,Five Rotten Pebbles
+directory,dg_pebblesflux
+accept,flux

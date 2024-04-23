@@ -1,0 +1,38 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+//These do not reflect the pngs
+group,Pebbles
+{
+	scope,0
+	
+	0,Idle
+	1,Pet
+	2,Angy
+	3,Think
+	4,Singing
+	5,AdressUser
+	6,Action
+	7,Error
+	8,Refuse
+	9,Joy
+	10,KERO
+	11,Annoyed
+	12,Annoyed2
+	13,OOPS
+	14,Annoyed3
+	15,Glare
+	16,Not-so Glare
+	17,Hold Pearls
+	18,Hold Pearls Angy
+	19,Hold Pearls Action, Error, Refuse
+	20,Scare
+	21,Concerned
+	22,Hold Pearls Concern
+	23,AdressUser2
+	24,Hold Pearls2
+	25,Singing
+	26,Hold Pearls Scare
+	96,Singing
+}

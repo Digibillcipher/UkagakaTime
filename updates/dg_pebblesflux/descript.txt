@@ -1,0 +1,506 @@
+﻿seriko.alignmenttodesktop,free
+seriko.use_self_alpha, 1
+
+charset,UTF-8
+type,shell
+name,Five Rotten Pebbles
+craftman,Digi_056
+craftmanurl,https://digi-056.tumblr.com/
+homeurl,https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_pebblesflux/
+
+sakura.balloon.offsetx,0
+sakura.balloon.offsety,0
+kero.balloon.offsetx,0
+kero.balloon.offsety,0
+sakura.balloon.alignment,none
+kero.balloon.alignment,none
+
+//Font
+menu.background.font.color.r,84
+menu.background.font.color.g,4
+menu.background.font.color.b,6
+
+//Menu Color
+menu.background.bitmap.filename,menu_background.png
+menu.background.alignment,leftbottom+repeat-x
+menu.foreground.bitmap.filename,menu_foreground.png
+menu.foreground.alignment,leftbottom
+menu.sidebar.bitmap.filename,menu_sidebar.png
+menu.sidebar.alignment,leftbottom
+menu.separator.color.r,84
+menu.separator.color.g,4
+menu.separator.color.b,6
+menu.frame.color.r,84
+menu.frame.color.g,4
+menu.frame.color.b,6
+
+sakura.menu, hidden
+
+//Color names by Galla The Galla (except for Pebbled)
+sakura.bindgroup0.name,Pearl Left Hand,Violet
+sakura.bindgroup1.name,Pearl Left Hand,Lemon
+sakura.bindgroup2.name,Pearl Left Hand,Tangerine
+sakura.bindgroup3.name,Pearl Left Hand,Cyan
+sakura.bindgroup4.name,Pearl Left Hand,Forest
+sakura.bindgroup5.name,Pearl Left Hand,Blue
+sakura.bindgroup6.name,Pearl Left Hand,Lavender
+sakura.bindgroup7.name,Pearl Left Hand,Crystal
+sakura.bindgroup8.name,Pearl Left Hand,Pearl
+sakura.bindgroup9.name,Pearl Left Hand,Seaside
+sakura.bindgroup10.name,Pearl Left Hand,Maroon
+sakura.bindgroup11.name,Pearl Left Hand,Flamingo
+sakura.bindgroup12.name,Pearl Left Hand,Swamp
+sakura.bindgroup13.name,Pearl Left Hand,Coral
+sakura.bindgroup14.name,Pearl Left Hand,Necromancy
+sakura.bindgroup15.name,Pearl Left Hand,Pistachio
+sakura.bindgroup16.name,Pearl Left Hand,Midnight
+sakura.bindgroup17.name,Pearl Left Hand,Seaglass
+sakura.bindgroup18.name,Pearl Left Hand,Magenta
+sakura.bindgroup19.name,Pearl Left Hand,Overgrowth
+sakura.bindgroup20.name,Pearl Left Hand,Red
+sakura.bindgroup21.name,Pearl Left Hand,Yellow
+sakura.bindgroup22.name,Pearl Left Hand,Pink
+sakura.bindgroup23.name,Pearl Left Hand,Sunglow
+sakura.bindgroup24.name,Pearl Left Hand,Wine
+sakura.bindgroup25.name,Pearl Left Hand,Purple
+sakura.bindgroup26.name,Pearl Left Hand,Robin
+sakura.bindgroup27.name,Pearl Left Hand,Green
+sakura.bindgroup28.name,Pearl Left Hand,Sour
+sakura.bindgroup29.name,Pearl Left Hand,Faded
+sakura.bindgroup30.name,Pearl Left Hand,Onyx
+sakura.bindgroup31.name,Pearl Left Hand,Orange
+sakura.bindgroup32.name,Pearl Left Hand,Silver
+sakura.bindgroup33.name,Pearl Left Hand,White
+sakura.bindgroup34.name,Pearl Left Hand,Dream
+sakura.bindgroup35.name,Pearl Left Hand,Pebbled
+sakura.bindoption0.group,Pearl Left Hand,mustselect
+sakura.bindgroup8.default,1
+
+sakura.bindgroup40.name,Pearl Right Hand,Violet
+sakura.bindgroup41.name,Pearl Right Hand,Lemon
+sakura.bindgroup42.name,Pearl Right Hand,Tangerine
+sakura.bindgroup43.name,Pearl Right Hand,Cyan
+sakura.bindgroup44.name,Pearl Right Hand,Forest
+sakura.bindgroup45.name,Pearl Right Hand,Blue
+sakura.bindgroup46.name,Pearl Right Hand,Lavender
+sakura.bindgroup47.name,Pearl Right Hand,Crystal
+sakura.bindgroup48.name,Pearl Right Hand,Pearl
+sakura.bindgroup49.name,Pearl Right Hand,Seaside
+sakura.bindgroup50.name,Pearl Right Hand,Maroon
+sakura.bindgroup51.name,Pearl Right Hand,Flamingo
+sakura.bindgroup52.name,Pearl Right Hand,Swamp
+sakura.bindgroup53.name,Pearl Right Hand,Coral
+sakura.bindgroup54.name,Pearl Right Hand,Necromancy
+sakura.bindgroup55.name,Pearl Right Hand,Pistachio
+sakura.bindgroup56.name,Pearl Right Hand,Midnight
+sakura.bindgroup57.name,Pearl Right Hand,Seaglass
+sakura.bindgroup58.name,Pearl Right Hand,Magenta
+sakura.bindgroup59.name,Pearl Right Hand,Overgrowth
+sakura.bindgroup60.name,Pearl Right Hand,Red
+sakura.bindgroup61.name,Pearl Right Hand,Yellow
+sakura.bindgroup62.name,Pearl Right Hand,Pink
+sakura.bindgroup63.name,Pearl Right Hand,Sunglow
+sakura.bindgroup64.name,Pearl Right Hand,Wine
+sakura.bindgroup65.name,Pearl Right Hand,Purple
+sakura.bindgroup66.name,Pearl Right Hand,Robin
+sakura.bindgroup67.name,Pearl Right Hand,Green
+sakura.bindgroup68.name,Pearl Right Hand,Sour
+sakura.bindgroup69.name,Pearl Right Hand,Faded
+sakura.bindgroup70.name,Pearl Right Hand,Onyx
+sakura.bindgroup71.name,Pearl Right Hand,Orange
+sakura.bindgroup72.name,Pearl Right Hand,Silver
+sakura.bindgroup73.name,Pearl Right Hand,White
+sakura.bindgroup74.name,Pearl Right Hand,Dream
+sakura.bindgroup75.name,Pearl Right Hand,Pebbled
+sakura.bindoption1.group,Pearl Right Hand,mustselect
+sakura.bindgroup74.default,1
+
+sakura.bindgroup80.name,Pearl Top Right,Violet
+sakura.bindgroup81.name,Pearl Top Right,Lemon
+sakura.bindgroup82.name,Pearl Top Right,Tangerine
+sakura.bindgroup83.name,Pearl Top Right,Cyan
+sakura.bindgroup84.name,Pearl Top Right,Forest
+sakura.bindgroup85.name,Pearl Top Right,Blue
+sakura.bindgroup86.name,Pearl Top Right,Lavender
+sakura.bindgroup87.name,Pearl Top Right,Crystal
+sakura.bindgroup88.name,Pearl Top Right,Pearl
+sakura.bindgroup89.name,Pearl Top Right,Seaside
+sakura.bindgroup90.name,Pearl Top Right,Maroon
+sakura.bindgroup91.name,Pearl Top Right,Flamingo
+sakura.bindgroup92.name,Pearl Top Right,Swamp
+sakura.bindgroup93.name,Pearl Top Right,Coral
+sakura.bindgroup94.name,Pearl Top Right,Necromancy
+sakura.bindgroup95.name,Pearl Top Right,Pistachio
+sakura.bindgroup96.name,Pearl Top Right,Midnight
+sakura.bindgroup97.name,Pearl Top Right,Seaglass
+sakura.bindgroup98.name,Pearl Top Right,Magenta
+sakura.bindgroup99.name,Pearl Top Right,Overgrowth
+sakura.bindgroup100.name,Pearl Top Right,Red
+sakura.bindgroup101.name,Pearl Top Right,Yellow
+sakura.bindgroup102.name,Pearl Top Right,Pink
+sakura.bindgroup103.name,Pearl Top Right,Sunglow
+sakura.bindgroup104.name,Pearl Top Right,Wine
+sakura.bindgroup105.name,Pearl Top Right,Purple
+sakura.bindgroup106.name,Pearl Top Right,Robin
+sakura.bindgroup107.name,Pearl Top Right,Green
+sakura.bindgroup108.name,Pearl Top Right,Sour
+sakura.bindgroup109.name,Pearl Top Right,Faded
+sakura.bindgroup110.name,Pearl Top Right,Onyx
+sakura.bindgroup111.name,Pearl Top Right,Orange
+sakura.bindgroup112.name,Pearl Top Right,Silver
+sakura.bindgroup113.name,Pearl Top Right,White
+sakura.bindgroup114.name,Pearl Top Right,Dream
+sakura.bindgroup115.name,Pearl Top Right,Pebbled
+sakura.bindoption2.group,Pearl Top Right,mustselect
+sakura.bindgroup109.default,1
+
+sakura.bindgroup120.name,Pearl Top Left,Violet
+sakura.bindgroup121.name,Pearl Top Left,Lemon
+sakura.bindgroup122.name,Pearl Top Left,Tangerine
+sakura.bindgroup123.name,Pearl Top Left,Cyan
+sakura.bindgroup124.name,Pearl Top Left,Forest
+sakura.bindgroup125.name,Pearl Top Left,Blue
+sakura.bindgroup126.name,Pearl Top Left,Lavender
+sakura.bindgroup127.name,Pearl Top Left,Crystal
+sakura.bindgroup128.name,Pearl Top Left,Pearl
+sakura.bindgroup129.name,Pearl Top Left,Seaside
+sakura.bindgroup130.name,Pearl Top Left,Maroon
+sakura.bindgroup131.name,Pearl Top Left,Flamingo
+sakura.bindgroup132.name,Pearl Top Left,Swamp
+sakura.bindgroup133.name,Pearl Top Left,Coral
+sakura.bindgroup134.name,Pearl Top Left,Necromancy
+sakura.bindgroup135.name,Pearl Top Left,Pistachio
+sakura.bindgroup136.name,Pearl Top Left,Midnight
+sakura.bindgroup137.name,Pearl Top Left,Seaglass
+sakura.bindgroup138.name,Pearl Top Left,Magenta
+sakura.bindgroup139.name,Pearl Top Left,Overgrowth
+sakura.bindgroup140.name,Pearl Top Left,Red
+sakura.bindgroup141.name,Pearl Top Left,Yellow
+sakura.bindgroup142.name,Pearl Top Left,Pink
+sakura.bindgroup143.name,Pearl Top Left,Sunglow
+sakura.bindgroup144.name,Pearl Top Left,Wine
+sakura.bindgroup145.name,Pearl Top Left,Purple
+sakura.bindgroup146.name,Pearl Top Left,Robin
+sakura.bindgroup147.name,Pearl Top Left,Green
+sakura.bindgroup148.name,Pearl Top Left,Sour
+sakura.bindgroup149.name,Pearl Top Left,Faded
+sakura.bindgroup150.name,Pearl Top Left,Onyx
+sakura.bindgroup151.name,Pearl Top Left,Orange
+sakura.bindgroup152.name,Pearl Top Left,Silver
+sakura.bindgroup153.name,Pearl Top Left,White
+sakura.bindgroup154.name,Pearl Top Left,Dream
+sakura.bindgroup155.name,Pearl Top Left,Pebbled
+sakura.bindoption3.group,Pearl Top Left,mustselect
+sakura.bindgroup153.default,1
+
+sakura.bindgroup160.name,Pearl Bottom Left,Violet
+sakura.bindgroup161.name,Pearl Bottom Left,Lemon
+sakura.bindgroup162.name,Pearl Bottom Left,Tangerine
+sakura.bindgroup163.name,Pearl Bottom Left,Cyan
+sakura.bindgroup164.name,Pearl Bottom Left,Forest
+sakura.bindgroup165.name,Pearl Bottom Left,Blue
+sakura.bindgroup166.name,Pearl Bottom Left,Lavender
+sakura.bindgroup167.name,Pearl Bottom Left,Crystal
+sakura.bindgroup168.name,Pearl Bottom Left,Pearl
+sakura.bindgroup169.name,Pearl Bottom Left,Seaside
+sakura.bindgroup170.name,Pearl Bottom Left,Maroon
+sakura.bindgroup171.name,Pearl Bottom Left,Flamingo
+sakura.bindgroup172.name,Pearl Bottom Left,Swamp
+sakura.bindgroup173.name,Pearl Bottom Left,Coral
+sakura.bindgroup174.name,Pearl Bottom Left,Necromancy
+sakura.bindgroup175.name,Pearl Bottom Left,Pistachio
+sakura.bindgroup176.name,Pearl Bottom Left,Midnight
+sakura.bindgroup177.name,Pearl Bottom Left,Seaglass
+sakura.bindgroup178.name,Pearl Bottom Left,Magenta
+sakura.bindgroup179.name,Pearl Bottom Left,Overgrowth
+sakura.bindgroup180.name,Pearl Bottom Left,Red
+sakura.bindgroup181.name,Pearl Bottom Left,Yellow
+sakura.bindgroup182.name,Pearl Bottom Left,Pink
+sakura.bindgroup183.name,Pearl Bottom Left,Sunglow
+sakura.bindgroup184.name,Pearl Bottom Left,Wine
+sakura.bindgroup185.name,Pearl Bottom Left,Purple
+sakura.bindgroup186.name,Pearl Bottom Left,Robin
+sakura.bindgroup187.name,Pearl Bottom Left,Green
+sakura.bindgroup188.name,Pearl Bottom Left,Sour
+sakura.bindgroup189.name,Pearl Bottom Left,Faded
+sakura.bindgroup190.name,Pearl Bottom Left,Onyx
+sakura.bindgroup191.name,Pearl Bottom Left,Orange
+sakura.bindgroup192.name,Pearl Bottom Left,Silver
+sakura.bindgroup193.name,Pearl Bottom Left,White
+sakura.bindgroup194.name,Pearl Bottom Left,Dream
+sakura.bindgroup195.name,Pearl Bottom Left,Pebbled
+sakura.bindoption4.group,Pearl Bottom Left,mustselect
+sakura.bindgroup167.default,1
+
+sakura.bindgroup200.name,Pearl Bottom Right,Violet
+sakura.bindgroup201.name,Pearl Bottom Right,Lemon
+sakura.bindgroup202.name,Pearl Bottom Right,Tangerine
+sakura.bindgroup203.name,Pearl Bottom Right,Cyan
+sakura.bindgroup204.name,Pearl Bottom Right,Forest
+sakura.bindgroup205.name,Pearl Bottom Right,Blue
+sakura.bindgroup206.name,Pearl Bottom Right,Lavender
+sakura.bindgroup207.name,Pearl Bottom Right,Crystal
+sakura.bindgroup208.name,Pearl Bottom Right,Pearl
+sakura.bindgroup209.name,Pearl Bottom Right,Seaside
+sakura.bindgroup210.name,Pearl Bottom Right,Maroon
+sakura.bindgroup211.name,Pearl Bottom Right,Flamingo
+sakura.bindgroup212.name,Pearl Bottom Right,Swamp
+sakura.bindgroup213.name,Pearl Bottom Right,Coral
+sakura.bindgroup214.name,Pearl Bottom Right,Necromancy
+sakura.bindgroup215.name,Pearl Bottom Right,Pistachio
+sakura.bindgroup216.name,Pearl Bottom Right,Midnight
+sakura.bindgroup217.name,Pearl Bottom Right,Seaglass
+sakura.bindgroup218.name,Pearl Bottom Right,Magenta
+sakura.bindgroup219.name,Pearl Bottom Right,Overgrowth
+sakura.bindgroup220.name,Pearl Bottom Right,Red
+sakura.bindgroup221.name,Pearl Bottom Right,Yellow
+sakura.bindgroup222.name,Pearl Bottom Right,Pink
+sakura.bindgroup223.name,Pearl Bottom Right,Sunglow
+sakura.bindgroup224.name,Pearl Bottom Right,Wine
+sakura.bindgroup225.name,Pearl Bottom Right,Purple
+sakura.bindgroup226.name,Pearl Bottom Right,Robin
+sakura.bindgroup227.name,Pearl Bottom Right,Green
+sakura.bindgroup228.name,Pearl Bottom Right,Sour
+sakura.bindgroup229.name,Pearl Bottom Right,Faded
+sakura.bindgroup230.name,Pearl Bottom Right,Onyx
+sakura.bindgroup231.name,Pearl Bottom Right,Orange
+sakura.bindgroup232.name,Pearl Bottom Right,Silver
+sakura.bindgroup233.name,Pearl Bottom Right,White
+sakura.bindgroup234.name,Pearl Bottom Right,Dream
+sakura.bindgroup235.name,Pearl Bottom Right,Pebbled
+sakura.bindoption5.group,Pearl Bottom Right,mustselect
+sakura.bindgroup232.default,1
+
+sakura.bindgroup240.name,Halo Left Hand,Violet
+sakura.bindgroup241.name,Halo Left Hand,Lemon
+sakura.bindgroup242.name,Halo Left Hand,Tangerine
+sakura.bindgroup243.name,Halo Left Hand,Cyan
+sakura.bindgroup244.name,Halo Left Hand,Forest
+sakura.bindgroup245.name,Halo Left Hand,Blue
+sakura.bindgroup246.name,Halo Left Hand,Lavender
+sakura.bindgroup247.name,Halo Left Hand,Crystal
+sakura.bindgroup248.name,Halo Left Hand,Pearl
+sakura.bindgroup249.name,Halo Left Hand,Seaside
+sakura.bindgroup250.name,Halo Left Hand,Maroon
+sakura.bindgroup251.name,Halo Left Hand,Flamingo
+sakura.bindgroup252.name,Halo Left Hand,Swamp
+sakura.bindgroup253.name,Halo Left Hand,Coral
+sakura.bindgroup254.name,Halo Left Hand,Necromancy
+sakura.bindgroup255.name,Halo Left Hand,Pistachio
+sakura.bindgroup256.name,Halo Left Hand,Midnight
+sakura.bindgroup257.name,Halo Left Hand,Seaglass
+sakura.bindgroup258.name,Halo Left Hand,Magenta
+sakura.bindgroup259.name,Halo Left Hand,Overgrowth
+sakura.bindgroup260.name,Halo Left Hand,Red
+sakura.bindgroup261.name,Halo Left Hand,Yellow
+sakura.bindgroup262.name,Halo Left Hand,Pink
+sakura.bindgroup263.name,Halo Left Hand,Sunglow
+sakura.bindgroup264.name,Halo Left Hand,Wine
+sakura.bindgroup265.name,Halo Left Hand,Purple
+sakura.bindgroup266.name,Halo Left Hand,Robin
+sakura.bindgroup267.name,Halo Left Hand,Green
+sakura.bindgroup268.name,Halo Left Hand,Sour
+sakura.bindgroup269.name,Halo Left Hand,Faded
+sakura.bindgroup270.name,Halo Left Hand,Onyx
+sakura.bindgroup271.name,Halo Left Hand,Orange
+sakura.bindgroup272.name,Halo Left Hand,Silver
+sakura.bindgroup273.name,Halo Left Hand,White
+sakura.bindgroup274.name,Halo Left Hand,Dream
+sakura.bindgroup275.name,Halo Left Hand,Pebbled
+sakura.bindoption6.group,Halo Left Hand,mustselect
+sakura.bindgroup248.default,1
+
+sakura.bindgroup280.name,Halo Right Hand,Violet
+sakura.bindgroup281.name,Halo Right Hand,Lemon
+sakura.bindgroup282.name,Halo Right Hand,Tangerine
+sakura.bindgroup283.name,Halo Right Hand,Cyan
+sakura.bindgroup284.name,Halo Right Hand,Forest
+sakura.bindgroup285.name,Halo Right Hand,Blue
+sakura.bindgroup286.name,Halo Right Hand,Lavender
+sakura.bindgroup287.name,Halo Right Hand,Crystal
+sakura.bindgroup288.name,Halo Right Hand,Pearl
+sakura.bindgroup289.name,Halo Right Hand,Seaside
+sakura.bindgroup290.name,Halo Right Hand,Maroon
+sakura.bindgroup291.name,Halo Right Hand,Flamingo
+sakura.bindgroup292.name,Halo Right Hand,Swamp
+sakura.bindgroup293.name,Halo Right Hand,Coral
+sakura.bindgroup294.name,Halo Right Hand,Necromancy
+sakura.bindgroup295.name,Halo Right Hand,Pistachio
+sakura.bindgroup296.name,Halo Right Hand,Midnight
+sakura.bindgroup297.name,Halo Right Hand,Seaglass
+sakura.bindgroup298.name,Halo Right Hand,Magenta
+sakura.bindgroup299.name,Halo Right Hand,Overgrowth
+sakura.bindgroup300.name,Halo Right Hand,Red
+sakura.bindgroup301.name,Halo Right Hand,Yellow
+sakura.bindgroup302.name,Halo Right Hand,Pink
+sakura.bindgroup303.name,Halo Right Hand,Sunglow
+sakura.bindgroup304.name,Halo Right Hand,Wine
+sakura.bindgroup305.name,Halo Right Hand,Purple
+sakura.bindgroup306.name,Halo Right Hand,Robin
+sakura.bindgroup307.name,Halo Right Hand,Green
+sakura.bindgroup308.name,Halo Right Hand,Sour
+sakura.bindgroup309.name,Halo Right Hand,Faded
+sakura.bindgroup310.name,Halo Right Hand,Onyx
+sakura.bindgroup311.name,Halo Right Hand,Orange
+sakura.bindgroup312.name,Halo Right Hand,Silver
+sakura.bindgroup313.name,Halo Right Hand,White
+sakura.bindgroup314.name,Halo Right Hand,Dream
+sakura.bindgroup315.name,Halo Right Hand,Pebbled
+sakura.bindoption7.group,Halo Right Hand,mustselect
+sakura.bindgroup314.default,1
+
+sakura.bindgroup320.name,Halo Top Right,Violet
+sakura.bindgroup321.name,Halo Top Right,Lemon
+sakura.bindgroup322.name,Halo Top Right,Tangerine
+sakura.bindgroup323.name,Halo Top Right,Cyan
+sakura.bindgroup324.name,Halo Top Right,Forest
+sakura.bindgroup325.name,Halo Top Right,Blue
+sakura.bindgroup326.name,Halo Top Right,Lavender
+sakura.bindgroup327.name,Halo Top Right,Crystal
+sakura.bindgroup328.name,Halo Top Right,Pearl
+sakura.bindgroup329.name,Halo Top Right,Seaside
+sakura.bindgroup330.name,Halo Top Right,Maroon
+sakura.bindgroup331.name,Halo Top Right,Flamingo
+sakura.bindgroup332.name,Halo Top Right,Swamp
+sakura.bindgroup333.name,Halo Top Right,Coral
+sakura.bindgroup334.name,Halo Top Right,Necromancy
+sakura.bindgroup335.name,Halo Top Right,Pistachio
+sakura.bindgroup336.name,Halo Top Right,Midnight
+sakura.bindgroup337.name,Halo Top Right,Seaglass
+sakura.bindgroup338.name,Halo Top Right,Magenta
+sakura.bindgroup339.name,Halo Top Right,Overgrowth
+sakura.bindgroup340.name,Halo Top Right,Red
+sakura.bindgroup341.name,Halo Top Right,Yellow
+sakura.bindgroup342.name,Halo Top Right,Pink
+sakura.bindgroup343.name,Halo Top Right,Sunglow
+sakura.bindgroup344.name,Halo Top Right,Wine
+sakura.bindgroup345.name,Halo Top Right,Purple
+sakura.bindgroup346.name,Halo Top Right,Robin
+sakura.bindgroup347.name,Halo Top Right,Green
+sakura.bindgroup348.name,Halo Top Right,Sour
+sakura.bindgroup349.name,Halo Top Right,Faded
+sakura.bindgroup350.name,Halo Top Right,Onyx
+sakura.bindgroup351.name,Halo Top Right,Orange
+sakura.bindgroup352.name,Halo Top Right,Silver
+sakura.bindgroup353.name,Halo Top Right,White
+sakura.bindgroup354.name,Halo Top Right,Dream
+sakura.bindgroup355.name,Halo Top Right,Pebbled
+sakura.bindoption8.group,Halo Top Right,mustselect
+sakura.bindgroup349.default,1
+
+sakura.bindgroup360.name,Halo Top Left,Violet
+sakura.bindgroup361.name,Halo Top Left,Lemon
+sakura.bindgroup362.name,Halo Top Left,Tangerine
+sakura.bindgroup363.name,Halo Top Left,Cyan
+sakura.bindgroup364.name,Halo Top Left,Forest
+sakura.bindgroup365.name,Halo Top Left,Blue
+sakura.bindgroup366.name,Halo Top Left,Lavender
+sakura.bindgroup367.name,Halo Top Left,Crystal
+sakura.bindgroup368.name,Halo Top Left,Pearl
+sakura.bindgroup369.name,Halo Top Left,Seaside
+sakura.bindgroup370.name,Halo Top Left,Maroon
+sakura.bindgroup371.name,Halo Top Left,Flamingo
+sakura.bindgroup372.name,Halo Top Left,Swamp
+sakura.bindgroup373.name,Halo Top Left,Coral
+sakura.bindgroup374.name,Halo Top Left,Necromancy
+sakura.bindgroup375.name,Halo Top Left,Pistachio
+sakura.bindgroup376.name,Halo Top Left,Midnight
+sakura.bindgroup377.name,Halo Top Left,Seaglass
+sakura.bindgroup378.name,Halo Top Left,Magenta
+sakura.bindgroup379.name,Halo Top Left,Overgrowth
+sakura.bindgroup380.name,Halo Top Left,Red
+sakura.bindgroup381.name,Halo Top Left,Yellow
+sakura.bindgroup382.name,Halo Top Left,Pink
+sakura.bindgroup383.name,Halo Top Left,Sunglow
+sakura.bindgroup384.name,Halo Top Left,Wine
+sakura.bindgroup385.name,Halo Top Left,Purple
+sakura.bindgroup386.name,Halo Top Left,Robin
+sakura.bindgroup387.name,Halo Top Left,Green
+sakura.bindgroup388.name,Halo Top Left,Sour
+sakura.bindgroup389.name,Halo Top Left,Faded
+sakura.bindgroup390.name,Halo Top Left,Onyx
+sakura.bindgroup391.name,Halo Top Left,Orange
+sakura.bindgroup392.name,Halo Top Left,Silver
+sakura.bindgroup393.name,Halo Top Left,White
+sakura.bindgroup394.name,Halo Top Left,Dream
+sakura.bindgroup395.name,Halo Top Left,Pebbled
+sakura.bindoption9.group,Halo Top Left,mustselect
+sakura.bindgroup393.default,1
+
+sakura.bindgroup400.name,Halo Bottom Left,Violet
+sakura.bindgroup401.name,Halo Bottom Left,Lemon
+sakura.bindgroup402.name,Halo Bottom Left,Tangerine
+sakura.bindgroup403.name,Halo Bottom Left,Cyan
+sakura.bindgroup404.name,Halo Bottom Left,Forest
+sakura.bindgroup405.name,Halo Bottom Left,Blue
+sakura.bindgroup406.name,Halo Bottom Left,Lavender
+sakura.bindgroup407.name,Halo Bottom Left,Crystal
+sakura.bindgroup408.name,Halo Bottom Left,Pearl
+sakura.bindgroup409.name,Halo Bottom Left,Seaside
+sakura.bindgroup410.name,Halo Bottom Left,Maroon
+sakura.bindgroup411.name,Halo Bottom Left,Flamingo
+sakura.bindgroup412.name,Halo Bottom Left,Swamp
+sakura.bindgroup413.name,Halo Bottom Left,Coral
+sakura.bindgroup414.name,Halo Bottom Left,Necromancy
+sakura.bindgroup415.name,Halo Bottom Left,Pistachio
+sakura.bindgroup416.name,Halo Bottom Left,Midnight
+sakura.bindgroup417.name,Halo Bottom Left,Seaglass
+sakura.bindgroup418.name,Halo Bottom Left,Magenta
+sakura.bindgroup419.name,Halo Bottom Left,Overgrowth
+sakura.bindgroup420.name,Halo Bottom Left,Red
+sakura.bindgroup421.name,Halo Bottom Left,Yellow
+sakura.bindgroup422.name,Halo Bottom Left,Pink
+sakura.bindgroup423.name,Halo Bottom Left,Sunglow
+sakura.bindgroup424.name,Halo Bottom Left,Wine
+sakura.bindgroup425.name,Halo Bottom Left,Purple
+sakura.bindgroup426.name,Halo Bottom Left,Robin
+sakura.bindgroup427.name,Halo Bottom Left,Green
+sakura.bindgroup428.name,Halo Bottom Left,Sour
+sakura.bindgroup429.name,Halo Bottom Left,Faded
+sakura.bindgroup430.name,Halo Bottom Left,Onyx
+sakura.bindgroup431.name,Halo Bottom Left,Orange
+sakura.bindgroup432.name,Halo Bottom Left,Silver
+sakura.bindgroup433.name,Halo Bottom Left,White
+sakura.bindgroup434.name,Halo Bottom Left,Dream
+sakura.bindgroup435.name,Halo Bottom Left,Pebbled
+sakura.bindoption10.group,Halo Bottom Left,mustselect
+sakura.bindgroup407.default,1
+
+sakura.bindgroup440.name,Halo Bottom Right,Violet
+sakura.bindgroup441.name,Halo Bottom Right,Lemon
+sakura.bindgroup442.name,Halo Bottom Right,Tangerine
+sakura.bindgroup443.name,Halo Bottom Right,Cyan
+sakura.bindgroup444.name,Halo Bottom Right,Forest
+sakura.bindgroup445.name,Halo Bottom Right,Blue
+sakura.bindgroup446.name,Halo Bottom Right,Lavender
+sakura.bindgroup447.name,Halo Bottom Right,Crystal
+sakura.bindgroup448.name,Halo Bottom Right,Pearl
+sakura.bindgroup449.name,Halo Bottom Right,Seaside
+sakura.bindgroup450.name,Halo Bottom Right,Maroon
+sakura.bindgroup451.name,Halo Bottom Right,Flamingo
+sakura.bindgroup452.name,Halo Bottom Right,Swamp
+sakura.bindgroup453.name,Halo Bottom Right,Coral
+sakura.bindgroup454.name,Halo Bottom Right,Necromancy
+sakura.bindgroup455.name,Halo Bottom Right,Pistachio
+sakura.bindgroup456.name,Halo Bottom Right,Midnight
+sakura.bindgroup457.name,Halo Bottom Right,Seaglass
+sakura.bindgroup458.name,Halo Bottom Right,Magenta
+sakura.bindgroup459.name,Halo Bottom Right,Overgrowth
+sakura.bindgroup460.name,Halo Bottom Right,Red
+sakura.bindgroup461.name,Halo Bottom Right,Yellow
+sakura.bindgroup462.name,Halo Bottom Right,Pink
+sakura.bindgroup463.name,Halo Bottom Right,Sunglow
+sakura.bindgroup464.name,Halo Bottom Right,Wine
+sakura.bindgroup465.name,Halo Bottom Right,Purple
+sakura.bindgroup466.name,Halo Bottom Right,Robin
+sakura.bindgroup467.name,Halo Bottom Right,Green
+sakura.bindgroup468.name,Halo Bottom Right,Sour
+sakura.bindgroup469.name,Halo Bottom Right,Faded
+sakura.bindgroup470.name,Halo Bottom Right,Onyx
+sakura.bindgroup471.name,Halo Bottom Right,Orange
+sakura.bindgroup472.name,Halo Bottom Right,Silver
+sakura.bindgroup473.name,Halo Bottom Right,White
+sakura.bindgroup474.name,Halo Bottom Right,Dream
+sakura.bindgroup475.name,Halo Bottom Right,Pebbled
+sakura.bindoption11.group,Halo Bottom Right,mustselect
+sakura.bindgroup472.default,1
