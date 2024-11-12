@@ -113,6 +113,13 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
 
+**Rotedle**<br>
+(dg_rotedle.nar)<br>
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/local/rotedle.png">
+
+* A Rain World Rot themed shell for Needle!
+* Comes with various rot color options!
+
 **Hatsune Neon**<br>
 (dg_miku.nar)<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
