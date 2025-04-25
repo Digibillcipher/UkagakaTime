@@ -58,7 +58,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 * AU Gordon Freeman and Darth Vader chatter on your desktop.
 * Unfinished temporary shell but still with plenty of writing!
-* Mysterious features that I forgot I added when I made them years ago!
+* Mysterious features that I forgot I added when I made them over a year ago!
 * A fine layer of dust in their souls and in their code!
 
 # Shells!
