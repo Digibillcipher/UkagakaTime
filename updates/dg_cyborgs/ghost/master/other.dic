@@ -1,0 +1,256 @@
+OnTranslate
+{
+	_talk = reference0
+	
+	//This is what makes %(embedded_elements) work in script input
+	if reference1 == "" && reference2 == "" //If this is from the input box
+	{ //send input box : no event (ref2) , no special flag (ref1)
+		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
+	}
+	
+	//If you want to add anything to OnTranslate, like text replacement, I would put it after this point, generally. Just make sure it's before the TOSTR(_talk)
+	
+	TOSTR(_talk)
+}
+
+//This is just here so you can use anchors to link to websites if you want. You can link to websites with normal menu choice tags! If you do, a handy URL preview will show up in the balloon!
+OnAnchorSelect
+{
+	if "http://" _in_ reference0 || "https://" _in_ reference0; "\j[""%(reference0)""]"
+}
+
+//Hotkeys
+OnKeyPress
+{
+	if reference0 == "f1"; "\![open,readme]"
+	elseif reference0 == "t"; OnAiTalk
+	elseif reference0 == "r"; OnLastTalk
+}
+
+//Happens about 30 seconds after a script ends, by default, to bring them back to normal poses
+OnSurfaceRestore
+{
+	"\1\s[10]\0\s[0]"
+}
+
+//Happens when the ghost is unminimized. You *can* include dialogue, but you don't *have* to. I have included this event because if you don't, it defaults to \0\s[0]\1\s[10], which you don't want in some cases, such as if your ghost uses different surfaces or has a different number of characters.
+OnWindowStateRestore
+{
+	"\1\s[10]\0\s[0]"
+}
+
+//Network update url. Make sure you have a / on the end of the url or it will give a warning every time users try to update! If you don't plan to use network updates you can remove this
+//IF YOU'RE USING GITHUB FOR NETWORK UPDATES: DO NOT USE github.io URLS! It will cause you pain and suffering. USE raw.githubusercontent!!!
+//To get the raw.githubusercontent link super easy:
+//• Open your ghost's repo online
+//• navigate to the ghost's folder (the top level one, with install.txt, readme.txt, etc)
+//• Click on install.txt, or another text file on that level
+//• Once on that page, click the "raw" button. You should see the url now starts with raw.githubusercontent
+//• Copy that url exactly as is, but *leave off the "install.txt" or whatever file name at the end.*
+//Tada! That's your url! Make sure you test it! The dev palette and script/network log can help with that
+On_homeurl
+{
+	"https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_cyborgs/"
+}
+
+
+//—————————————————————————————— Right click menu links ——————————————————————————————
+
+//Takes an array of alternating names and urls, and formats them for use with the right click menu
+FormatLinks : all
+{
+	for _i = 0; _i < ARRAYSIZE(_argv); _i++
+	{
+		_argv[_i] //Add the link/title
+		//Alternate between adding %ASC(1) or %ASC(2)
+		if _i % 2 == 1; "%ASC(2)"
+		else; "%ASC(1)"
+	}
+}
+
+On_sakura.recommendsites
+{
+	FormatLinks(recommendsites_sakura)
+}
+
+//These are the websites linked in the top option of the sakura's right click menu. The format is simple; write the label of the link on the left followed by a semicolon, and then on the right, the url to link to. These should be separate strings.
+recommendsites_sakura : array
+{
+	"Digi_056's Tumblr"; "https://digi-056.tumblr.com/"
+	"Digi_056's Pastel Hell"; "https://digibillcipher.github.io/"
+	"Zarla's Ashido.com"; "https://www.ashido.com/"
+	"Zarla's DrDowasure.com"; "http://www.drdowasure.com/"
+	"Zichqec's Ukagaka Hub"; "https://ukagaka.zichqec.com/"
+	"Galla's Ghosts"; "https://gallathegalla.github.io/gtg-ghosts/"
+	"Ukagaka Dream Team Wiki"; "https://ukagakadreamteam.com/wiki/home"
+}
+
+On_portalrootbutton.caption
+{
+	"Resources"
+}
+
+On_sakura.portalsites 
+{
+	FormatLinks(portalsites_sakura)
+}
+
+//These are the websites linked in the second option of the sakura's right click menu. Same as above
+portalsites_sakura : array
+{
+	"Ukagaka Dream Team Contact Page"; "https://ukagakadreamteam.com/wiki/info/ukagaka_dream_team#where_to_find_us"
+	"Official SSP Documentation (Translated to English)"; "https://ukagakadreamteam.github.io/ukadoc/manual/index.html"
+	"Digi's Github Repository (Downloads/Changelogs)"; "https://github.com/Digibillcipher/UkagakaTime"
+	"Digi's Ukagaka Webpage"; "https://digibillcipher.github.io/index_files/ukagaka.htm"
+}
+
+On_kero.recommendbuttoncaption
+{
+	"Just for funsies :3"
+}
+
+On_kero.recommendsites
+{
+	FormatLinks(recommendsites_kero)
+}
+
+//These are the websites linked in the first option of the kero's right click menu. Same as above
+recommendsites_kero : array
+{
+	"Full-Life Consequences"; "https://youtu.be/OHxyZaZlaOs"
+	"Lamarr Goes to the Zoo"; "https://www.jeepbarnett.com/index.html?lamarr/index.html"
+}
+
+
+//—————————————————————————————— User pronoun related ——————————————————————————————
+
+they
+{
+	if SHIORI3FW.UserSex == "male"; "he"
+	elseif SHIORI3FW.UserSex == "female"; "she"
+	else; "they"
+}
+
+them
+{
+	if SHIORI3FW.UserSex == "male"; "him"
+	elseif SHIORI3FW.UserSex == "female"; "her"
+	else; "them"
+}
+
+their
+{
+	if SHIORI3FW.UserSex == "male"; "his"
+	elseif SHIORI3FW.UserSex == "female"; "her"
+	else; "their"
+}
+
+theirs
+{
+	if SHIORI3FW.UserSex == "male"; "his"
+	elseif SHIORI3FW.UserSex == "female"; "hers"
+	else; "theirs"
+}
+
+themself
+{
+	if SHIORI3FW.UserSex == "male"; "himself"
+	elseif SHIORI3FW.UserSex == "female"; "herself"
+	else; "themself"
+}
+
+//%(they) %(p('are','is'))
+//You can change the name of this function if you want! I kept it short so it's fast to type
+p
+{
+	if SHIORI3FW.UserSex == "undef"; _argv[0] //they are
+	else; _argv[1] //he is/she is
+}
+
+/*
+
+An example of the above setup:
+"%(they) %(p('were','was')) looking for that earlier, I'll ask if %(they)'%('ve','s') found it."
+
+If using they, the %(p) functions will return the first word specified, resulting in:
+"they were looking for that earlier, I'll ask if they've found it."
+
+If not using they, for example if using she, it will return the second specified word instead, resulting in:
+"she was looking for that earlier, I'll ask if she's found it."
+
+With this function, you can quickly customize words that need to change based on whether it should be singular or plural. Just remember; the %(p) function is set up so that the first word you specify matches with the 'they' labels used on the pronoun functions. You can always switch that around if you like, too.
+
+*/
+
+//Copied from the base SHIORI files, but with the username variable added
+OnNotifyUserInfo : void
+{
+	SHIORI3FW.UserName = reference[0]
+	username = reference[0]
+	SHIORI3FW.UserNameFull = reference[1]
+	SHIORI3FW.UserBirthday = SPLIT(reference[2],',',3)
+	for _i = 0 ; _i < 3 ; _i++ {
+		SHIORI3FW.UserBirthday[_i] = TOINT(SHIORI3FW.UserBirthday[_i])
+	}
+	SHIORI3FW.UserSex = reference[3]
+}
+
+//Written by Zichqec https://zichqec.github.io/s-the-skeleton/
+/*
+This function should work in any YAYA ghost. Just copy the whole function into your ghost somewhere, and it should be applied automatically!
+If you're using AYA, you can just copy over the entire if check into your normal OnTranslate function, and leave out the other lines of code.
+
+
+How to write your dialogues with this processor:
+
+This is some dialogue. Pauses will be inserted after punctuation marks, so long as there is a space after them! If you want to control the timing manually...\w8\w8\w8\w8 you can do that too. \n\nMake sure you add a space before linebreaks if you want the previous sentence to have a pause after it.\![dummy-tag] You can also purposefully not add a space (or put another tag in the way) if you want to omit the pause.
+
+With the default setup, this would be the output:
+
+This is some dialogue.\w8 Pauses will be inserted after punctuation marks,\w4 so long as there is a space after them!\w8 If you want to control the timing manually...\w8\w8\w8\w8 you can do that too.\w8 \n\nMake sure you add a space before linebreaks if you want the previous sentence to have a pause after it.\![dummy-tag] You can also purposefully not add a space (or put another tag in the way) if you want to omit the pause.
+
+
+Pause tags are added after punctuation marks, but ONLY if that punctuation mark is followed immediately by a space. You can use this to control whether or not a pause is added at any point in your dialogue.
+
+You can also add \![no-autopause] anywhere in a script to prevent pauses from being added in any part of the script! This is useful for things like menus.
+Be careful that you don't have a comma and space combination in your sakurascript tags! As long as you write them like \![raise,OnThing,Arg 1] and not \![raise, OnThing, Arg 1], you should be fine.
+
+You can adjust this all how you like. I also included options to handle ellipsis separately.
+You'll have to be a bit mindful of how you write your dialogues, but this can make it much easier/cleaner in general!
+*/
+OnTranslateInternal.AutoPauses
+{
+	_talk = _argv[0]
+	
+	if "\![no-autopause]" !_in_ _talk
+	{
+		/*
+		//Additional options if you want ellipsis to have little pauses between each dot. Personally, I think I want to do that manually, for when I want a particular flavor.
+		
+		_talk = REPLACE(_talk,"... ",".\w2.\w2.\w8 ") //Ellipsis
+		_talk = REPLACE(_talk,"..? ",".\w2.\w2?\w8 ") //Question mark + ellipsis
+		_talk = REPLACE(_talk,"..! ",".\w2.\w2!\w8 ") //Exclamation point + ellipsis
+		*/
+		
+		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
+		_talk = REPLACE(_talk,". ",".\w8 ") //Period
+		_talk = REPLACE(_talk,"? ","?\w8 ") //Question mark
+		_talk = REPLACE(_talk,"! ","!\w8 ") //Exclamation point
+		//_talk = REPLACE(_talk,"- ","-\w8 ") //Dash - This one seems to happen a lot when I don't want it, so I am commenting it out
+		_talk = REPLACE(_talk,"; ",";\w4 ") //Semicolon
+	}
+	
+	_talk
+}
+
+OnSecondChange
+{
+	secount = secount + 1
+}
+
+GetUptime //%(GetUptime)
+{
+	_uphour = (secount/60)/60
+	_upmin = secount/60
+	"%(_uphour):%(_upmin):%(secount)"
+}

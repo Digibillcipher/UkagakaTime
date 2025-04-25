@@ -1,0 +1,99 @@
+//This file handles a couple little QOL functions you may want. But these are not necessary! If you don't care for them just erase them. If you don't want to set up network updates, you can comment or remove the update functions too. If you're not interested in any of these, just remove the whole file!
+
+//—————————————————————————————— Installing something ——————————————————————————————
+OnInstallBegin
+{
+	"\1\s[10]I believe the Earthling would like us to do something for %(them) while we are here.%(FRM)\s[0]I guess we can...\w8\w8\w8"
+}
+
+OnInstallComplete
+{
+	"\0\s[0]Done, \w8%(they) wanted us to install a %(reference0),\w4 called %(reference1)."
+}
+
+OnInstallFailure
+{
+	"\0\s[0]I hate to admit it, \w8but something went wrong.%(VDR)\s[10]In the same way that we were stuck here?%(FRM)..."
+}
+
+OnInstallRefuse
+{
+	"\1\s[10]I believe the Earthling has given us the wrong item.%(FRM)\s[0]I'll just put it over there..."
+}
+
+//—————————————————————————————— Creating a .nar file ——————————————————————————————
+OnNarCreating
+{
+	"\1\s[10]I believe the Earthling would like us to do something for %(them) while we are here.%(FRM)\s[0]I guess we can...\w8\w8\w8"
+}
+
+OnNarCreated
+{
+	"\0\s[0]Done, \w8%(they) wanted us to make a %(reference0).nar"
+}
+
+//—————————————————————————————— Creating a .dau file ——————————————————————————————
+OnUpdatedataCreating
+{
+	"\1\s[10]I believe the Earthling would like us to do something for %(them) while we are here.%(FRM)\s[0]I guess we can...\w8\w8\w8"
+}
+ 
+OnUpdatedataCreated
+{
+	"\0\s[0]Done, \w8%(they) wanted us to make a updates2.dau"
+}
+
+//—————————————————————————————— Network Update ——————————————————————————————
+//Starting an update
+OnUpdateBegin
+{
+	"\1\s[10]I believe the Earthling would like us to do something for %(them) while we are here.%(FRM)\s[0]I guess we can...\w8\w8\w8"
+}
+
+//reference0 is the number of new files, starting from 0
+OnUpdateReady
+{
+	reference0++ //Number of files starts from 0, so this displays the correct amount
+	
+	//plural checks, adds an s and changes is to are if there's more than 1 file
+	_s = ""; _are = "is"; if reference0 != 1; _s = "s"; _are = "are"
+	
+	"\0\s[0]Hmmm, \w8there %(_are) %(reference0) new file%(_s).\w8"
+}
+
+//When the update finishes. Don't forget to initialize any new variables you've created! I highly highly recommend using OnInitialize for this (it's in boot.dic), in case the user updates via the ghost explorer or some other means.
+//reference0 is 'none' if there were no new files to update with, reference1 is a list of new file names, separated by commas
+OnUpdateComplete
+{
+	if reference0 == "none"
+	{
+		"\0\s[0]Well, \w8%(they) wanted us to update something of %(theirs) but there was nothing to update."
+	}
+	else
+	{
+		"\0\s[0]Done, \w8%(they) wanted us to update something of %(theirs)."
+	}
+}
+
+//reference0 is the reason the update failed
+OnUpdateFailure //If the update fails
+{
+	if reference0 == "timeout" //If it timed out
+	{
+		"\0\s[0]I hate to admit it, \w8but something went wrong.%(VDR)\s[10]In the same way that we were stuck here?%(FRM)...\w8I guess I took too long."
+	}
+	elseif reference0 == "md5 miss" //If the update files have not been uploaded correctly and don't match the updates2.dau
+	{
+		_file = SPLITPATH(reference1)[2] + SPLITPATH(reference1)[3] //This gets the name and extension of the offending file
+		
+		"\0\s[0]I hate to admit it, \w8but something went wrong.%(VDR)\s[10]In the same way that we were stuck here?%(FRM)No...\w8I got an MD5 error on %(_file)"
+	}
+	elseif reference0 == "artificial" //If the user cancels the update by double clicking the balloon
+	{
+		"\0\s[0]Huh, \w8I guess %(they) didn't want me to."
+	}
+	else //Any other errors
+	{
+		"\0\s[0]I hate to admit it, \w8but something went wrong.%(VDR)\s[10]In the same way that we were stuck here?%(FRM)No...\w8I got an error. \w8It said: %(reference0)"
+	}
+}

@@ -1,0 +1,16 @@
+charset,UTF-8
+
+name,The Cyborgs
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Digi_056
+craftmanurl,https://digibillcipher.github.io/
+
+sakura.name,Gordon
+kero.name,Vader
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0

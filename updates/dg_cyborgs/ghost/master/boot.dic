@@ -1,0 +1,100 @@
+OnFirstBoot
+{
+	//If you add variables, make sure to initialize them here!
+	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
+	secount = 0
+	silly = 0
+	aitalkinterval = (RAND(1200)+1)+300
+	"\0\s[0]\1\s[10]"
+	--
+	"\0Huh? \w8This isn't where I wanted to go!%(VDR)It seems you've been pulled somewhere else, dragging me along with you.%(FRM)You said you wanted to come.%(VDR)...\w8Do you at least know where we are?%(FRM)It looks like we're on an, \w8Earth computer?%(VDR)Only you could achieve something as ridiculous as that.%(FRM)Oh really? \w8I would have thought that %(CHR(34))The Chosen One%(CHR(34)) would have been in stranger situations.%(VDR)I suppose I should expect no less from a man who ignored his friend's advice and is now suffering the consequences...%(FRM)...\w8\w8We might be here a while.%(VDR)Are you admitting defeat at leaving this place?%(FRM)No... \w8I just haven't figured it out yet..."
+}
+
+OnBoot
+{
+	secount = 0
+	silly = 0
+	aitalkinterval = (RAND(1200)+1)+300
+	"\1\s[10]\0\s[0]"
+	--
+	"\0Here again!? \w8I thought I'd finally figured out how not to get stuck here!%(VDR)At least this will give us a break from our duties.%(FRM)Easy for you to say, \w8you're not the one who has to get us back out."
+	"\1It seems we are back on the Earthling's computer.%(FRM)...\w8Would you like to hear the story of how I got blamed for the ruining of a casserole that was later destroyed via nuclear bomb again?%(VDR)No.%(FRM)I have a feeling you'll disagree with that statement later."
+	"\0Here we go again...%(VDR)Do you think you will ever figure out how to avoid transporting us here?%(FRM)..."
+	"\1Hmm... \w8The computer again...%(FRM)..."
+	"\0Don't...\w8If I keep my eyes closed we are not on some random person's computer again."
+	"\1I suppose we will be putting that adventure on hold?%(FRM)Unfortunately..."
+	"\0Have I taught you how to play chess yet? \w8Because it seems we will have all the time in the world."
+	"\1Perhaps you can tell me more about this %(CHR(34))good friend%(CHR(34)) of yours while we are here."
+	"\0I'm never going to figure this out, \w8am I? \w8We're just going to get stuck here forever.%(VDR)Based on the fact that you have gotten us out before, \w8I believe you can do it again.%(FRM)Thanks."
+	"\1It seems you are having an easier time learning how to wield a lightsaber, than to prevent us from finding ourselves here again.%(FRM)..."
+	
+}
+
+OnGhostChanging
+{
+	"\1\s[10]\0\s[0]"
+	--
+	"\0I think I got it!%(VDR)...%(FRM)What if I try this-\e"
+	"\0Alright... \w8what if I-"
+	"\0Okay, \w8okay, \w8I think I know what I'm doing wrong.%(VDR)Really?%(FRM)Maybe."
+	"\0Hmm... \w8maybe if I-"
+	"\0Maybe if I think about how hungry I am we can leave.%(VDR)..."
+	"\0Leaving can't be that hard, \w8maybe I'm just overthinking it."
+	"\0Attempting to leave in, \w83, \w82, \w81..."
+	"\0Alright Gordon, \w8you can do this. \w8Just, \w8concentrate..."
+	"\0Home feels really foggy from in here, \w8but if I can just, \w8GRAB IT FOR ONCE-"
+	"\0If I close my eyes and imagine hard enough, \w8I'll open them and we'll be home. \w8Hopefully."
+	--
+	"\w8\w8"
+}
+
+OnGhostChanged
+{
+	"\0\s[0]\1\s[10]"
+	--
+	if reference0 == "Gordon"
+	{
+		"\0DAMN IT! \w8I really thought I had it that time!"
+		"\1It seems we will not be leaving just yet.%(FRM)..."
+		"\0We are never getting out of here on our own terms, \w8are we?"
+		"\1...\w8I cannot believe you still have not figured out how to send us home.%(FRM)..."
+		"\0Ugh..."
+		"\1Hmmm...%(FRM)..."
+		"\0I'll get it eventually, \w8I have to."
+		"\0At this rate, \w8we'll be here for the rest of our lives."
+		"\0Maybe we should just wait for my friend to rescue us..."
+		"\1Do you believe your %(CHR(34))good friend%(CHR(34)) is aware of our situation?%(FRM)I'm not sure, \w8but I would hope he would rescue us if he was."
+		
+	}
+	else //If you're switching to them from another ghost...
+	{
+		"\0Here again!? \w8I thought I'd finally figured out how not to get stuck here!%(VDR)At least this will give us a break from our duties.%(FRM)Easy for you to say, \w8you're not the one who has to get us back out."
+		"\1It seems we are back on the Earthling's computer.%(FRM)...\w8Would you like to hear the story of how I got blamed for the ruining of a casserole that was later destroyed via nuclear bomb again?%(VDR)No.%(FRM)I have a feeling you'll disagree with that statement later."
+		"\0Here we go again...%(VDR)Do you think you will ever figure out how to avoid transporting us here?%(FRM)..."
+		"\1Hmm... \w8The computer again...%(FRM)..."
+		"\0Don't...\w8If I keep my eyes closed we are not on some random person's computer again."
+		"\1I suppose we will be putting that adventure on hold?%(FRM)Unfortunately..."
+		"\0Have I taught you how to play chess yet? \w8Because it seems we will have all the time in the world."
+		"\1Perhaps you can tell me more about this %(CHR(34))good friend%(CHR(34)) of yours while we are here."
+		"\0I'm never going to figure this out, \w8am I? \w8We're just going to get stuck here forever.%(VDR)Based on the fact that you have gotten us out before, \w8I believe you can do it again.%(FRM)Thanks."
+		"\1It seems you are having an easier time learning how to wield a lightsaber, than to prevent us from finding ourselves here again.%(FRM)..."
+	}
+}
+
+OnClose
+{
+	"\1\s[10]\0\s[0]"
+	--
+	"\0I think I got it!%(VDR)...%(FRM)What if I try this-"
+	"\0Alright... \w8what if I-"
+	"\0Okay, \w8okay, \w8I think I know what I'm doing wrong.%(VDR)Really?%(FRM)Maybe."
+	"\0Hmm... \w8maybe if I-"
+	"\0Maybe if I think about how hungry I am we can leave.%(VDR)..."
+	"\0Leaving can't be that hard, \w8maybe I'm just overthinking it."
+	"\0Attempting to leave in, \w83, \w82, \w81..."
+	"\0Alright Gordon, \w8you can do this. \w8Just, \w8concentrate..."
+	"\0Home feels really foggy from in here, \w8but if I can just, \w8GRAB IT FOR ONCE-"
+	"\0If I close my eyes and imagine hard enough, \w8I'll open them and we'll be home. \w8Hopefully."
+	--
+	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
+}
