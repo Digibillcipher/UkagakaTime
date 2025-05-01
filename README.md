@@ -128,6 +128,12 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
 
+**Trusty Nail**<br>
+(dg_nail.nar)<br>
+
+* A Hollow Knight themed shell for Needle!
+* Might look at you occasionally...
+
 **Hatsune Neon**<br>
 (dg_miku.nar)<br>
 <img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
