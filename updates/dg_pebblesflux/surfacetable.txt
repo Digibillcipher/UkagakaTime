@@ -34,5 +34,9 @@ group,Pebbles
 	24,Hold Pearls2
 	25,Singing
 	26,Hold Pearls Scare
+	27,EarTwitch1
+	28,EarTwitch2
+	29,EarTwitch3
+	30,EarTwitch4
 	96,Singing
 }

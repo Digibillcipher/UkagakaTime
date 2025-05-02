@@ -8,7 +8,7 @@
 //Write the current version of your shell here, and it'll be noted on the main menu. Try it out!
 shellver
 {
-	"1.0.1"
+	"1.0.2"
 }
 
 //Set up the path to your tray icon here, and it'll automatically change to it whenever your shell is loaded. Note that you'll need to keep the /../../shell/ part as it is, just edit the path after that
@@ -175,7 +175,7 @@ OnCustom_Menu
 
 OnNowawa
 {
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\s[17]\i[1]"
 	}
@@ -190,7 +190,7 @@ OnNowawa
 	"You done?"
 	"Finished?"
 	"No more noises to make?"
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\s[25]Ah, \w8silence."
 	}
@@ -204,13 +204,31 @@ OnNowawa
 
 OnWawawawa
 {
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
-		"\b2\s[17]\i[1]"
+		if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96
+		{
+			"\b2\s[29]\w2\s[25]\w8\s[17]\i[1]"
+			"\b2\s[17]\i[1]"
+			"\b2\s[17]\i[1]"
+		}
+		else
+		{
+			"\b2\s[17]\i[1]"
+		}
 	}
 	else
 	{
-		"\b2\s[5]\i[1]"
+		if SHIORI3FW.LastSurface[0] == 0
+		{
+			"\b2\s[27]\i[1]\w2\s[0]\i[1]\w8\s[5]\i[1]"
+			"\b2\s[5]\i[1]"
+			"\b2\s[5]\i[1]"
+		}
+		else
+		{
+			"\b2\s[5]\i[1]"
+		}
 	}
 	--
 	"What? \w8What do you want?"
@@ -238,7 +256,7 @@ OnAskPebbles
 {
 	//Why did my wife leave me and take the pups? -ueue_mlgpro
 	//Idk that's not my problem -Pebbles
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\b2\s[22]\i[5]"
 	}
@@ -255,7 +273,7 @@ OnAskPebbles
 	"What are-?"
 	"Little slugcat-?"
 	--
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\w8\w8\s[17]\i[1] "
 	}
@@ -276,7 +294,7 @@ OnAskPebbles
 	"you're wondering "
 	"you're asking "
 	--
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"why if I have a mouth I don't move it while I'm speaking. \w8\w8\s[24]\i[11]\i[1]It's simply because I don't need to."
 		"if the rot on my body is at all dangerous. \w8\w8Luckily that is not the case, \w8\w8touching the rotten parts of me will neither infect you, \w8nor cause you harm in any way."
@@ -471,13 +489,29 @@ ItalF //%(ItalF)
 //Custom dialogue pool for being pet! This function is specifically called when the player moves their mouse over the "stroke_p" hitbox for a short while, which is usually the head. FLUX uses the variable totalpets to track the total number of times FLUX has been pet; if you want to track this for your shell specifically you'll need to add a custom variable! Make sure the name is very definitely unique, though. sanspets would be too generic, but zichqec_sanspets would be unique enough that it should never overlap with anyone else's. Uses the same references as OnMouseMove.
 OnCustom_Petting
 {
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
-		"\s[18]\i[1]"
+		if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96
+		{
+			"\s[29]\w2\s[25]\w8\s[18]\i[1]"
+			"\s[18]\i[1]"
+		}
+		else
+		{
+			"\s[18]\i[1]"
+		}
 	}
 	else
 	{
-		"\s[1]\i[1]"
+		if SHIORI3FW.LastSurface[0] == 0
+		{
+			"\s[27]\w2\s[0]\w8\s[1]\i[1]"
+			"\s[1]\i[1]"
+		}
+		else
+		{
+			"\s[1]\i[1]"
+		}
 	}
 	--
 	"STOP THAT!"
@@ -508,7 +542,7 @@ OnCustom_MouseDoubleClickSakura
 {
 	if reference4 == "boop"
 	{
-		if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+		if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 		{
 			"\s[18]\i[1]"
 		}
@@ -573,7 +607,7 @@ OnCustom_ActionSurfaces
 {
 	"\1\s[-1]\0"
 	--
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\s[19]"
 	}
@@ -638,7 +672,7 @@ OnCustom_OnVanished
 //heeeheehyohohohyheeehehe
 OnNeedlePoke
 {
-	if SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 96 || SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
 	{
 		"\s[18]\i[1]"
 	}
@@ -657,3 +691,70 @@ OnNeedlePoke
 	"HAVE YOU NO REASON?"
 	"YOU WILL REGRET THIS."
 }
+
+//I could never confirm why this didn't work or if it ever was registered as existing.
+/*
+OnSpectrePlugin.ConfirmCalibration
+{
+	"\![raiseplugin,Spectre,OnCustomCalibrationConfirm]"
+}
+
+OnSpectrePlugin.Possession
+{
+	if RAND(4) == 0
+	{
+		if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
+		{
+			"\s[26]"
+		}
+		else
+		{
+			"\s[20]"
+		}
+		--
+		"Huh!?\w8 What was that?"
+		"Did you see that?"
+		"Am I really loosing it?"
+		"I'm still me,\w8 right?"
+		"No-one else is here..."
+		"Who-?\w8 What-?"
+		"The world isn't blue,\w8 is it?"
+		"Did I say something?"
+		"I did not say that..."
+	}
+}
+
+OnSpectrePlugin.Surface
+{
+	if SHIORI3FW.LastSurface[0] == 17 || SHIORI3FW.LastSurface[0] == 18 || SHIORI3FW.LastSurface[0] == 19 || SHIORI3FW.LastSurface[0] == 22 || SHIORI3FW.LastSurface[0] == 24 || SHIORI3FW.LastSurface[0] == 25 || SHIORI3FW.LastSurface[0] == 26 || SHIORI3FW.LastSurface[0] == 96
+	{
+		if reference0 == "normal"; "\s[17]"
+		elseif reference0 == "embarrassed"; "\s[18]\i[1]"
+		elseif reference0 == "surprised"; "\s[17]"
+		elseif reference0 == "anxious"; "\s[22]"
+		elseif reference0 == "discouraged"; "\s[17]\i[1]"
+		elseif reference0 == "smile"; "\s[25]"
+		elseif reference0 == "relieved"; "\s[25]"
+		elseif reference0 == "angry"; "\s[18]\i[1]"
+		elseif reference0 == "sweat"; "\s[22]"
+		elseif reference0 == "indignant"; "\s[18]\i[1]"
+		elseif reference0 == "thinking"; "\s[19]\i[1]"
+		elseif reference0 == "unamused"; "\s[22]\i[5]"
+	}
+	else
+	{
+		if reference0 == "normal"; "\s[0]"
+		elseif reference0 == "embarrassed"; "\s[1]\i[1]"
+		elseif reference0 == "surprised"; "\s[13]"
+		elseif reference0 == "anxious"; "\s[21]"
+		elseif reference0 == "discouraged"; "\s[0]\i[1]"
+		elseif reference0 == "smile"; "\s[8]\i[11]"
+		elseif reference0 == "relieved"; "\s[8]\i[11]"
+		elseif reference0 == "angry"; "\s[1]\i[1]"
+		elseif reference0 == "sweat"; "\s[21]"
+		elseif reference0 == "indignant"; "\s[1]\i[1]"
+		elseif reference0 == "thinking"; "\s[6]\i[1]"
+		elseif reference0 == "unamused"; "\s[21]\i[1]"
+	}
+}
+*/

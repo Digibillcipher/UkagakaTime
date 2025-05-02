@@ -2,7 +2,7 @@ It's a lovely morning in this world, and you are a horrible slugcat.
 Annoy the poor wandering Iterator to play your favorite music with FLUX using this shell.
 Rain World/Downpour spoilers are scattered around so be warned
 
-Made by Digi_056 v1.0.1
+Made by Digi_056 v1.0.2
 
 Ears - Pet :3
 Upper Left Claws - Play
