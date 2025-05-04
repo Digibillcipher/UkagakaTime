@@ -168,7 +168,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 
 **Winamp Balloon**<br>
 (dg_winampb.nar)<br>
-<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampc.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampb.png">
 
 * A Winamp media player themed text balloon!
 
