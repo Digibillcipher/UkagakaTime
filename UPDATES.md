@@ -1,7 +1,5 @@
 # Changelogs
 
-**The Wretched Scientist**<br>
-
 **The Wretched Scientist v1.1.3 Update**
 
 * Old shell now included, although some things will be unavailable or strange looking while using
