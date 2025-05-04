@@ -2,6 +2,15 @@
 Back to Readme:<br>
 https://github.com/Digibillcipher/UkagakaTime/tree/main
 
+**Rotedle v1.0.1 Update**
+* Added more colors
+
+**Five Rotten Pebbles (FLUX) v1.0.2 Update**
+* Added the ability for his ears to twitch with certain actions.
+
+**Five Rotten Pebbles (FLUX) v1.0.1 Update**
+* Bugfix
+
 **The Wretched Scientist v1.1.3 Update**
 
 * Old shell now included, although some things will be unavailable or strange looking while using
@@ -31,3 +40,16 @@ https://github.com/Digibillcipher/UkagakaTime/tree/main
 * Auto flipping sides
 * ~~Nerd~~ Glasses dress-up
 * ~~Garland removed until I re-add it lol~~
+
+**DG - Don't Starve Balloon v1.1.1 Update**
+
+* Added two more balloon sizes
+* Added network updates
+* Increased symmetry
+
+**DG - Don't Starve Balloon v1.1.0 Update**
+
+* Increased the text area by a small amount, updated readme, and included my WilsonPH font
+
+The text balloon's folder name was changed from z_dontstarve to dg_dontstarve in 1.1.0<br>
+If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two balloon options with the same name

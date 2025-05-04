@@ -125,19 +125,6 @@ More information can be found in her readme
 
 * A Don't Starve themed text balloon!
 
-**DG - Don't Starve Balloon v1.1.1 Update**
-
-* Added two more balloon sizes
-* Added network updates
-* Increased symmetry
-
-**DG - Don't Starve Balloon v1.1.0 Update**
-
-* Increased the text area by a small amount, updated readme, and included my WilsonPH font
-
-The text balloon's folder name was changed from z_dontstarve to dg_dontstarve in 1.1.0<br>
-If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two balloon options with the same name
-
 **Winamp Balloon**<br>
 (dg_winampb.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/refs/heads/main/img/winampb.png">
