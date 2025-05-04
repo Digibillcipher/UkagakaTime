@@ -7,7 +7,6 @@ To download, click the file and download the raw file.
 
 **The Wretched Scientist**<br>
 (dg_wrwilson.nar)<br>
-<img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
 * A funny messed up scientist to vibe with you!<br>
@@ -50,12 +49,13 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **The Rain Station**<br>
 (dg_weather.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/ghost/the_rain_station/thumbnail.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/weather.png">
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
 **The Cyborgs**<br>
 (dg_cyborgs.nar)<br>
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/cyborgs.png">
 
 * AU Gordon Freeman and Darth Vader chatter on your desktop.
 * Unfinished temporary shell but still with plenty of writing!
@@ -66,7 +66,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Five Rotten Pebbles (FLUX)**<br>
 (dg_pebblesflux.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/flux/five_rotten_pebbles/appearance.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/pebblesflux.png">
 
 * An annoyed off-the-string Iterator to play your music!
 * Pet him! Boop Him! Poke him with Needle!
@@ -78,7 +78,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Wilture**<br>
 (dg_wilture.nar)<br>
-<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_wilture/surface21.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wilture.png">
 
 * A Wilson-y shell for Slugcat!
 * Comes with optional arms!
@@ -87,14 +87,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Squirt**<br>
 (Squirt.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/hydrate/squirt/thumbnail.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/squirt.png">
 
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
 **Hands Included**<br>
 (Hands Included.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/hands_included/appearance.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/hands.png">
 
 * A shell for Needle!
 * Comes with hands included!
@@ -102,14 +102,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Fluffidle**<br>
 (Fluffidle.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/fluffidle/appearance.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/fluffidle.png">
 
 * A shell for Needle!
 * Is the fur sharp or soft? You decide! :D
 
 **Injector**<br>
 (dg_injector.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/injector/thumbnail.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/injector.png">
 
 * A set of three shells for both Needle and Hydrate! Select via dressup!
 * Each one is themed off an injector from a different video game!<br>
@@ -117,27 +117,28 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 **Sewing Pin**<br>
 (dg_sewingpin.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/needle/sewing_pin/thumbnail.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/sewingpin.png">
 
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
 
 **Rotedle**<br>
 (dg_rotedle.nar)<br>
-<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/local/rotedle.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
 
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
 
 **Trusty Nail**<br>
 (dg_nail.nar)<br>
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/nail.png">
 
 * A Hollow Knight themed shell for Needle!
 * Might look at you occasionally...
 
 **Hatsune Neon**<br>
 (dg_miku.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/shell/shared-shell/hatsune_neon/appearance.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/miku.png">
 
 * A Hatsune Miku themed shell for both FLUX and FLELE!
 * Additional hotspots when used with FLUX!
@@ -148,7 +149,7 @@ More information can be found in her readme
 
 **Digi's Don't Starve**<br>
 (dg_dontstarve.nar)<br>
-<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_dontstarve/balloons0.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/dontstarve.png">
 
 * A Don't Starve themed text balloon!
 
@@ -167,7 +168,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 
 **Winamp Balloon**<br>
 (dg_winampb.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/balloon/winamp_balloon/thumbnail.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampb.png">
 
 * A Winamp media player themed text balloon!
 
@@ -175,7 +176,7 @@ If the SSP/balloon/z_dontstarve/ folder isn't deleted you'll end up with two bal
 
 **Winamp Calendar**<br>
 (dg_winampc.nar)<br>
-<img src="https://ukagakadreamteam.com/wiki/_media/calendar_skin/winamp_calendar/appearance.png">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampc.png">
 
 * A Winamp media player themed calendar skin!
 
