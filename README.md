@@ -8,6 +8,7 @@ To download, click the file and download the raw file.
 **The Wretched Scientist**<br>
 (dg_wrwilson.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/digibillcipher.github.io/main/index_files/image440.gif">
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
 * A funny messed up scientist to vibe with you!<br>
 More information can be found on my website:<br>
