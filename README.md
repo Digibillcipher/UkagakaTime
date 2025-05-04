@@ -100,6 +100,8 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
+* Update now with the Ghost Explorer! (v1.0.1 and above)<br>
+(Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
 **Trusty Nail**<br>
 (dg_nail.nar)<br>
