@@ -1,9 +1,9 @@
 # Welcome to Digi_056's Ukagaka Github Repository!<br>
 This is where I keep the downloads for my ukagaka projects and where their updates are hosted from.<br>
 Latest .nars are kept in the top folder while old versions are available in the "legacy" folder.<br>
-To download, click the file and download the raw file.<br>
-Changelogs for updates can be found here:<br>
-https://github.com/Digibillcipher/UkagakaTime/blob/main/UPDATES.md
+To install, drag the link to an open ghost. Alternatively, click the link to download the .nar<br>
+Changelogs for updates can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/UPDATES.md)<br>
+Content warnings can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/CONWARN.md)<br>
 
 # Ghosts!
 
