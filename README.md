@@ -7,6 +7,7 @@ Changelogs for updates can be found [here.](https://github.com/Digibillcipher/Uk
 # Ghosts!
 
 ### The Wretched Scientist
+* This ghost may contain descriptions of injuries.<br>
 [dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
@@ -23,7 +24,8 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
-**The Cyborgs**<br>
+### The Cyborgs
+* This ghost may contain descriptions of injuries.<br>
 [dg_cyborgs.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_cyborgs.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/cyborgs.png">
 
@@ -34,7 +36,7 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 
 # Shells!
 
-**Five Rotten Pebbles (FLUX)**<br>
+### Five Rotten Pebbles (FLUX)
 [dg_pebblesflux.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_pebblesflux1.0.2.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/pebblesflux.png">
 
@@ -46,7 +48,7 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Update now with the Ghost Explorer!<br>
 (Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
-**Wilture**<br>
+### Wilture
 [dg_wilture.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wilture%201.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wilture.png">
 
@@ -55,14 +57,14 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Update now with the Ghost Explorer!<br>
 (Ctrl+E > Type > Shell > Right Click "Wilture" > Network Update!)
 
-**Squirt**<br>
+### Squirt
 [Squirt.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Squirt.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/squirt.png">
 
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
-**Hands Included**<br>
+### Hands Included
 [Hands Included.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Hands%20Included.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/hands.png">
 
@@ -70,14 +72,14 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Comes with hands included!
 * May or may not blink!
 
-**Fluffidle**<br>
+### Fluffidle
 [Fluffidle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Fluffidle.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/fluffidle.png">
 
 * A shell for Needle!
 * Is the fur sharp or soft? You decide! :D
 
-**Injector**<br>
+### Injector
 [dg_injector.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_injector.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/injector.png">
 
@@ -85,14 +87,15 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Each one is themed off an injector from a different video game!<br>
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
-**Sewing Pin**<br>
+### Sewing Pin
 [dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/sewingpin.png">
 
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
 
-**Rotedle**<br>
+### Rotedle
+* This shell contains depictions of a fictional disease.<br>
 [dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
 
@@ -101,14 +104,14 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Update now with the Ghost Explorer! (v1.0.1 and above)<br>
 (Ctrl+E > Type > Shell > Right Click "Rotedle" > Network Update!)
 
-**Trusty Nail**<br>
+### Trusty Nail
 [dg_nail.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_nail.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/nail.png">
 
 * A Hollow Knight themed shell for Needle!
 * Might look at you occasionally...
 
-**Hatsune Neon**<br>
+### Hatsune Neon
 [dg_miku.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_miku1.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/miku.png">
 
@@ -119,13 +122,13 @@ More information can be found in her readme
 
 # Balloons!
 
-**Digi's Don't Starve**<br>
+### Digi's Don't Starve
 [dg_dontstarve.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_dontstarve%201.1.1.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/dontstarve.png">
 
 * A Don't Starve themed text balloon!
 
-**Winamp Balloon**<br>
+### Winamp Balloon
 [dg_winampb.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampb.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/refs/heads/main/img/winampb.png">
 
@@ -133,7 +136,7 @@ More information can be found in her readme
 
 # Calendars!
 
-**Winamp Calendar**<br>
+### Winamp Calendar
 [dg_winampc.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampc.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampc.png">
 
