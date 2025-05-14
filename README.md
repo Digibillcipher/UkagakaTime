@@ -2,12 +2,11 @@
 This is where I keep the downloads for my ukagaka projects and where their updates are hosted from.<br>
 Latest .nars are kept in the top folder while old versions are available in the "legacy" folder.<br>
 To install, drag the link to an open ghost. Alternatively, click the link to download the .nar<br>
-### Changelogs for updates can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/UPDATES.md)<br>
-### Content warnings can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/CONWARN.md)<br>
+Changelogs for updates can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/UPDATES.md)<br>
 
 # Ghosts!
 
-**The Wretched Scientist**<br>
+### The Wretched Scientist<br>
 [dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
