@@ -96,11 +96,11 @@ This ghost may contain descriptions of injuries.<br>
 
 ### Rotedle
 This shell contains depictions of a fictional disease.<br>
+[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
 <details>
 <summary>Image of Shell</summary>
-[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
-</details>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
+</details>
 
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
