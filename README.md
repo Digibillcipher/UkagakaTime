@@ -8,7 +8,7 @@ Content warnings can be found [here.](https://github.com/Digibillcipher/UkagakaT
 # Ghosts!
 
 **The Wretched Scientist**<br>
-(dg_wrwilson.nar)<br>
+[dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
 * A funny messed up scientist to vibe with you!<br>
