@@ -17,7 +17,7 @@ https://digibillcipher.github.io/index_files/ukagaka.htm
 
 **!!ATTENTION SURVIVORS!!**<br>
 If you are on an update before v1.1.3!!<br>
-Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if you haven't done so already.
+Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) to Wilson to fix network updates if you haven't done so already.
 
 **The Rain Station**<br>
 [dg_weather.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_weather%201.0.0.nar)<br>
