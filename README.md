@@ -100,7 +100,7 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
 * Update now with the Ghost Explorer! (v1.0.1 and above)<br>
-(Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
+(Ctrl+E > Type > Shell > Right Click "Rotedle" > Network Update!)
 
 **Trusty Nail**<br>
 [dg_nail.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_nail.nar)<br>
