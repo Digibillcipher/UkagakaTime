@@ -12,8 +12,7 @@ Content warnings can be found [here.](https://github.com/Digibillcipher/UkagakaT
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
 * A funny messed up scientist to vibe with you!<br>
-More information can be found on my website:<br>
-https://digibillcipher.github.io/index_files/ukagaka.htm
+More information can be found on [my website.](https://digibillcipher.github.io/index_files/ukagaka.htm)<br>
 
 **!!ATTENTION SURVIVORS!!**<br>
 If you are on an update before v1.1.3!!<br>
