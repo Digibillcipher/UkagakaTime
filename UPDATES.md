@@ -1,6 +1,5 @@
 # Changelogs
-Back to Readme:<br>
-https://github.com/Digibillcipher/UkagakaTime/tree/main
+[Back to Readme](https://github.com/Digibillcipher/UkagakaTime/tree/main)<br>
 
 **Rotedle v1.0.1 Update**
 * Added more colors
