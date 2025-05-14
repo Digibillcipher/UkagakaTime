@@ -7,7 +7,7 @@ Changelogs for updates can be found [here.](https://github.com/Digibillcipher/Uk
 # Ghosts!
 
 ### The Wretched Scientist
-* This ghost may contain descriptions of injuries.<br>
+This ghost may contain descriptions of injuries.<br>
 [dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
@@ -25,7 +25,7 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
 ### The Cyborgs
-* This ghost may contain descriptions of injuries.<br>
+This ghost may contain descriptions of injuries.<br>
 [dg_cyborgs.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_cyborgs.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/cyborgs.png">
 
@@ -95,7 +95,7 @@ Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) t
 * Select style and colors via dressup!
 
 ### Rotedle
-* This shell contains depictions of a fictional disease.<br>
+This shell contains depictions of a fictional disease.<br>
 [dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
 
