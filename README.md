@@ -6,7 +6,7 @@ Changelogs for updates can be found [here.](https://github.com/Digibillcipher/Uk
 
 # Ghosts!
 
-### The Wretched Scientist<br>
+### The Wretched Scientist
 [dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
@@ -17,7 +17,7 @@ More information can be found on [my website.](https://digibillcipher.github.io/
 If you are on an update before v1.1.3!!<br>
 Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) to Wilson to fix network updates if you haven't done so already.
 
-**The Rain Station**<br>
+### The Rain Station
 [dg_weather.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_weather%201.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/weather.png">
 
