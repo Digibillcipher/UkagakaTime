@@ -20,13 +20,13 @@ If you are on an update before v1.1.3!!<br>
 Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if you haven't done so already.
 
 **The Rain Station**<br>
-(dg_weather.nar)<br>
+[dg_weather.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_weather%201.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/weather.png">
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
 **The Cyborgs**<br>
-(dg_cyborgs.nar)<br>
+[dg_cyborgs.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_cyborgs.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/cyborgs.png">
 
 * AU Gordon Freeman and Darth Vader chatter on your desktop.
@@ -37,7 +37,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 # Shells!
 
 **Five Rotten Pebbles (FLUX)**<br>
-(dg_pebblesflux.nar)<br>
+[dg_pebblesflux.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_pebblesflux1.0.2.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/pebblesflux.png">
 
 * An annoyed off-the-string Iterator to play your music!
@@ -49,7 +49,7 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
 **Wilture**<br>
-(dg_wilture.nar)<br>
+[dg_wilture.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wilture%201.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wilture.png">
 
 * A Wilson-y shell for Slugcat!
@@ -58,14 +58,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (Ctrl+E > Type > Shell > Right Click "Wilture" > Network Update!)
 
 **Squirt**<br>
-(Squirt.nar)<br>
+[Squirt.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Squirt.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/squirt.png">
 
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
 **Hands Included**<br>
-(Hands Included.nar)<br>
+[Hands Included.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Hands%20Included.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/hands.png">
 
 * A shell for Needle!
@@ -73,14 +73,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 * May or may not blink!
 
 **Fluffidle**<br>
-(Fluffidle.nar)<br>
+[Fluffidle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Fluffidle.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/fluffidle.png">
 
 * A shell for Needle!
 * Is the fur sharp or soft? You decide! :D
 
 **Injector**<br>
-(dg_injector.nar)<br>
+[dg_injector.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_injector.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/injector.png">
 
 * A set of three shells for both Needle and Hydrate! Select via dressup!
@@ -88,14 +88,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
 **Sewing Pin**<br>
-(dg_sewingpin.nar)<br>
+[dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/sewingpin.png">
 
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
 
 **Rotedle**<br>
-(dg_rotedle.nar)<br>
+[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
 
 * A Rain World Rot themed shell for Needle!
@@ -104,14 +104,14 @@ Please drag "Wilson v1.1.2 Update Fix.nar" to Wilson to fix network updates if y
 (Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
 **Trusty Nail**<br>
-(dg_nail.nar)<br>
+[dg_nail.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_nail.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/nail.png">
 
 * A Hollow Knight themed shell for Needle!
 * Might look at you occasionally...
 
 **Hatsune Neon**<br>
-(dg_miku.nar)<br>
+[dg_miku.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_miku1.0.0.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/miku.png">
 
 * A Hatsune Miku themed shell for both FLUX and FLELE!
@@ -122,13 +122,13 @@ More information can be found in her readme
 # Balloons!
 
 **Digi's Don't Starve**<br>
-(dg_dontstarve.nar)<br>
+[dg_dontstarve.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_dontstarve%201.1.1.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/dontstarve.png">
 
 * A Don't Starve themed text balloon!
 
 **Winamp Balloon**<br>
-(dg_winampb.nar)<br>
+[dg_winampb.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampb.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/refs/heads/main/img/winampb.png">
 
 * A Winamp media player themed text balloon!
@@ -136,7 +136,7 @@ More information can be found in her readme
 # Calendars!
 
 **Winamp Calendar**<br>
-(dg_winampc.nar)<br>
+[dg_winampc.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampc.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampc.png">
 
 * A Winamp media player themed calendar skin!
