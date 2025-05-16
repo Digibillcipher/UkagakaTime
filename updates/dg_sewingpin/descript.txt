@@ -1,0 +1,101 @@
+﻿seriko.alignmenttodesktop,free
+seriko.use_self_alpha, 1
+
+charset,UTF-8
+type,shell
+name,Sewing Pin
+craftman,Digi_056
+craftmanurl,https://digi-056.tumblr.com/
+homeurl,https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/updates/dg_sewingpin/
+
+sakura.balloon.offsetx,0
+sakura.balloon.offsety,0
+kero.balloon.offsetx,0
+kero.balloon.offsety,0
+sakura.balloon.alignment,none
+kero.balloon.alignment,none
+
+menu.foreground.font.color.r,255
+menu.foreground.font.color.g,255
+menu.foreground.font.color.b,255
+
+menu.disable.font.color.r,170
+menu.disable.font.color.g,170
+menu.disable.font.color.b,170
+
+menu.separator.color.r,150
+menu.separator.color.g,150
+menu.separator.color.b,150
+
+menu.foreground.alignment,lefttop + repeatx + repeaty
+menu.background.alignment,lefttop + repeatx + repeaty
+
+menu.background.font.color.r,255
+menu.background.font.color.g,255
+menu.background.font.color.b,255
+
+menu.background.bitmap.filename,menu_background.png
+menu.foreground.bitmap.filename,menu_foreground.png
+menu.sidebar.bitmap.filename,menu_sidebar.png
+
+sakura.menu, auto
+
+sakura.bindgroup0.name,Shell,T-Pin
+sakura.bindgroup0.default,0
+sakura.bindgroup1.name,Shell,Flower
+sakura.bindgroup1.default,0
+sakura.bindgroup2.name,Shell,Pearl
+sakura.bindgroup2.default,1
+
+sakura.bindgroup50.name,Shell,Anti-Nail
+sakura.bindgroup50.default,0
+
+sakura.bindoption0.group,Shell,mustselect
+
+sakura.bindgroup3.name,Pearl Color,Turquoise
+sakura.bindgroup3.default,1
+sakura.bindgroup4.name,Pearl Color,Lime Green
+sakura.bindgroup4.default,0
+sakura.bindgroup5.name,Pearl Color,Black
+sakura.bindgroup5.default,0
+sakura.bindgroup6.name,Pearl Color,White
+sakura.bindgroup6.default,0
+sakura.bindgroup7.name,Pearl Color,Blue
+sakura.bindgroup7.default,0
+sakura.bindgroup8.name,Pearl Color,Green
+sakura.bindgroup8.default,0
+sakura.bindgroup9.name,Pearl Color,Salmon
+sakura.bindgroup9.default,0
+sakura.bindgroup11.name,Pearl Color,Pink
+sakura.bindgroup11.default,0
+sakura.bindgroup12.name,Pearl Color,Periwinkle
+sakura.bindgroup12.default,0
+sakura.bindgroup13.name,Pearl Color,Yellow
+sakura.bindgroup13.default,0
+sakura.bindgroup14.name,Pearl Color,Ruby
+sakura.bindgroup14.default,0
+
+sakura.bindoption2.group,Pearl Color,mustselect
+
+sakura.bindgroup30.name,Flower Color,Blue
+sakura.bindgroup30.default,1
+sakura.bindgroup31.name,Flower Color,Baby Blue
+sakura.bindgroup31.default,0
+sakura.bindgroup32.name,Flower Color,Purple
+sakura.bindgroup32.default,0
+sakura.bindgroup33.name,Flower Color,Orange
+sakura.bindgroup33.default,0
+sakura.bindgroup34.name,Flower Color,White
+sakura.bindgroup34.default,0
+sakura.bindgroup35.name,Flower Color,Yellow
+sakura.bindgroup35.default,0
+sakura.bindgroup36.name,Flower Color,Green
+sakura.bindgroup36.default,0
+sakura.bindgroup37.name,Flower Color,Teal
+sakura.bindgroup37.default,0
+sakura.bindgroup38.name,Flower Color,Red
+sakura.bindgroup38.default,0
+sakura.bindgroup39.name,Flower Color,Pink
+sakura.bindgroup39.default,0
+
+sakura.bindoption3.group,Flower Color,mustselect

@@ -88,11 +88,13 @@ This ghost may contain descriptions of injuries.<br>
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
 ### Sewing Pin
-[dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin.nar)<br>
+[dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin%201.0.1.nar.nar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/sewingpin.png">
 
 * A set of three sewing pin shells for Needle!
 * Select style and colors via dressup!
+* Update now with the Ghost Explorer!<br>
+(Ctrl+E > Type > Shell > Right Click "Sewing Pin" > Network Update!)
 
 ### Rotedle
 This shell contains depictions of a fictional disease.<br>

@@ -1,0 +1,97 @@
+descript
+{
+
+}
+
+surface0
+{
+	0interval,bind
+	0pattern0,0,0,replace,0,0
+	1interval,bind
+	1pattern0,1,0,replace,0,0
+	2interval,bind
+	2pattern0,2,0,replace,0,0
+
+	50interval,bind
+	50pattern0,50,0,replace,0,0
+}
+
+surface1
+{
+	30interval,bind
+	30pattern0,30,0,overlay,0,0
+	31interval,bind
+	31pattern0,31,0,overlay,0,0
+	32interval,bind
+	32pattern0,32,0,overlay,0,0
+	33interval,bind
+	33pattern0,33,0,overlay,0,0
+	34interval,bind
+	34pattern0,34,0,overlay,0,0
+	35interval,bind
+	35pattern0,35,0,overlay,0,0
+	36interval,bind
+	36pattern0,36,0,overlay,0,0
+	37interval,bind
+	37pattern0,37,0,overlay,0,0
+	38interval,bind
+	38pattern0,38,0,overlay,0,0
+	39interval,bind
+	39pattern0,39,0,overlay,0,0
+}
+
+surface2
+{
+	3interval,bind
+	3pattern0,3,0,overlay,0,0
+	4interval,bind
+	4pattern0,4,0,overlay,0,0
+	5interval,bind
+	5pattern0,5,0,overlay,0,0
+	6interval,bind
+	6pattern0,6,0,overlay,0,0
+	7interval,bind
+	7pattern0,7,0,overlay,0,0
+	8interval,bind
+	8pattern0,8,0,overlay,0,0
+	9interval,bind
+	9pattern0,9,0,overlay,0,0
+	11interval,bind
+	11pattern0,11,0,overlay,0,0
+	12interval,bind
+	12pattern0,12,0,overlay,0,0
+	13interval,bind
+	13pattern0,13,0,overlay,0,0
+	14interval,bind
+	14pattern0,14,0,overlay,0,0
+}
+
+surface50
+{
+	3interval,bind
+	3pattern0,3,0,overlay,0,0
+	4interval,bind
+	4pattern0,4,0,overlay,0,0
+	5interval,bind
+	5pattern0,5,0,overlay,0,0
+	6interval,bind
+	6pattern0,6,0,overlay,0,0
+	7interval,bind
+	7pattern0,7,0,overlay,0,0
+	8interval,bind
+	8pattern0,8,0,overlay,0,0
+	9interval,bind
+	9pattern0,9,0,overlay,0,0
+	11interval,bind
+	11pattern0,11,0,overlay,0,0
+	12interval,bind
+	12pattern0,12,0,overlay,0,0
+	13interval,bind
+	13pattern0,13,0,overlay,0,0
+	14interval,bind
+	14pattern0,14,0,overlay,0,0
+}
+
+surface10
+{
+}

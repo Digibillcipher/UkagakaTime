@@ -1,6 +1,10 @@
 # Changelogs
 [Back to Readme](https://github.com/Digibillcipher/UkagakaTime/tree/main)<br>
 
+**Sewing Pin v1.0.1 Update**
+* Added another pearl color
+* Added another needle shape.
+
 **Rotedle v1.0.1 Update**
 * Added more colors
 
