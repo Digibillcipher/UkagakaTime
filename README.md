@@ -2,6 +2,7 @@
 This is where I keep the downloads for my ukagaka projects and where their updates are hosted from.<br>
 Latest .nars are kept in the top folder while old versions are available in the "legacy" folder.<br>
 To install, drag the link to an open ghost. Alternatively, click the link to download the .nar<br>
+My Ukagaka Dream Team Wiki page can be found [here.](https://ukagakadreamteam.com/wiki/dev/digi_056)<br>
 Changelogs for updates can be found [here.](https://github.com/Digibillcipher/UkagakaTime/blob/main/UPDATES.md)<br>
 
 # Ghosts!
