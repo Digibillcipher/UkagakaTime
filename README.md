@@ -118,6 +118,7 @@ This shell contains depictions of a fictional disease.<br>
 
 * A Rain World Rot themed shell for Needle!
 * Comes with various rot color options!
+* Varying blinking, lights, and dripping animations!
 * Update now with the Ghost Explorer! (v1.0.1 and above)<br>
 (Ctrl+E > Type > Shell > Right Click "Rotedle" > Network Update!)
 
