@@ -9,7 +9,8 @@ Changelogs for updates can be found [here.](https://github.com/Digibillcipher/Uk
 
 ### The Wretched Scientist
 This ghost may contain descriptions of injuries.<br>
-[dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)<br>
+[dg_wrwilson.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wrwlison%201.1.3.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/ghost/the_wretched_scientist)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wrwilson.gif">
 
 * A funny messed up scientist to vibe with you!<br>
