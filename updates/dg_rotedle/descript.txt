@@ -41,46 +41,65 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 sakura.menu, auto
 
 sakura.bindgroup1.name,Rot Color,Bright
+sakura.bindgroup1.addid,400
 sakura.bindgroup1.default,1
 
 sakura.bindgroup3.name,Rot Color,Dull
+sakura.bindgroup3.addid,400
 sakura.bindgroup3.default,0
 
 sakura.bindgroup5.name,Rot Color,Fatherly
+sakura.bindgroup5.addid,601
 sakura.bindgroup5.default,0
 
 sakura.bindgroup7.name,Rot Color,Motherly
+sakura.bindgroup7.addid,400
 sakura.bindgroup7.default,0
 
 sakura.bindgroup9.name,Rot Color,Royal
+sakura.bindgroup9.addid,500
 sakura.bindgroup9.default,0
 
 sakura.bindgroup12.name,Rot Color,Soot
+sakura.bindgroup12.addid,400
+sakura.bindgroup12.addid,500
 sakura.bindgroup12.default,0
 
-sakura.bindgroup14.name,Rot Color,Rust
+sakura.bindgroup14.name,Rot Color,Blood
+sakura.bindgroup14.addid,400
 sakura.bindgroup14.default,0
 
-sakura.bindgroup16.name,Rot Color,Sunny
+sakura.bindgroup16.name,Rot Color,Rust
+sakura.bindgroup16.addid,400
 sakura.bindgroup16.default,0
 
-sakura.bindgroup18.name,Rot Color,Dirt
+sakura.bindgroup18.name,Rot Color,Sunny
+sakura.bindgroup18.addid,500
 sakura.bindgroup18.default,0
 
-sakura.bindgroup20.name,Rot Color,Kelp
+sakura.bindgroup20.name,Rot Color,Dirt
+sakura.bindgroup20.addid,500
 sakura.bindgroup20.default,0
 
-sakura.bindgroup22.name,Rot Color,Lively
+sakura.bindgroup22.name,Rot Color,Kelp
+sakura.bindgroup22.addid,400
 sakura.bindgroup22.default,0
 
-sakura.bindgroup24.name,Rot Color,Radiant
+sakura.bindgroup24.name,Rot Color,Lively
+sakura.bindgroup24.addid,602
 sakura.bindgroup24.default,0
 
-sakura.bindgroup26.name,Rot Color,Borne
+sakura.bindgroup26.name,Rot Color,Radiant
+sakura.bindgroup26.addid,603
 sakura.bindgroup26.default,0
 
-sakura.bindgroup28.name,Rot Color,Flesh
+sakura.bindgroup28.name,Rot Color,Borne
+sakura.bindgroup28.addid,500
 sakura.bindgroup28.default,0
+
+sakura.bindgroup30.name,Rot Color,Flesh
+sakura.bindgroup30.addid,600
+sakura.bindgroup30.default,0
 
 
 sakura.bindoption0.group,Rot Color,mustselect
@@ -88,8 +107,9 @@ sakura.bindoption0.group,Rot Color,mustselect
 sakura.bindgroup100.name,Amount,Lots
 sakura.bindgroup100.default,1
 sakura.bindgroup101.name,Amount,Some
+sakura.bindgroup101.addid,1001
 sakura.bindgroup101.default,0
-sakura.bindgroup0.name,Amount,None
-sakura.bindgroup0.default,0
+sakura.bindgroup1000.name,Amount,None
+sakura.bindgroup1000.default,0
 
 sakura.bindoption0.group,Amount,mustselect

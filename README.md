@@ -109,7 +109,7 @@ This ghost may contain descriptions of injuries.<br>
 
 ### Rotedle
 This shell contains depictions of a fictional disease.<br>
-[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)
+[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.2.nar)
 [[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/rotedle)<br>
 <details>
 <summary>Image of Shell</summary>

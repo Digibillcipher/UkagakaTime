@@ -5,6 +5,10 @@
 * Added another pearl color
 * Added another needle shape.
 
+**Rotedle v1.0.2 Update**
+* Added another color
+* Added animations
+
 **Rotedle v1.0.1 Update**
 * Added more colors
 
