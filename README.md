@@ -21,14 +21,16 @@ If you are on an update before v1.1.3!!<br>
 Please drag [Wilson v1.1.2 Update Fix.nar](Wilson%20v1.1.2%20Update%20Fix.nar) to Wilson to fix network updates if you haven't done so already.
 
 ### The Rain Station
-[dg_weather.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_weather%201.0.0.nar)<br>
+[dg_weather.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_weather%201.0.0.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/ghost/the_rain_station)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/weather.png">
 
 * Rainometer and colleagues on your desktop! The Window will change with their states!
 
 ### The Cyborgs
 This ghost may contain descriptions of injuries.<br>
-[dg_cyborgs.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_cyborgs.nar)<br>
+[dg_cyborgs.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_cyborgs.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/ghost/the_cyborgs)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/cyborgs.png">
 
 * AU Gordon Freeman and Darth Vader chatter on your desktop.
@@ -39,7 +41,8 @@ This ghost may contain descriptions of injuries.<br>
 # Shells!
 
 ### Five Rotten Pebbles (FLUX)
-[dg_pebblesflux.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_pebblesflux1.0.2.nar)<br>
+[dg_pebblesflux.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_pebblesflux1.0.2.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/flux/five_rotten_pebbles)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/pebblesflux.png">
 
 * An annoyed off-the-string Iterator to play your music!
@@ -51,7 +54,8 @@ This ghost may contain descriptions of injuries.<br>
 (Ctrl+E > Type > Shell > Right Click "Five Rotten Pebbles" > Network Update!)
 
 ### Wilture
-[dg_wilture.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wilture%201.0.0.nar)<br>
+[dg_wilture.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_wilture%201.0.0.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/slugcat/wilture)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/wilture.png">
 
 * A Wilson-y shell for Slugcat!
@@ -60,14 +64,16 @@ This ghost may contain descriptions of injuries.<br>
 (Ctrl+E > Type > Shell > Right Click "Wilture" > Network Update!)
 
 ### Squirt
-[Squirt.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Squirt.nar)<br>
+[Squirt.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Squirt.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/hydrate/squirt)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/squirt.png">
 
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
 ### Hands Included
-[Hands Included.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Hands%20Included.nar)<br>
+[Hands Included.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Hands%20Included.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/hands_included)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/hands.png">
 
 * A shell for Needle!
@@ -75,14 +81,16 @@ This ghost may contain descriptions of injuries.<br>
 * May or may not blink!
 
 ### Fluffidle
-[Fluffidle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Fluffidle.nar)<br>
+[Fluffidle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Fluffidle.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/fluffidle)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/fluffidle.png">
 
 * A shell for Needle!
 * Is the fur sharp or soft? You decide! :D
 
 ### Injector
-[dg_injector.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_injector.nar)<br>
+[dg_injector.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_injector.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/shared-shell/injector)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/injector.png">
 
 * A set of three shells for both Needle and Hydrate! Select via dressup!
@@ -90,7 +98,8 @@ This ghost may contain descriptions of injuries.<br>
 (Don't Starve Together, Mother Russia Bleeds, and Resident Evil!)
 
 ### Sewing Pin
-[dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin%201.0.1.nar)<br>
+[dg_sewingpin.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_sewingpin%201.0.1.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/sewing_pin)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/sewingpin.png">
 
 * A set of three sewing pin shells for Needle!
@@ -100,7 +109,8 @@ This ghost may contain descriptions of injuries.<br>
 
 ### Rotedle
 This shell contains depictions of a fictional disease.<br>
-[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)<br>
+[dg_rotedle.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_rotedle%201.0.1.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/rotedle)<br>
 <details>
 <summary>Image of Shell</summary>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/rotedle.png">
@@ -112,14 +122,16 @@ This shell contains depictions of a fictional disease.<br>
 (Ctrl+E > Type > Shell > Right Click "Rotedle" > Network Update!)
 
 ### Trusty Nail
-[dg_nail.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_nail.nar)<br>
+[dg_nail.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_nail.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/trusty_nail)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/nail.png">
 
 * A Hollow Knight themed shell for Needle!
 * Might look at you occasionally...
 
 ### Hatsune Neon
-[dg_miku.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_miku1.0.0.nar)<br>
+[dg_miku.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_miku1.0.0.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/shell/shared-shell/hatsune_neon)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/miku.png">
 
 * A Hatsune Miku themed shell for both FLUX and FLELE!
@@ -130,13 +142,15 @@ More information can be found in her readme
 # Balloons!
 
 ### Digi's Don't Starve
-[dg_dontstarve.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_dontstarve%201.1.1.nar)<br>
+[dg_dontstarve.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_dontstarve%201.1.1.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/balloon/dg_dont_starve)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/dontstarve.png">
 
 * A Don't Starve themed text balloon!
 
 ### Winamp Balloon
-[dg_winampb.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampb.nar)<br>
+[dg_winampb.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampb.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/balloon/winamp_balloon)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/refs/heads/main/img/winampb.png">
 
 * A Winamp media player themed text balloon!
@@ -144,7 +158,8 @@ More information can be found in her readme
 # Calendars!
 
 ### Winamp Calendar
-[dg_winampc.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampc.nar)<br>
+[dg_winampc.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_winampc.nar)
+[[Wiki]](https://ukagakadreamteam.com/wiki/calendar_skin/winamp_calendar)<br>
 <img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/winampc.png">
 
 * A Winamp media player themed calendar skin!
@@ -169,5 +184,5 @@ https://ukagakadreamteam.com/wiki/ghost/slugcat
 **SSP**
 http://ssp.shillest.net/
 <br>
-**Ukagaka Dream Team Getting Started Page**
+**Ukagaka Dream Team Wiki Getting Started Page**
 https://ukagakadreamteam.com/wiki/guide/beginner_guide
