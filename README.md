@@ -71,6 +71,14 @@ This ghost may contain descriptions of injuries.<br>
 * A shell for Hydrate! 
 * Comes with a huge amount of different color and sticker options!
 
+### Coconut Water
+[dg_coconut.zip](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/dg_coconut.zip)
+
+<img src="https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/img/coconut.png">
+
+* A shell for Hydrate! 
+* Made entirely on an iPhone 6s! (With a template ;)
+
 ### Hands Included
 [Hands Included.nar](https://raw.githubusercontent.com/Digibillcipher/UkagakaTime/main/Hands%20Included.nar)
 [[Wiki]](https://ukagakadreamteam.com/wiki/shell/needle/hands_included)<br>
